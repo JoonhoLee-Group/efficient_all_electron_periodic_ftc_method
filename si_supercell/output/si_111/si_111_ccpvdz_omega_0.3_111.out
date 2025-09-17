@@ -1,0 +1,619 @@
+                  Welcome to Q-Chem
+           with Periodic Boundary Condition
+     A Quantum Leap Into The Future Of Chemistry
+
+ Adam Rettig, Xintian Feng, Meng-Fu Chen, Hieu Dinh, Stephen Quiton,
+ Anton Ni, Paul J. Robinson, Jinghong Zhang, Joonho Lee
+
+Contributors to earlier versions of Q-Chem not listed above:
+ Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
+ Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//si_111_ccpvdz_omega_0.3_111.scratch20250908144336/si_111_ccpvdz_omega_0.3_111.0
+ Scratch folder: /n/netscratch/joonholee_lab/Lab/hieudinh//si_111_ccpvdz_omega_0.3_111.scratch20250908144336
+ Auxillary files located at: /n/holylabs/LABS/joonholee_lab/Lab/qchem_base/qcaux
+ Q-Chem begins on Mon Sep  8 14:43:37 2025
+
+ -------------------------------------------------------------
+ User input:
+ -------------------------------------------------------------
+ $lattice
+ 3
+ 0.000000 5.130600 5.130600
+ 5.130600 0.000000 5.130600
+ 5.130600 5.130600 0.000000
+ $end
+ 
+ $unitcell
+ ABSOLUTE
+ 0 1
+ Si 0.000000 0.000000 0.000000
+ Si 2.565300 2.565300 2.565300
+ $end
+ 
+ $rem
+ jobtype = sp
+ method = pbe
+ scf_convergence = 5
+ scf_guess = autosad
+ scf_algorithm = diis_gdm
+ basis = cc-pvdz
+ aux_basis = cc-pvtz-jk
+ input_bohr = true
+ symmetry false
+ latsum_factor 1.0
+ 
+ mp_mesh = [1,1,1]
+ 
+ integral_direct true
+ bvk_cgto true
+ 
+ thresh 14
+ mem_total 1000000
+ threads 32
+ 
+ MAX_SCF_CYCLES 3
+ madelung = false
+ omega 0.3
+ do_rij_bigmem true
+ automate_g true
+ print_level 10
+ rsdf_print_level 10
+ grid_type_xc 1
+ 
+ thresh_1e2c_sp 1e-14
+ thresh_2e3c_bra_ket_sep 1e-10
+ thresh_g 1e-12
+ $end
+ 
+ -------------------------------------------------------------
+ Running PBC job
+
+ Requested Exchange Correlation Functionals: 
+  DFT Exchange:  1.00000 pbe_x
+  DFT Correlation:  1.00000 pbe_c
+ using 32 threads for computing.
+ ---------------------------------------------------------------
+      Coordinates of Atoms in Central Unit Cell (Angstroms)
+    I     Atom         X            Y            Z
+ ---------------------------------------------------------------
+    1      Si      0.000000     0.000000     0.000000
+    2      Si      1.357498     1.357498     1.357498
+ ---------------------------------------------------------------
+ --------------------------------------------------
+              Lattice Vectors (Angstroms)
+              X            Y            Z
+ --------------------------------------------------
+   X       0.000000     2.714997     2.714997
+   Y       2.714997     0.000000     2.714997
+   Z       2.714997     2.714997     0.000000
+ --------------------------------------------------
+ --------------------------------------------------
+       Reciprocal Lattice Vectors (Angstroms^-1)
+              X            Y            Z
+ --------------------------------------------------
+   X      -1.157126     1.157126     1.157126
+   Y       1.157126    -1.157126     1.157126
+   Z       1.157126     1.157126    -1.157126
+ --------------------------------------------------
+
+ Single point calculation requested
+
+ Hamiltonian contributions:
+ List of terms in Hamiltonian: kpts_nn, kpts_kinetic, kpts_vnuc_df, kpts_xc, kpts_rij_bigmem
+
+ K-Points calculation started.
+
+ Basis set information about using solid harmonic (1) or Cartesian (0):
+  si : D(1) 
+
+ Basis set information about using solid harmonic (1) or Cartesian (0):
+  si : D(1) D(1) D(1) D(1) D(1) D(1) D(1) D(1) D(1) F(1) F(1) F(1) G(1) 
+
+ There are 36 basis functions in the central unit cell.
+ Print atomic basis of atoms in the central unit cell:
+ -------------------------------------------------------------
+2 84 84 16
+
+  0.00000000000000e+00  0.00000000000000e+00  0.00000000000000e+00
+  2.56530000000000e+00  2.56530000000000e+00  2.56530000000000e+00
+
+  7.88600000000000e+04
+  1.18200000000000e+04
+  2.69200000000000e+03
+  7.63400000000000e+02
+  2.49600000000000e+02
+  9.02800000000000e+01
+  3.52900000000000e+01
+  1.45100000000000e+01
+  4.05300000000000e+00
+  7.88600000000000e+04
+  1.18200000000000e+04
+  2.69200000000000e+03
+  2.49600000000000e+02
+  9.02800000000000e+01
+  3.52900000000000e+01
+  1.45100000000000e+01
+  4.05300000000000e+00
+  1.48200000000000e+00
+  7.88600000000000e+04
+  1.18200000000000e+04
+  2.69200000000000e+03
+  9.02800000000000e+01
+  3.52900000000000e+01
+  1.45100000000000e+01
+  4.05300000000000e+00
+  1.48200000000000e+00
+  2.51700000000000e-01
+  9.24300000000000e-02
+  3.15900000000000e+02
+  7.44200000000000e+01
+  2.34800000000000e+01
+  8.48800000000000e+00
+  3.21700000000000e+00
+  1.22900000000000e+00
+  7.44200000000000e+01
+  2.34800000000000e+01
+  8.48800000000000e+00
+  3.21700000000000e+00
+  1.22900000000000e+00
+  2.96400000000000e-01
+  8.76800000000000e-02
+  2.75000000000000e-01
+  7.88600000000000e+04
+  1.18200000000000e+04
+  2.69200000000000e+03
+  7.63400000000000e+02
+  2.49600000000000e+02
+  9.02800000000000e+01
+  3.52900000000000e+01
+  1.45100000000000e+01
+  4.05300000000000e+00
+  7.88600000000000e+04
+  1.18200000000000e+04
+  2.69200000000000e+03
+  2.49600000000000e+02
+  9.02800000000000e+01
+  3.52900000000000e+01
+  1.45100000000000e+01
+  4.05300000000000e+00
+  1.48200000000000e+00
+  7.88600000000000e+04
+  1.18200000000000e+04
+  2.69200000000000e+03
+  9.02800000000000e+01
+  3.52900000000000e+01
+  1.45100000000000e+01
+  4.05300000000000e+00
+  1.48200000000000e+00
+  2.51700000000000e-01
+  9.24300000000000e-02
+  3.15900000000000e+02
+  7.44200000000000e+01
+  2.34800000000000e+01
+  8.48800000000000e+00
+  3.21700000000000e+00
+  1.22900000000000e+00
+  7.44200000000000e+01
+  2.34800000000000e+01
+  8.48800000000000e+00
+  3.21700000000000e+00
+  1.22900000000000e+00
+  2.96400000000000e-01
+  8.76800000000000e-02
+  2.75000000000000e-01
+
+  9.06253754413352e-01
+  1.69293104204437e+00
+  2.88765135213002e+00
+  4.51686717623273e+00
+  6.15495015249549e+00
+  6.60292741422250e+00
+  4.31307094498082e+00
+  1.11211258821928e+00
+  3.28871017883051e-02
+  1.81811499558714e-03
+  7.82084807797983e-03
+ -3.64325186414446e-03
+ -1.38589915538590e-01
+ -3.09231066968474e-01
+ -8.37223961363792e-01
+ -2.35283994917911e-01
+  1.05074974557404e+00
+  5.58607098057301e-01
+ -3.73189052056138e-04
+ -4.34506392374390e-04
+ -1.25465717071959e-03
+  1.25391036214459e-02
+  2.72204657714548e-02
+  2.48300227161584e-02
+ -1.48880417762021e-01
+ -3.39029634838718e-01
+  2.96723365521804e-01
+  1.19473010431857e-01
+  7.49634571599597e+00
+  9.36025063316295e+00
+  9.42818987380764e+00
+  6.66500330898836e+00
+  2.81728351118454e+00
+  4.95548501763808e-01
+  1.33801616421722e-01
+ -1.41076498099296e-01
+  2.71250274850203e-02
+ -2.30271473527780e-01
+  1.34383996261684e-01
+  3.01514460345638e-01
+  6.80089021682769e-02
+  1.71886461192366e-01
+  9.06253754413352e-01
+  1.69293104204437e+00
+  2.88765135213002e+00
+  4.51686717623273e+00
+  6.15495015249549e+00
+  6.60292741422250e+00
+  4.31307094498082e+00
+  1.11211258821928e+00
+  3.28871017883051e-02
+  1.81811499558714e-03
+  7.82084807797983e-03
+ -3.64325186414446e-03
+ -1.38589915538590e-01
+ -3.09231066968474e-01
+ -8.37223961363792e-01
+ -2.35283994917911e-01
+  1.05074974557404e+00
+  5.58607098057301e-01
+ -3.73189052056138e-04
+ -4.34506392374390e-04
+ -1.25465717071959e-03
+  1.25391036214459e-02
+  2.72204657714548e-02
+  2.48300227161584e-02
+ -1.48880417762021e-01
+ -3.39029634838718e-01
+  2.96723365521804e-01
+  1.19473010431857e-01
+  7.49634571599597e+00
+  9.36025063316295e+00
+  9.42818987380764e+00
+  6.66500330898836e+00
+  2.81728351118454e+00
+  4.95548501763808e-01
+  1.33801616421722e-01
+ -1.41076498099296e-01
+  2.71250274850203e-02
+ -2.30271473527780e-01
+  1.34383996261684e-01
+  3.01514460345638e-01
+  6.80089021682769e-02
+  1.71886461192366e-01
+
+0 0 0 0 1 1 1
+0 0 
+9 0
+
+0 1 1 9 1 1 1
+9 0 
+9 0
+
+0 2 2 18 1 1 1
+18 0 
+9 0
+
+0 3 3 27 1 1 1
+27 0 
+1 0
+
+0 4 4 28 1 3 3
+28 1 
+6 0
+
+0 7 7 34 1 3 3
+34 1 
+6 0
+
+0 10 10 40 1 3 3
+40 1 
+1 0
+
+0 13 13 41 1 5 6
+41 2 
+1 1
+
+1 18 18 42 1 1 1
+42 0 
+9 0
+
+1 19 19 51 1 1 1
+51 0 
+9 0
+
+1 20 20 60 1 1 1
+60 0 
+9 0
+
+1 21 21 69 1 1 1
+69 0 
+1 0
+
+1 22 22 70 1 3 3
+70 1 
+6 0
+
+1 25 25 76 1 3 3
+76 1 
+6 0
+
+1 28 28 82 1 3 3
+82 1 
+1 0
+
+1 31 31 83 1 5 6
+83 2 
+1 1
+
+ -------------------------------------------------------------
+ Allocate 259112 B from available memory: 1048576000000 B
+ There are 1331 image cells after screening.
+ There are 1221 image cells for CGTO evaluation after screening.
+ Real-Space grid for FFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for FFT: (10,10,10)
+ There are 9261 real-space grid points.
+ There are 64 batches of real-space grid points. 
+ Size of each grid batch is around 128
+ Grid for AFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for AFT: (10,10,10)
+ There are 9261 real-space grid points.
+
+ There are 5456 atom-centered grid points.
+
+ Spacegroup symmetry group: Fd-3m
+ Reducing spacegroup symmetry to symmorphic group: F -4 3 m
+ Monkhorst-Pack mesh is [1,1,1]
+ There are 1 k points.
+kpoints in Bohr
+0.0000000000 0.0000000000 0.0000000000
+ There are 14 alpha and 14 beta electrons
+ Start computing overlap matrix
+ Allocate 20736 B from available memory: 1048575740896 B
+ Time for computing overlap matrix: 1.6490000000 s
+ ====== Initialize compute kernels for all-electron RI-J (kpts) ====== 
+ ========================================================== 
+ Range-separated parameter omega        = 0.299999999999999989
+ Threshold for 1e2c shellpair           = 0.000000000000010000
+ Threshold for 2e2c SR integral         = 0.000000000000000001
+ Threshold for 2e3c SR integral         = 0.000000000100000000
+ Threshold for AFT G-space screening is = 0.000000000001000000
+ The exponent cutoff for C/D classification (omega2 / 2) is  = 0.044999999999999998
+ ========================================================== 
+ === Post process the basis set for RI calculation (exp_cutoff = 0.044999999999999998 ) === 
+nshells_b1 before uncontraction = 16
+nshells_b1 after uncontraction = 16
+nshells_baux before uncontraction = 74
+nshells_baux after uncontraction = 74
+===============================================
+nbsf total   = 36
+nbsf compact = 36
+nbsf diffuse = 0
+naux total   = 242
+naux compact = 242
+naux diffuse = 0
+nshells_bnuc = 2
+
+ Number of unique atoms is 1
+ Unique atom #0 (si) has 8 shells.
+
+Shell 0 to 7 belongs to atom si
+Shell 8 to 15 belongs to atom si
+
+ Number of unique atom is 1
+ Unique atom #0 (si) has 37 auxiliary shells.
+
+Auxiliary Shell 0 to 36 belongs to atom si
+Auxiliary Shell 37 to 73 belongs to atom si
+
+================= Automatically determine grid size for reciprocal space summation =================
+ Range-separated parameter = 0.30000000000000 and G-space screening threshold = 0.00000000000100
+The number of grid points along each axis dimension is (4, 4, 4)
+Total number of grid points = 729
+
+Use nonortho shellpair for diffuse density
+======== Initializing relevant kernel for RIJ (CC type) ========
+There are 135 shellpairs in the reference unit cell
+There are 2395 images and we expect to have 323325 in total
+There are 9752 shellpairs in the lattice sum after screening
+****** AFT -> SR ******
+Maximum bra distance cutoff is 24.000000000000
+Maximum bra ket distance cutoff is 35.357348128408
+Maximum bra ket screening distance is 28.093750000000
+Number of auxiliary image is 1409
+There are 135 shellpairs in the reference unit cell
+There are 551 images and we expect to have 74385 in total
+There are 9752 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 32.767991255000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+======== Initialize the SR component for Vnuc (CC type) ========
+Maximum bra distance cutoff is 24.000000000000
+Maximum bra ket distance cutoff is 29.210206846529
+Maximum bra ket screening distance is 21.726328375039
+Number of auxiliary image is 911
+There are 135 shellpairs in the reference unit cell
+There are 551 images and we expect to have 74385 in total
+There are 9752 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 32.767991255000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+ Aufbau occupation scheme, occupation determined by eigenvalue
+ == 0-th k-point nmo = 36 (0.00000,0.00000,0.00000) ==
+
+ Generate autoSAD guess
+backing up fragment data
+Atom # 0: si, charge: 0, multiplicity: 3.000000
+writing autosad to fragment context
+Settings for isolated fragments: 
+  frgm_gamma: TRUE
+  frgm_center: FALSE
+
+    Running SCF for isolated atom #0
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//si_111_ccpvdz_omega_0.3_111.scratch20250908144336/autosad_frgmt_0/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//si_111_ccpvdz_omega_0.3_111.scratch20250908144336/autosad_frgmt_0/frgmt_job.out
+    Fragment job begins at Mon Sep  8 14:43:39 2025
+
+ Integrated density by DFT XC:
+   Numerical integral  =    13.999999917315
+   Relative error      =     0.0000005906 %
+Final energy components:
+ DFT Correlation            Energy =  -0.48513826889398
+ DFT Exchange               Energy = -20.16642564451798
+ Kinetic (alpha)            Energy = 145.25889537694826
+ Kinetic (beta)             Energy = 143.28753845481555
+ Nuclear Attraction (alpha) Energy = -351.37163574421368
+ Nuclear Attraction (beta)  Energy = -337.75785676323625
+ Nuclear Repulsion          Energy =   0.00000000000000
+ SEOQF                      Energy =  -0.00000000097530
+ Total Coulomb              Energy = 132.01551581812853
+----------------------------------------------
+    SCF Energy: -289.2191067719
+   Total fragment job time:  0.33 s.
+restoring fragment data
+
+ ------------------------------------------------------------------------
+ Allocate 81744 B from available memory: 1048575720160 B
+ Time for generating SCF guess: 0.35 s
+
+ Allocate 69752 B from available memory: 1048575638432 B
+ Selected algorithms for each term:
+  kpts_kinetic -> @0x14f95b7d1680
+  kpts_nn -> @0x14f95b7d1800
+  kpts_rij_bigmem -> @0x14f95b7d13e0
+  kpts_vnuc_df -> @0x14f95b7d1380
+  kpts_xc -> @0x14f95b7d12c0
+ Time for computing kinetic matrix is 1.92 s
+Start calculating Vnuc CC type!
+ Time for computing nuclear attraction matrix is 2.12 s
+Compute (P|Q) and use solve on the fly!
+Maximum distance between P and Q is 36.45654200218807
+Number of images for (P|Qn) is 1633
+ Time for computing 2e2c SR integral is 0.13 s
+Maximum dynamic memory per thread for 2e3c SR integrals: 0.000 GiB
+Batch size for basis function pair is 703 out of 703
+ === bvk cell = 0 has 100.000 % of the basis function pairs === 
+Static memory requirement for 2e3c SR integrals: 0.001 GB
+There are 1 munu batches for computing 2e3c SR integrals with latsum
+There are 4 Q batches for computing 2e3c SR integrals with latsum
+ Time for computing 2e3c SR integral (CC) is 1.48 s
+ Time for RI-J this SCF iteration is 1.67 s
+ Time for RI-J this SCF iteration is 0.03 s
+ ----------------------------------------------
+ Guess energy: -578.1173054106
+ ----------------------------------------------
+ Guess energy components:
+ DFT Correlation    Energy =  -1.07955724473143
+ DFT Exchange       Energy = -40.75530071883549
+ Kinetic            Energy = 578.33377088095551
+ Nuclear Attraction Energy = -1187.65044991107925
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.92789086778697
+ ----------------------------------------------
+  Cycle       Energy         DIIS error
+ ----------------------------------------------
+ Time for RI-J this SCF iteration is 0.03 s
+    1    -578.1233718556      3.29e-03  
+ Energy components after cycle 1:
+ DFT Correlation    Energy =  -1.08118522875676
+ DFT Exchange       Energy = -40.67694130979703
+ Kinetic            Energy = 577.68741462504602
+ Nuclear Attraction Energy = -1186.19002821697950
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.03102755951346
+    2    -578.1233718556      8.63e-04  
+ Energy components after cycle 2:
+ DFT Correlation    Energy =  -1.08118522875676
+ DFT Exchange       Energy = -40.67694130979703
+ Kinetic            Energy = 577.68741462504602
+ Nuclear Attraction Energy = -1186.19002821697950
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.03102755951346
+ ----------------------------------------------
+  Cycle       Energy        RMS Gradient
+ ----------------------------------------------
+ Time for RI-J this SCF iteration is 0.03 s
+    1    -578.1236138572      9.05e-03   Normal BFGS step
+ Energy components after cycle 1:
+ DFT Correlation    Energy =  -1.08096199992285
+ DFT Exchange       Energy = -40.70038711706178
+ Kinetic            Energy = 577.92808123029135
+ Nuclear Attraction Energy = -1186.65067525314680
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.27398856726177
+ Time for RI-J this SCF iteration is 0.04 s
+    2    -578.1236307279      2.03e-03   Normal BFGS step
+ Energy components after cycle 2:
+ DFT Correlation    Energy =  -1.08098218284297
+ DFT Exchange       Energy = -40.69516121765386
+ Kinetic            Energy = 577.87073650327955
+ Nuclear Attraction Energy = -1186.54611817714726
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.22155363108232
+ Time for RI-J this SCF iteration is 0.03 s
+    3    -578.1236307356      3.04e-05   Normal BFGS step
+ Energy components after cycle 3:
+ DFT Correlation    Energy =  -1.08098509060414
+ DFT Exchange       Energy = -40.69521730183271
+ Kinetic            Energy = 577.87177452227866
+ Nuclear Attraction Energy = -1186.54745075059327
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.22190716976701
+    3    -578.1236307356      3.04e-05
+ ----------------------------------------------
+ Final energy components:
+ DFT Correlation    Energy =  -1.08098509060414
+ DFT Exchange       Energy = -40.69521730183271
+ Kinetic            Energy = 577.87177452227866
+ Nuclear Attraction Energy = -1186.54745075059327
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 175.22190716976701
+ ----------------------------------------------
+ Final energy is -578.1236307356
+
+ SCF time:   CPU 292.31s  wall 11.00s 
+ Total wall time for computing Kinetic: 0.00 s (6)
+ Total wall time for computing RIJ-BIGMEM: 1.82 s (6)
+ Total wall time for computing RSDF Vnuc: 0.00 s (6)
+ Total wall time for computing DFT XC: 2.47 s (6)
+ ---------------------------------------------------------------------------
+                        Orbital Energies (a.u.)
+ ---------------------------------------------------------------------------
+ == 0-th k-point (0.00000,0.00000,0.00000) occupation: 14==
+ -64.93623 -64.93623 -4.57133 -4.57122 -2.98238 -2.98238 -2.98238 -2.98181 -2.98181 -2.98181
+ -0.13378 0.31698 0.31698 0.31698 0.40150 0.40150 0.40150 0.44023 0.60888 0.60888
+ 0.63177 0.87090 0.87090 0.87090 1.06629 1.29009 1.29009 1.29009 1.29960 1.29960
+ 1.40304 1.40304 1.40304 1.71458 1.71458 1.71458
+ ---------------------------------------------------------------------------
+ VBM is at 0-th k-point with 8.62552 eV
+ CBM is at 0-th k-point with 10.92543 eV
+ Band gap is 2.29991 eV
+
+
+           Ground-State Mulliken Net Atomic Charges
+
+      Atom                 Charge (a.u.)          Spin (a.u.)
+   --------------------------------------------------------
+      1 Si              (-0.000000,-0.000000)    (0.000000,0.000000)
+      2 Si               (0.000000,-0.000000)    (0.000000,0.000000)
+   --------------------------------------------------------
+  Sum of atomic charges =     (-0.000000,-0.000000)
+  Sum of spin   charges =       (0.000000,0.000000)
+
+
+
+ Total job time:  11.54 s.
+ Mon Sep  8 14:43:48 2025
+
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using QCPBC. Have a nice day.    *
+        *                                                           *
+        *************************************************************
+
+Running job 1 of 1

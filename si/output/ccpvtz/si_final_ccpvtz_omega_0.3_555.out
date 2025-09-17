@@ -1,0 +1,2076 @@
+                  Welcome to Q-Chem
+           with Periodic Boundary Condition
+     A Quantum Leap Into The Future Of Chemistry
+
+ Adam Rettig, Xintian Feng, Meng-Fu Chen, Hieu Dinh, Stephen Quiton,
+ Anton Ni, Paul J. Robinson, Jinghong Zhang, Joonho Lee
+
+Contributors to earlier versions of Q-Chem not listed above:
+ Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
+ Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//si_2_ccpvtz_omega_0.3_555.scratch20250909091709/si_2_ccpvtz_omega_0.3_555.0
+ Scratch folder: /n/netscratch/joonholee_lab/Lab/hieudinh//si_2_ccpvtz_omega_0.3_555.scratch20250909091709
+ Auxillary files located at: /n/holylabs/LABS/joonholee_lab/Lab/qchem_base/qcaux
+ Q-Chem begins on Tue Sep  9 09:17:10 2025
+
+ -------------------------------------------------------------
+ User input:
+ -------------------------------------------------------------
+ $lattice
+ 3
+ 0.000000 5.130600 5.130600
+ 5.130600 0.000000 5.130600
+ 5.130600 5.130600 0.000000
+ $end
+ 
+ $unitcell
+ ABSOLUTE
+ 0 1
+ Si 0.000000 0.000000 0.000000
+ Si 2.565300 2.565300 2.565300
+ $end
+ 
+ $rem
+ jobtype = sp
+ method = pbe
+ scf_convergence = 5
+ scf_guess = autosad
+ scf_algorithm = diis_gdm
+ basis = cc-pvtz
+ aux_basis = cc-pvtz-jk
+ input_bohr = true
+ symmetry = false
+ rsdf_print_level 1
+ is_basis_uctr true
+ 
+ mp_mesh = [5,5,5]
+ 
+ integral_direct true
+ bvk_cgto true
+ 
+ thresh 14
+ mem_total 1000000
+ threads 32
+ 
+ MAX_SCF_CYCLES 500
+ madelung = false
+ omega 0.3
+ do_rij_bigmem true
+ automate_g true
+ print_level 10
+ grid_type_xc 1
+ 
+ thresh_1e2c_sp 1e-14
+ thresh_2e3c_bra_ket_sep 1e-10
+ thresh_g 1e-12
+ $end
+ 
+ -------------------------------------------------------------
+ Running PBC job
+
+ Requested Exchange Correlation Functionals: 
+  DFT Exchange:  1.00000 pbe_x
+  DFT Correlation:  1.00000 pbe_c
+ using 32 threads for computing.
+ ---------------------------------------------------------------
+      Coordinates of Atoms in Central Unit Cell (Angstroms)
+    I     Atom         X            Y            Z
+ ---------------------------------------------------------------
+    1      Si      0.000000     0.000000     0.000000
+    2      Si      1.357498     1.357498     1.357498
+ ---------------------------------------------------------------
+ --------------------------------------------------
+              Lattice Vectors (Angstroms)
+              X            Y            Z
+ --------------------------------------------------
+   X       0.000000     2.714997     2.714997
+   Y       2.714997     0.000000     2.714997
+   Z       2.714997     2.714997     0.000000
+ --------------------------------------------------
+ --------------------------------------------------
+       Reciprocal Lattice Vectors (Angstroms^-1)
+              X            Y            Z
+ --------------------------------------------------
+   X      -1.157126     1.157126     1.157126
+   Y       1.157126    -1.157126     1.157126
+   Z       1.157126     1.157126    -1.157126
+ --------------------------------------------------
+
+ Single point calculation requested
+
+ Hamiltonian contributions:
+ List of terms in Hamiltonian: kpts_nn, kpts_kinetic, kpts_vnuc_df, kpts_xc, kpts_rij_bigmem
+
+ K-Points calculation started.
+
+ Basis set information about using solid harmonic (1) or Cartesian (0):
+  si : D(1) D(1) F(1) 
+
+ Basis set information about using solid harmonic (1) or Cartesian (0):
+  si : D(1) D(1) D(1) D(1) D(1) D(1) D(1) D(1) D(1) F(1) F(1) F(1) G(1) 
+
+ There are 68 basis functions in the central unit cell.
+ Print atomic basis of atoms in the central unit cell:
+ -------------------------------------------------------------
+2 104 104 24
+
+  0.00000000000000e+00  0.00000000000000e+00  0.00000000000000e+00
+  2.56530000000000e+00  2.56530000000000e+00  2.56530000000000e+00
+
+  2.54900000000000e+05
+  3.81900000000000e+04
+  8.69000000000000e+03
+  2.46200000000000e+03
+  8.04800000000000e+02
+  2.91300000000000e+02
+  1.13600000000000e+02
+  4.67500000000000e+01
+  1.98200000000000e+01
+  7.70800000000000e+00
+  3.34000000000000e+00
+  2.54900000000000e+05
+  3.81900000000000e+04
+  8.69000000000000e+03
+  8.04800000000000e+02
+  2.91300000000000e+02
+  1.13600000000000e+02
+  4.67500000000000e+01
+  1.98200000000000e+01
+  7.70800000000000e+00
+  3.34000000000000e+00
+  1.40200000000000e+00
+  2.54900000000000e+05
+  3.81900000000000e+04
+  8.69000000000000e+03
+  2.91300000000000e+02
+  1.13600000000000e+02
+  4.67500000000000e+01
+  1.98200000000000e+01
+  7.70800000000000e+00
+  3.34000000000000e+00
+  1.40200000000000e+00
+  2.07000000000000e-01
+  4.38700000000000e-01
+  7.94400000000000e-02
+  4.81500000000000e+02
+  1.13900000000000e+02
+  3.62300000000000e+01
+  1.33400000000000e+01
+  5.25200000000000e+00
+  2.12000000000000e+00
+  1.13900000000000e+02
+  3.62300000000000e+01
+  1.33400000000000e+01
+  5.25200000000000e+00
+  2.12000000000000e+00
+  2.52800000000000e-01
+  8.56100000000000e-01
+  7.88900000000000e-02
+  4.81000000000000e-01
+  1.59000000000000e-01
+  3.36000000000000e-01
+  2.54900000000000e+05
+  3.81900000000000e+04
+  8.69000000000000e+03
+  2.46200000000000e+03
+  8.04800000000000e+02
+  2.91300000000000e+02
+  1.13600000000000e+02
+  4.67500000000000e+01
+  1.98200000000000e+01
+  7.70800000000000e+00
+  3.34000000000000e+00
+  2.54900000000000e+05
+  3.81900000000000e+04
+  8.69000000000000e+03
+  8.04800000000000e+02
+  2.91300000000000e+02
+  1.13600000000000e+02
+  4.67500000000000e+01
+  1.98200000000000e+01
+  7.70800000000000e+00
+  3.34000000000000e+00
+  1.40200000000000e+00
+  2.54900000000000e+05
+  3.81900000000000e+04
+  8.69000000000000e+03
+  2.91300000000000e+02
+  1.13600000000000e+02
+  4.67500000000000e+01
+  1.98200000000000e+01
+  7.70800000000000e+00
+  3.34000000000000e+00
+  1.40200000000000e+00
+  2.07000000000000e-01
+  4.38700000000000e-01
+  7.94400000000000e-02
+  4.81500000000000e+02
+  1.13900000000000e+02
+  3.62300000000000e+01
+  1.33400000000000e+01
+  5.25200000000000e+00
+  2.12000000000000e+00
+  1.13900000000000e+02
+  3.62300000000000e+01
+  1.33400000000000e+01
+  5.25200000000000e+00
+  2.12000000000000e+00
+  2.52800000000000e-01
+  8.56100000000000e-01
+  7.88900000000000e-02
+  4.81000000000000e-01
+  1.59000000000000e-01
+  3.36000000000000e-01
+
+  5.06121931014315e-01
+  9.46667895564849e-01
+  1.63484840115776e+00
+  2.64073594005923e+00
+  3.97699155153283e+00
+  5.40905960736848e+00
+  6.15868961670172e+00
+  4.99170532032548e+00
+  2.02857976424901e+00
+  1.82839763527352e-01
+ -1.25640690342342e-02
+  1.10808750449959e-03
+  1.94415577975663e-03
+  2.70023730632789e-03
+ -1.69098200112149e-02
+ -8.66890848691569e-02
+ -2.76125946359713e-01
+ -6.25588788447604e-01
+ -6.61701688370681e-01
+  3.11114524237060e-01
+  9.56658906468163e-01
+  4.36891217824705e-01
+  1.05873342256663e-04
+  1.52975802748887e-04
+  4.28394863673135e-04
+ -4.94070443505333e-03
+ -1.17298035021286e-02
+ -2.95023896611804e-02
+ -1.71455066569284e-02
+  3.00007138114875e-03
+ -6.19326651465540e-02
+ -2.59989143457351e-01
+  2.47187614608056e-01
+  3.84180942836044e-01
+  1.06644759418552e-01
+  6.70509611941243e+00
+  8.84487660481054e+00
+  9.82415782069442e+00
+  8.40902910540583e+00
+  4.80448757555754e+00
+  1.55989499299286e+00
+ -1.15889775037608e-01
+ -5.13312293701512e-02
+ -2.64771097977823e-01
+ -6.52512718105956e-02
+ -1.94608613796415e-01
+  2.59380435893970e-01
+  1.17380433533106e+00
+  5.95960578383022e-02
+  4.57260134599596e-01
+  6.58952976069849e-02
+  1.26537084505476e-01
+  5.06121931014315e-01
+  9.46667895564849e-01
+  1.63484840115776e+00
+  2.64073594005923e+00
+  3.97699155153283e+00
+  5.40905960736848e+00
+  6.15868961670172e+00
+  4.99170532032548e+00
+  2.02857976424901e+00
+  1.82839763527352e-01
+ -1.25640690342342e-02
+  1.10808750449959e-03
+  1.94415577975663e-03
+  2.70023730632789e-03
+ -1.69098200112149e-02
+ -8.66890848691569e-02
+ -2.76125946359713e-01
+ -6.25588788447604e-01
+ -6.61701688370681e-01
+  3.11114524237060e-01
+  9.56658906468163e-01
+  4.36891217824705e-01
+  1.05873342256663e-04
+  1.52975802748887e-04
+  4.28394863673135e-04
+ -4.94070443505333e-03
+ -1.17298035021286e-02
+ -2.95023896611804e-02
+ -1.71455066569284e-02
+  3.00007138114875e-03
+ -6.19326651465540e-02
+ -2.59989143457351e-01
+  2.47187614608056e-01
+  3.84180942836044e-01
+  1.06644759418552e-01
+  6.70509611941243e+00
+  8.84487660481054e+00
+  9.82415782069442e+00
+  8.40902910540583e+00
+  4.80448757555754e+00
+  1.55989499299286e+00
+ -1.15889775037608e-01
+ -5.13312293701512e-02
+ -2.64771097977823e-01
+ -6.52512718105956e-02
+ -1.94608613796415e-01
+  2.59380435893970e-01
+  1.17380433533106e+00
+  5.95960578383022e-02
+  4.57260134599596e-01
+  6.58952976069849e-02
+  1.26537084505476e-01
+
+0 0 0 0 1 1 1
+0 0 
+11 0
+
+0 1 1 11 1 1 1
+11 0 
+11 0
+
+0 2 2 22 1 1 1
+22 0 
+11 0
+
+0 3 3 33 1 1 1
+33 0 
+1 0
+
+0 4 4 34 1 1 1
+34 0 
+1 0
+
+0 5 5 35 1 3 3
+35 1 
+6 0
+
+0 8 8 41 1 3 3
+41 1 
+6 0
+
+0 11 11 47 1 3 3
+47 1 
+1 0
+
+0 14 14 48 1 3 3
+48 1 
+1 0
+
+0 17 17 49 1 5 6
+49 2 
+1 1
+
+0 22 22 50 1 5 6
+50 2 
+1 1
+
+0 27 27 51 1 7 10
+51 3 
+1 1
+
+1 34 34 52 1 1 1
+52 0 
+11 0
+
+1 35 35 63 1 1 1
+63 0 
+11 0
+
+1 36 36 74 1 1 1
+74 0 
+11 0
+
+1 37 37 85 1 1 1
+85 0 
+1 0
+
+1 38 38 86 1 1 1
+86 0 
+1 0
+
+1 39 39 87 1 3 3
+87 1 
+6 0
+
+1 42 42 93 1 3 3
+93 1 
+6 0
+
+1 45 45 99 1 3 3
+99 1 
+1 0
+
+1 48 48 100 1 3 3
+100 1 
+1 0
+
+1 51 51 101 1 5 6
+101 2 
+1 1
+
+1 56 56 102 1 5 6
+102 2 
+1 1
+
+1 61 61 103 1 7 10
+103 3 
+1 1
+
+ -------------------------------------------------------------
+ Allocate 263208 B from available memory: 1048576000000 B
+ There are 1331 image cells after screening.
+ There are 1353 image cells for CGTO evaluation after screening.
+ Real-Space grid for FFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for FFT: (10,10,10)
+ There are 9261 real-space grid points.
+ There are 64 batches of real-space grid points. 
+ Size of each grid batch is around 128
+ Grid for AFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for AFT: (10,10,10)
+ There are 9261 real-space grid points.
+
+ There are 5456 atom-centered grid points.
+
+ Spacegroup symmetry group: Fd-3m
+ Reducing spacegroup symmetry to symmorphic group: F -4 3 m
+ Monkhorst-Pack mesh is [5,5,5]
+ There are 125 k points.
+kpoints in Bohr
+-0.2449298447 -0.2449298447 -0.2449298447
+-0.1224649224 -0.1224649224 -0.3673947671
+-0.0000000000 -0.0000000000 -0.4898596895
+0.1224649224 0.1224649224 -0.6123246119
+0.2449298447 0.2449298447 -0.7347895342
+-0.1224649224 -0.3673947671 -0.1224649224
+-0.0000000000 -0.2449298447 -0.2449298447
+0.1224649224 -0.1224649224 -0.3673947671
+0.2449298447 -0.0000000000 -0.4898596895
+0.3673947671 0.1224649224 -0.6123246119
+-0.0000000000 -0.4898596895 0.0000000000
+0.1224649224 -0.3673947671 -0.1224649224
+0.2449298447 -0.2449298447 -0.2449298447
+0.3673947671 -0.1224649224 -0.3673947671
+0.4898596895 0.0000000000 -0.4898596895
+0.1224649224 -0.6123246119 0.1224649224
+0.2449298447 -0.4898596895 0.0000000000
+0.3673947671 -0.3673947671 -0.1224649224
+0.4898596895 -0.2449298447 -0.2449298447
+0.6123246119 -0.1224649224 -0.3673947671
+0.2449298447 -0.7347895342 0.2449298447
+0.3673947671 -0.6123246119 0.1224649224
+0.4898596895 -0.4898596895 0.0000000000
+0.6123246119 -0.3673947671 -0.1224649224
+0.7347895342 -0.2449298447 -0.2449298447
+-0.3673947671 -0.1224649224 -0.1224649224
+-0.2449298447 -0.0000000000 -0.2449298447
+-0.1224649224 0.1224649224 -0.3673947671
+-0.0000000000 0.2449298447 -0.4898596895
+0.1224649224 0.3673947671 -0.6123246119
+-0.2449298447 -0.2449298447 0.0000000000
+-0.1224649224 -0.1224649224 -0.1224649224
+-0.0000000000 -0.0000000000 -0.2449298447
+0.1224649224 0.1224649224 -0.3673947671
+0.2449298447 0.2449298447 -0.4898596895
+-0.1224649224 -0.3673947671 0.1224649224
+-0.0000000000 -0.2449298447 0.0000000000
+0.1224649224 -0.1224649224 -0.1224649224
+0.2449298447 0.0000000000 -0.2449298447
+0.3673947671 0.1224649224 -0.3673947671
+-0.0000000000 -0.4898596895 0.2449298447
+0.1224649224 -0.3673947671 0.1224649224
+0.2449298447 -0.2449298447 0.0000000000
+0.3673947671 -0.1224649224 -0.1224649224
+0.4898596895 0.0000000000 -0.2449298447
+0.1224649224 -0.6123246119 0.3673947671
+0.2449298447 -0.4898596895 0.2449298447
+0.3673947671 -0.3673947671 0.1224649224
+0.4898596895 -0.2449298447 0.0000000000
+0.6123246119 -0.1224649224 -0.1224649224
+-0.4898596895 -0.0000000000 -0.0000000000
+-0.3673947671 0.1224649224 -0.1224649224
+-0.2449298447 0.2449298447 -0.2449298447
+-0.1224649224 0.3673947671 -0.3673947671
+0.0000000000 0.4898596895 -0.4898596895
+-0.3673947671 -0.1224649224 0.1224649224
+-0.2449298447 -0.0000000000 -0.0000000000
+-0.1224649224 0.1224649224 -0.1224649224
+0.0000000000 0.2449298447 -0.2449298447
+0.1224649224 0.3673947671 -0.3673947671
+-0.2449298447 -0.2449298447 0.2449298447
+-0.1224649224 -0.1224649224 0.1224649224
+0.0000000000 0.0000000000 0.0000000000
+0.1224649224 0.1224649224 -0.1224649224
+0.2449298447 0.2449298447 -0.2449298447
+-0.1224649224 -0.3673947671 0.3673947671
+-0.0000000000 -0.2449298447 0.2449298447
+0.1224649224 -0.1224649224 0.1224649224
+0.2449298447 0.0000000000 0.0000000000
+0.3673947671 0.1224649224 -0.1224649224
+-0.0000000000 -0.4898596895 0.4898596895
+0.1224649224 -0.3673947671 0.3673947671
+0.2449298447 -0.2449298447 0.2449298447
+0.3673947671 -0.1224649224 0.1224649224
+0.4898596895 0.0000000000 0.0000000000
+-0.6123246119 0.1224649224 0.1224649224
+-0.4898596895 0.2449298447 -0.0000000000
+-0.3673947671 0.3673947671 -0.1224649224
+-0.2449298447 0.4898596895 -0.2449298447
+-0.1224649224 0.6123246119 -0.3673947671
+-0.4898596895 -0.0000000000 0.2449298447
+-0.3673947671 0.1224649224 0.1224649224
+-0.2449298447 0.2449298447 -0.0000000000
+-0.1224649224 0.3673947671 -0.1224649224
+0.0000000000 0.4898596895 -0.2449298447
+-0.3673947671 -0.1224649224 0.3673947671
+-0.2449298447 0.0000000000 0.2449298447
+-0.1224649224 0.1224649224 0.1224649224
+0.0000000000 0.2449298447 0.0000000000
+0.1224649224 0.3673947671 -0.1224649224
+-0.2449298447 -0.2449298447 0.4898596895
+-0.1224649224 -0.1224649224 0.3673947671
+0.0000000000 0.0000000000 0.2449298447
+0.1224649224 0.1224649224 0.1224649224
+0.2449298447 0.2449298447 0.0000000000
+-0.1224649224 -0.3673947671 0.6123246119
+0.0000000000 -0.2449298447 0.4898596895
+0.1224649224 -0.1224649224 0.3673947671
+0.2449298447 0.0000000000 0.2449298447
+0.3673947671 0.1224649224 0.1224649224
+-0.7347895342 0.2449298447 0.2449298447
+-0.6123246119 0.3673947671 0.1224649224
+-0.4898596895 0.4898596895 -0.0000000000
+-0.3673947671 0.6123246119 -0.1224649224
+-0.2449298447 0.7347895342 -0.2449298447
+-0.6123246119 0.1224649224 0.3673947671
+-0.4898596895 0.2449298447 0.2449298447
+-0.3673947671 0.3673947671 0.1224649224
+-0.2449298447 0.4898596895 -0.0000000000
+-0.1224649224 0.6123246119 -0.1224649224
+-0.4898596895 0.0000000000 0.4898596895
+-0.3673947671 0.1224649224 0.3673947671
+-0.2449298447 0.2449298447 0.2449298447
+-0.1224649224 0.3673947671 0.1224649224
+0.0000000000 0.4898596895 0.0000000000
+-0.3673947671 -0.1224649224 0.6123246119
+-0.2449298447 0.0000000000 0.4898596895
+-0.1224649224 0.1224649224 0.3673947671
+0.0000000000 0.2449298447 0.2449298447
+0.1224649224 0.3673947671 0.1224649224
+-0.2449298447 -0.2449298447 0.7347895342
+-0.1224649224 -0.1224649224 0.6123246119
+0.0000000000 0.0000000000 0.4898596895
+0.1224649224 0.1224649224 0.3673947671
+0.2449298447 0.2449298447 0.2449298447
+ There are 14 alpha and 14 beta electrons
+ Start computing overlap matrix
+ Allocate 9248000 B from available memory: 1048575736800 B
+ Time for computing overlap matrix: 1.8780000000 s
+ ====== Initialize compute kernels for all-electron RI-J (kpts) ====== 
+ ========================================================== 
+ Range-separated parameter omega        = 0.299999999999999989
+ Threshold for 1e2c shellpair           = 0.000000000000010000
+ Threshold for 2e2c SR integral         = 0.000000000000000001
+ Threshold for 2e3c SR integral         = 0.000000000100000000
+ Threshold for AFT G-space screening is = 0.000000000001000000
+ The exponent cutoff for C/D classification (omega2 / 2) is  = 0.044999999999999998
+ ========================================================== 
+ === Post process the basis set for RI calculation (exp_cutoff = 0.044999999999999998 ) === 
+nshells_b1 before uncontraction = 24
+nshells_b1 after uncontraction = 24
+nshells_baux before uncontraction = 74
+nshells_baux after uncontraction = 74
+===============================================
+nbsf total   = 68
+nbsf compact = 68
+nbsf diffuse = 0
+naux total   = 242
+naux compact = 242
+naux diffuse = 0
+nshells_bnuc = 2
+
+ Number of unique atoms is 1
+ Unique atom #0 (si) has 12 shells.
+
+Shell 0 to 11 belongs to atom si
+Shell 12 to 23 belongs to atom si
+
+ Number of unique atom is 1
+ Unique atom #0 (si) has 37 auxiliary shells.
+
+Auxiliary Shell 0 to 36 belongs to atom si
+Auxiliary Shell 37 to 73 belongs to atom si
+
+================= Automatically determine grid size for reciprocal space summation =================
+ Range-separated parameter = 0.30000000000000 and G-space screening threshold = 0.00000000000100
+The number of grid points along each axis dimension is (4, 4, 4)
+Total number of grid points = 729
+
+Use nonortho shellpair for diffuse density
+======== Initializing relevant kernel for RIJ (CC type) ========
+There are 299 shellpairs in the reference unit cell
+There are 2707 images and we expect to have 809393 in total
+There are 21144 shellpairs in the lattice sum after screening
+****** AFT -> SR ******
+Maximum bra distance cutoff is 26.000000000000
+Maximum bra ket distance cutoff is 36.613925668604
+Maximum bra ket screening distance is 28.531250000000
+Number of auxiliary image is 1633
+There are 299 shellpairs in the reference unit cell
+There are 695 images and we expect to have 207805 in total
+There are 21144 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 32.767702775000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+======== Initialize the SR component for Vnuc (CC type) ========
+Maximum bra distance cutoff is 26.000000000000
+Maximum bra ket distance cutoff is 30.465105393952
+Maximum bra ket screening distance is 22.160673009729
+Number of auxiliary image is 1031
+There are 299 shellpairs in the reference unit cell
+There are 695 images and we expect to have 207805 in total
+There are 21144 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 32.767702775000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+ Aufbau occupation scheme, occupation determined by eigenvalue
+ == 0-th k-point nmo = 68 (-0.24493,-0.24493,-0.24493) ==
+ == 1-th k-point nmo = 68 (-0.12246,-0.12246,-0.36739) ==
+ == 2-th k-point nmo = 68 (-0.00000,-0.00000,-0.48986) ==
+ == 3-th k-point nmo = 68 (0.12246,0.12246,-0.61232) ==
+ == 4-th k-point nmo = 68 (0.24493,0.24493,-0.73479) ==
+ == 5-th k-point nmo = 68 (-0.12246,-0.36739,-0.12246) ==
+ == 6-th k-point nmo = 68 (-0.00000,-0.24493,-0.24493) ==
+ == 7-th k-point nmo = 68 (0.12246,-0.12246,-0.36739) ==
+ == 8-th k-point nmo = 68 (0.24493,-0.00000,-0.48986) ==
+ == 9-th k-point nmo = 68 (0.36739,0.12246,-0.61232) ==
+ == 10-th k-point nmo = 68 (-0.00000,-0.48986,0.00000) ==
+ == 11-th k-point nmo = 68 (0.12246,-0.36739,-0.12246) ==
+ == 12-th k-point nmo = 68 (0.24493,-0.24493,-0.24493) ==
+ == 13-th k-point nmo = 68 (0.36739,-0.12246,-0.36739) ==
+ == 14-th k-point nmo = 68 (0.48986,0.00000,-0.48986) ==
+ == 15-th k-point nmo = 68 (0.12246,-0.61232,0.12246) ==
+ == 16-th k-point nmo = 68 (0.24493,-0.48986,0.00000) ==
+ == 17-th k-point nmo = 68 (0.36739,-0.36739,-0.12246) ==
+ == 18-th k-point nmo = 68 (0.48986,-0.24493,-0.24493) ==
+ == 19-th k-point nmo = 68 (0.61232,-0.12246,-0.36739) ==
+ == 20-th k-point nmo = 68 (0.24493,-0.73479,0.24493) ==
+ == 21-th k-point nmo = 68 (0.36739,-0.61232,0.12246) ==
+ == 22-th k-point nmo = 68 (0.48986,-0.48986,0.00000) ==
+ == 23-th k-point nmo = 68 (0.61232,-0.36739,-0.12246) ==
+ == 24-th k-point nmo = 68 (0.73479,-0.24493,-0.24493) ==
+ == 25-th k-point nmo = 68 (-0.36739,-0.12246,-0.12246) ==
+ == 26-th k-point nmo = 68 (-0.24493,-0.00000,-0.24493) ==
+ == 27-th k-point nmo = 68 (-0.12246,0.12246,-0.36739) ==
+ == 28-th k-point nmo = 68 (-0.00000,0.24493,-0.48986) ==
+ == 29-th k-point nmo = 68 (0.12246,0.36739,-0.61232) ==
+ == 30-th k-point nmo = 68 (-0.24493,-0.24493,0.00000) ==
+ == 31-th k-point nmo = 68 (-0.12246,-0.12246,-0.12246) ==
+ == 32-th k-point nmo = 68 (-0.00000,-0.00000,-0.24493) ==
+ == 33-th k-point nmo = 68 (0.12246,0.12246,-0.36739) ==
+ == 34-th k-point nmo = 68 (0.24493,0.24493,-0.48986) ==
+ == 35-th k-point nmo = 68 (-0.12246,-0.36739,0.12246) ==
+ == 36-th k-point nmo = 68 (-0.00000,-0.24493,0.00000) ==
+ == 37-th k-point nmo = 68 (0.12246,-0.12246,-0.12246) ==
+ == 38-th k-point nmo = 68 (0.24493,0.00000,-0.24493) ==
+ == 39-th k-point nmo = 68 (0.36739,0.12246,-0.36739) ==
+ == 40-th k-point nmo = 68 (-0.00000,-0.48986,0.24493) ==
+ == 41-th k-point nmo = 68 (0.12246,-0.36739,0.12246) ==
+ == 42-th k-point nmo = 68 (0.24493,-0.24493,0.00000) ==
+ == 43-th k-point nmo = 68 (0.36739,-0.12246,-0.12246) ==
+ == 44-th k-point nmo = 68 (0.48986,0.00000,-0.24493) ==
+ == 45-th k-point nmo = 68 (0.12246,-0.61232,0.36739) ==
+ == 46-th k-point nmo = 68 (0.24493,-0.48986,0.24493) ==
+ == 47-th k-point nmo = 68 (0.36739,-0.36739,0.12246) ==
+ == 48-th k-point nmo = 68 (0.48986,-0.24493,0.00000) ==
+ == 49-th k-point nmo = 68 (0.61232,-0.12246,-0.12246) ==
+ == 50-th k-point nmo = 68 (-0.48986,-0.00000,-0.00000) ==
+ == 51-th k-point nmo = 68 (-0.36739,0.12246,-0.12246) ==
+ == 52-th k-point nmo = 68 (-0.24493,0.24493,-0.24493) ==
+ == 53-th k-point nmo = 68 (-0.12246,0.36739,-0.36739) ==
+ == 54-th k-point nmo = 68 (0.00000,0.48986,-0.48986) ==
+ == 55-th k-point nmo = 68 (-0.36739,-0.12246,0.12246) ==
+ == 56-th k-point nmo = 68 (-0.24493,-0.00000,-0.00000) ==
+ == 57-th k-point nmo = 68 (-0.12246,0.12246,-0.12246) ==
+ == 58-th k-point nmo = 68 (0.00000,0.24493,-0.24493) ==
+ == 59-th k-point nmo = 68 (0.12246,0.36739,-0.36739) ==
+ == 60-th k-point nmo = 68 (-0.24493,-0.24493,0.24493) ==
+ == 61-th k-point nmo = 68 (-0.12246,-0.12246,0.12246) ==
+ == 62-th k-point nmo = 68 (0.00000,0.00000,0.00000) ==
+ == 63-th k-point nmo = 68 (0.12246,0.12246,-0.12246) ==
+ == 64-th k-point nmo = 68 (0.24493,0.24493,-0.24493) ==
+ == 65-th k-point nmo = 68 (-0.12246,-0.36739,0.36739) ==
+ == 66-th k-point nmo = 68 (-0.00000,-0.24493,0.24493) ==
+ == 67-th k-point nmo = 68 (0.12246,-0.12246,0.12246) ==
+ == 68-th k-point nmo = 68 (0.24493,0.00000,0.00000) ==
+ == 69-th k-point nmo = 68 (0.36739,0.12246,-0.12246) ==
+ == 70-th k-point nmo = 68 (-0.00000,-0.48986,0.48986) ==
+ == 71-th k-point nmo = 68 (0.12246,-0.36739,0.36739) ==
+ == 72-th k-point nmo = 68 (0.24493,-0.24493,0.24493) ==
+ == 73-th k-point nmo = 68 (0.36739,-0.12246,0.12246) ==
+ == 74-th k-point nmo = 68 (0.48986,0.00000,0.00000) ==
+ == 75-th k-point nmo = 68 (-0.61232,0.12246,0.12246) ==
+ == 76-th k-point nmo = 68 (-0.48986,0.24493,-0.00000) ==
+ == 77-th k-point nmo = 68 (-0.36739,0.36739,-0.12246) ==
+ == 78-th k-point nmo = 68 (-0.24493,0.48986,-0.24493) ==
+ == 79-th k-point nmo = 68 (-0.12246,0.61232,-0.36739) ==
+ == 80-th k-point nmo = 68 (-0.48986,-0.00000,0.24493) ==
+ == 81-th k-point nmo = 68 (-0.36739,0.12246,0.12246) ==
+ == 82-th k-point nmo = 68 (-0.24493,0.24493,-0.00000) ==
+ == 83-th k-point nmo = 68 (-0.12246,0.36739,-0.12246) ==
+ == 84-th k-point nmo = 68 (0.00000,0.48986,-0.24493) ==
+ == 85-th k-point nmo = 68 (-0.36739,-0.12246,0.36739) ==
+ == 86-th k-point nmo = 68 (-0.24493,0.00000,0.24493) ==
+ == 87-th k-point nmo = 68 (-0.12246,0.12246,0.12246) ==
+ == 88-th k-point nmo = 68 (0.00000,0.24493,0.00000) ==
+ == 89-th k-point nmo = 68 (0.12246,0.36739,-0.12246) ==
+ == 90-th k-point nmo = 68 (-0.24493,-0.24493,0.48986) ==
+ == 91-th k-point nmo = 68 (-0.12246,-0.12246,0.36739) ==
+ == 92-th k-point nmo = 68 (0.00000,0.00000,0.24493) ==
+ == 93-th k-point nmo = 68 (0.12246,0.12246,0.12246) ==
+ == 94-th k-point nmo = 68 (0.24493,0.24493,0.00000) ==
+ == 95-th k-point nmo = 68 (-0.12246,-0.36739,0.61232) ==
+ == 96-th k-point nmo = 68 (0.00000,-0.24493,0.48986) ==
+ == 97-th k-point nmo = 68 (0.12246,-0.12246,0.36739) ==
+ == 98-th k-point nmo = 68 (0.24493,0.00000,0.24493) ==
+ == 99-th k-point nmo = 68 (0.36739,0.12246,0.12246) ==
+ == 100-th k-point nmo = 68 (-0.73479,0.24493,0.24493) ==
+ == 101-th k-point nmo = 68 (-0.61232,0.36739,0.12246) ==
+ == 102-th k-point nmo = 68 (-0.48986,0.48986,-0.00000) ==
+ == 103-th k-point nmo = 68 (-0.36739,0.61232,-0.12246) ==
+ == 104-th k-point nmo = 68 (-0.24493,0.73479,-0.24493) ==
+ == 105-th k-point nmo = 68 (-0.61232,0.12246,0.36739) ==
+ == 106-th k-point nmo = 68 (-0.48986,0.24493,0.24493) ==
+ == 107-th k-point nmo = 68 (-0.36739,0.36739,0.12246) ==
+ == 108-th k-point nmo = 68 (-0.24493,0.48986,-0.00000) ==
+ == 109-th k-point nmo = 68 (-0.12246,0.61232,-0.12246) ==
+ == 110-th k-point nmo = 68 (-0.48986,0.00000,0.48986) ==
+ == 111-th k-point nmo = 68 (-0.36739,0.12246,0.36739) ==
+ == 112-th k-point nmo = 68 (-0.24493,0.24493,0.24493) ==
+ == 113-th k-point nmo = 68 (-0.12246,0.36739,0.12246) ==
+ == 114-th k-point nmo = 68 (0.00000,0.48986,0.00000) ==
+ == 115-th k-point nmo = 68 (-0.36739,-0.12246,0.61232) ==
+ == 116-th k-point nmo = 68 (-0.24493,0.00000,0.48986) ==
+ == 117-th k-point nmo = 68 (-0.12246,0.12246,0.36739) ==
+ == 118-th k-point nmo = 68 (0.00000,0.24493,0.24493) ==
+ == 119-th k-point nmo = 68 (0.12246,0.36739,0.12246) ==
+ == 120-th k-point nmo = 68 (-0.24493,-0.24493,0.73479) ==
+ == 121-th k-point nmo = 68 (-0.12246,-0.12246,0.61232) ==
+ == 122-th k-point nmo = 68 (0.00000,0.00000,0.48986) ==
+ == 123-th k-point nmo = 68 (0.12246,0.12246,0.36739) ==
+ == 124-th k-point nmo = 68 (0.24493,0.24493,0.24493) ==
+
+ Generate autoSAD guess
+backing up fragment data
+Atom # 0: si, charge: 0, multiplicity: 3.000000
+writing autosad to fragment context
+Settings for isolated fragments: 
+  frgm_gamma: TRUE
+  frgm_center: FALSE
+
+    Running SCF for isolated atom #0
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//si_2_ccpvtz_omega_0.3_555.scratch20250909091709/autosad_frgmt_0/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//si_2_ccpvtz_omega_0.3_555.scratch20250909091709/autosad_frgmt_0/frgmt_job.out
+    Fragment job begins at Tue Sep  9 09:17:14 2025
+
+ Integrated density by DFT XC:
+   Numerical integral  =    13.999999324657
+   Relative error      =     0.0000048239 %
+Final energy components:
+ DFT Correlation            Energy =  -0.48419291960634
+ DFT Exchange               Energy = -20.15457765326661
+ Kinetic (alpha)            Energy = 145.16532593944470
+ Kinetic (beta)             Energy = 143.17442658177279
+ Nuclear Attraction (alpha) Energy = -351.25548439806869
+ Nuclear Attraction (beta)  Energy = -337.63206466478050
+ Nuclear Repulsion          Energy =   0.00000000000000
+ SEOQF                      Energy =   0.00000000065999
+ Total Coulomb              Energy = 131.95997984351325
+----------------------------------------------
+    SCF Energy: -289.2265872703
+   Total fragment job time:  0.48 s.
+restoring fragment data
+
+ ------------------------------------------------------------------------
+ Allocate 30450000 B from available memory: 1048566488800 B
+ Time for generating SCF guess: 0.50 s
+
+ Allocate 78392 B from available memory: 1048536038816 B
+ Selected algorithms for each term:
+  kpts_kinetic -> @0x151881e1f680
+  kpts_nn -> @0x151881e1f800
+  kpts_rij_bigmem -> @0x151881e1f3e0
+  kpts_vnuc_df -> @0x151881e1f380
+  kpts_xc -> @0x151881e1f2c0
+ Time for computing kinetic matrix is 1.96 s
+Start calculating Vnuc CC type!
+ Time for computing nuclear attraction matrix is 2.30 s
+Compute (P|Q) and use solve on the fly!
+Maximum distance between P and Q is 36.45654200218807
+Number of images for (P|Qn) is 1633
+ Time for computing 2e2c SR integral is 0.14 s
+Maximum dynamic memory per thread for 2e3c SR integrals: 0.064 GiB
+Batch size for basis function pair is 2451 out of 2451
+ === bvk cell = 0 has 100.000 % of the basis function pairs === 
+ === bvk cell = 1 has 94.492 % of the basis function pairs === 
+ === bvk cell = 2 has 51.000 % of the basis function pairs === 
+ === bvk cell = 3 has 43.778 % of the basis function pairs === 
+ === bvk cell = 4 has 92.738 % of the basis function pairs === 
+ === bvk cell = 5 has 94.492 % of the basis function pairs === 
+ === bvk cell = 6 has 66.463 % of the basis function pairs === 
+ === bvk cell = 7 has 28.152 % of the basis function pairs === 
+ === bvk cell = 8 has 59.812 % of the basis function pairs === 
+ === bvk cell = 9 has 95.675 % of the basis function pairs === 
+ === bvk cell = 10 has 51.000 % of the basis function pairs === 
+ === bvk cell = 11 has 28.152 % of the basis function pairs === 
+ === bvk cell = 12 has 17.013 % of the basis function pairs === 
+ === bvk cell = 13 has 41.820 % of the basis function pairs === 
+ === bvk cell = 14 has 64.586 % of the basis function pairs === 
+ === bvk cell = 15 has 43.778 % of the basis function pairs === 
+ === bvk cell = 16 has 59.812 % of the basis function pairs === 
+ === bvk cell = 17 has 41.820 % of the basis function pairs === 
+ === bvk cell = 18 has 19.747 % of the basis function pairs === 
+ === bvk cell = 19 has 25.745 % of the basis function pairs === 
+ === bvk cell = 20 has 92.738 % of the basis function pairs === 
+ === bvk cell = 21 has 95.675 % of the basis function pairs === 
+ === bvk cell = 22 has 64.586 % of the basis function pairs === 
+ === bvk cell = 23 has 25.745 % of the basis function pairs === 
+ === bvk cell = 24 has 58.752 % of the basis function pairs === 
+ === bvk cell = 25 has 94.492 % of the basis function pairs === 
+ === bvk cell = 26 has 66.463 % of the basis function pairs === 
+ === bvk cell = 27 has 28.152 % of the basis function pairs === 
+ === bvk cell = 28 has 59.812 % of the basis function pairs === 
+ === bvk cell = 29 has 95.675 % of the basis function pairs === 
+ === bvk cell = 30 has 66.463 % of the basis function pairs === 
+ === bvk cell = 31 has 30.477 % of the basis function pairs === 
+ === bvk cell = 32 has 23.949 % of the basis function pairs === 
+ === bvk cell = 33 has 60.588 % of the basis function pairs === 
+ === bvk cell = 34 has 83.476 % of the basis function pairs === 
+ === bvk cell = 35 has 28.152 % of the basis function pairs === 
+ === bvk cell = 36 has 23.949 % of the basis function pairs === 
+ === bvk cell = 37 has 20.971 % of the basis function pairs === 
+ === bvk cell = 38 has 31.089 % of the basis function pairs === 
+ === bvk cell = 39 has 34.884 % of the basis function pairs === 
+ === bvk cell = 40 has 59.812 % of the basis function pairs === 
+ === bvk cell = 41 has 60.588 % of the basis function pairs === 
+ === bvk cell = 42 has 31.089 % of the basis function pairs === 
+ === bvk cell = 43 has 13.505 % of the basis function pairs === 
+ === bvk cell = 44 has 31.253 % of the basis function pairs === 
+ === bvk cell = 45 has 95.675 % of the basis function pairs === 
+ === bvk cell = 46 has 83.476 % of the basis function pairs === 
+ === bvk cell = 47 has 34.884 % of the basis function pairs === 
+ === bvk cell = 48 has 31.253 % of the basis function pairs === 
+ === bvk cell = 49 has 78.254 % of the basis function pairs === 
+ === bvk cell = 50 has 51.000 % of the basis function pairs === 
+ === bvk cell = 51 has 28.152 % of the basis function pairs === 
+ === bvk cell = 52 has 17.013 % of the basis function pairs === 
+ === bvk cell = 53 has 41.820 % of the basis function pairs === 
+ === bvk cell = 54 has 64.586 % of the basis function pairs === 
+ === bvk cell = 55 has 28.152 % of the basis function pairs === 
+ === bvk cell = 56 has 23.949 % of the basis function pairs === 
+ === bvk cell = 57 has 20.971 % of the basis function pairs === 
+ === bvk cell = 58 has 31.089 % of the basis function pairs === 
+ === bvk cell = 59 has 34.884 % of the basis function pairs === 
+ === bvk cell = 60 has 17.013 % of the basis function pairs === 
+ === bvk cell = 61 has 20.971 % of the basis function pairs === 
+ === bvk cell = 62 has 5.794 % of the basis function pairs === 
+ === bvk cell = 63 has 16.075 % of the basis function pairs === 
+ === bvk cell = 64 has 14.606 % of the basis function pairs === 
+ === bvk cell = 65 has 41.820 % of the basis function pairs === 
+ === bvk cell = 66 has 31.089 % of the basis function pairs === 
+ === bvk cell = 67 has 16.075 % of the basis function pairs === 
+ === bvk cell = 68 has 12.525 % of the basis function pairs === 
+ === bvk cell = 69 has 28.641 % of the basis function pairs === 
+ === bvk cell = 70 has 64.586 % of the basis function pairs === 
+ === bvk cell = 71 has 34.884 % of the basis function pairs === 
+ === bvk cell = 72 has 14.606 % of the basis function pairs === 
+ === bvk cell = 73 has 28.641 % of the basis function pairs === 
+ === bvk cell = 74 has 60.588 % of the basis function pairs === 
+ === bvk cell = 75 has 43.778 % of the basis function pairs === 
+ === bvk cell = 76 has 59.812 % of the basis function pairs === 
+ === bvk cell = 77 has 41.820 % of the basis function pairs === 
+ === bvk cell = 78 has 19.747 % of the basis function pairs === 
+ === bvk cell = 79 has 25.745 % of the basis function pairs === 
+ === bvk cell = 80 has 59.812 % of the basis function pairs === 
+ === bvk cell = 81 has 60.588 % of the basis function pairs === 
+ === bvk cell = 82 has 31.089 % of the basis function pairs === 
+ === bvk cell = 83 has 13.505 % of the basis function pairs === 
+ === bvk cell = 84 has 31.253 % of the basis function pairs === 
+ === bvk cell = 85 has 41.820 % of the basis function pairs === 
+ === bvk cell = 86 has 31.089 % of the basis function pairs === 
+ === bvk cell = 87 has 16.075 % of the basis function pairs === 
+ === bvk cell = 88 has 12.525 % of the basis function pairs === 
+ === bvk cell = 89 has 28.641 % of the basis function pairs === 
+ === bvk cell = 90 has 19.747 % of the basis function pairs === 
+ === bvk cell = 91 has 13.505 % of the basis function pairs === 
+ === bvk cell = 92 has 12.525 % of the basis function pairs === 
+ === bvk cell = 93 has 4.978 % of the basis function pairs === 
+ === bvk cell = 94 has 20.971 % of the basis function pairs === 
+ === bvk cell = 95 has 25.745 % of the basis function pairs === 
+ === bvk cell = 96 has 31.253 % of the basis function pairs === 
+ === bvk cell = 97 has 28.641 % of the basis function pairs === 
+ === bvk cell = 98 has 20.971 % of the basis function pairs === 
+ === bvk cell = 99 has 25.092 % of the basis function pairs === 
+ === bvk cell = 100 has 92.738 % of the basis function pairs === 
+ === bvk cell = 101 has 95.675 % of the basis function pairs === 
+ === bvk cell = 102 has 64.586 % of the basis function pairs === 
+ === bvk cell = 103 has 25.745 % of the basis function pairs === 
+ === bvk cell = 104 has 58.752 % of the basis function pairs === 
+ === bvk cell = 105 has 95.675 % of the basis function pairs === 
+ === bvk cell = 106 has 83.476 % of the basis function pairs === 
+ === bvk cell = 107 has 34.884 % of the basis function pairs === 
+ === bvk cell = 108 has 31.253 % of the basis function pairs === 
+ === bvk cell = 109 has 78.254 % of the basis function pairs === 
+ === bvk cell = 110 has 64.586 % of the basis function pairs === 
+ === bvk cell = 111 has 34.884 % of the basis function pairs === 
+ === bvk cell = 112 has 14.606 % of the basis function pairs === 
+ === bvk cell = 113 has 28.641 % of the basis function pairs === 
+ === bvk cell = 114 has 60.588 % of the basis function pairs === 
+ === bvk cell = 115 has 25.745 % of the basis function pairs === 
+ === bvk cell = 116 has 31.253 % of the basis function pairs === 
+ === bvk cell = 117 has 28.641 % of the basis function pairs === 
+ === bvk cell = 118 has 20.971 % of the basis function pairs === 
+ === bvk cell = 119 has 25.092 % of the basis function pairs === 
+ === bvk cell = 120 has 58.752 % of the basis function pairs === 
+ === bvk cell = 121 has 78.254 % of the basis function pairs === 
+ === bvk cell = 122 has 60.588 % of the basis function pairs === 
+ === bvk cell = 123 has 25.092 % of the basis function pairs === 
+ === bvk cell = 124 has 24.480 % of the basis function pairs === 
+Static memory requirement for 2e3c SR integrals: 0.240 GB
+There are 1 munu batches for computing 2e3c SR integrals with latsum
+There are 4 Q batches for computing 2e3c SR integrals with latsum
+ Time for computing 2e3c SR integral (CC) is 4.11 s
+ Time for RI-J this SCF iteration is 4.41 s
+ Time for RI-J this SCF iteration is 0.12 s
+ ----------------------------------------------
+ Guess energy: -578.7851899453
+ ----------------------------------------------
+ Guess energy components:
+ DFT Correlation    Energy =  -1.09479568890537
+ DFT Exchange       Energy = -40.55296837577573
+ Kinetic            Energy = 577.25697471546550
+ Nuclear Attraction Energy = -1185.75120376932091
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 174.25046245791123
+ ----------------------------------------------
+  Cycle       Energy         DIIS error
+ ----------------------------------------------
+ Time for RI-J this SCF iteration is 0.20 s
+    1    -578.7863786066      7.77e-04  
+ Energy components after cycle 1:
+ DFT Correlation    Energy =  -1.09706758372462
+ DFT Exchange       Energy = -40.51271398771759
+ Kinetic            Energy = 576.90890767287055
+ Nuclear Attraction Energy = -1184.96227257667761
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.77042715328457
+    2    -578.7863786066      3.52e-04  
+ Energy components after cycle 2:
+ DFT Correlation    Energy =  -1.09706758372462
+ DFT Exchange       Energy = -40.51271398771759
+ Kinetic            Energy = 576.90890767287055
+ Nuclear Attraction Energy = -1184.96227257667761
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.77042715328457
+ ----------------------------------------------
+  Cycle       Energy        RMS Gradient
+ ----------------------------------------------
+ Time for RI-J this SCF iteration is 0.35 s
+    1    -578.7865026334      6.55e-03   Normal BFGS step
+ Energy components after cycle 1:
+ DFT Correlation    Energy =  -1.09642009293970
+ DFT Exchange       Energy = -40.53469573572074
+ Kinetic            Energy = 577.15314084368458
+ Nuclear Attraction Energy = -1185.41770262492855
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 174.00283426116087
+ Time for RI-J this SCF iteration is 0.13 s
+    2    -578.7865295033      2.39e-03   Normal BFGS step
+ Energy components after cycle 2:
+ DFT Correlation    Energy =  -1.09655102979986
+ DFT Exchange       Energy = -40.52653426283438
+ Kinetic            Energy = 577.05224039988559
+ Nuclear Attraction Energy = -1185.24462605320446
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.92260072732333
+ Time for RI-J this SCF iteration is 0.11 s
+    3    -578.7865296364      1.20e-04   Normal BFGS step
+ Energy components after cycle 3:
+ DFT Correlation    Energy =  -1.09657237322082
+ DFT Exchange       Energy = -40.52707855849725
+ Kinetic            Energy = 577.06181787400340
+ Nuclear Attraction Energy = -1185.25727866863076
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.92624137463108
+ Time for RI-J this SCF iteration is 0.12 s
+    4    -578.7865296514      4.21e-05   Normal BFGS step
+ Energy components after cycle 4:
+ DFT Correlation    Energy =  -1.09656645011558
+ DFT Exchange       Energy = -40.52698210901003
+ Kinetic            Energy = 577.05992005485768
+ Nuclear Attraction Energy = -1185.25496190841818
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.92572004595428
+ Time for RI-J this SCF iteration is 0.11 s
+    5    -578.7865296514      1.75e-07   Normal BFGS step
+ Energy components after cycle 5:
+ DFT Correlation    Energy =  -1.09656646154892
+ DFT Exchange       Energy = -40.52698165252010
+ Kinetic            Energy = 577.05991484242293
+ Nuclear Attraction Energy = -1185.25495236952975
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.92571527444403
+    5    -578.7865296514      1.75e-07  Convergence criterion met
+ ----------------------------------------------
+ Final energy components:
+ DFT Correlation    Energy =  -1.09656646154892
+ DFT Exchange       Energy = -40.52698165252010
+ Kinetic            Energy = 577.05991484242293
+ Nuclear Attraction Energy = -1185.25495236952975
+ Nuclear Repulsion  Energy = -102.89365928466421
+ Total Coulomb      Energy = 173.92571527444403
+ ----------------------------------------------
+ Final energy is -578.7865296514
+
+ SCF time:   CPU 959.96s  wall 38.00s 
+ Total wall time for computing Kinetic: 0.00 s (8)
+ Total wall time for computing RIJ-BIGMEM: 5.55 s (8)
+ Total wall time for computing RSDF Vnuc: 0.03 s (8)
+ Total wall time for computing DFT XC: 21.72 s (8)
+ ---------------------------------------------------------------------------
+                        Orbital Energies (a.u.)
+ ---------------------------------------------------------------------------
+ == 0-th k-point (-0.24493,-0.24493,-0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 1-th k-point (-0.12246,-0.12246,-0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 2-th k-point (-0.00000,-0.00000,-0.48986) occupation: 14==
+ -64.99141 -64.99141 -4.62053 -4.62044 -3.03140 -3.03140 -3.03109 -3.03092 -3.03065 -3.03065
+ -0.06385 0.04932 0.17586 0.17586 0.29925 0.32674 0.59459 0.59459 0.68723 0.69429
+ 0.75506 0.75506 0.78410 0.83141 0.91130 0.94986 0.94986 0.99514 1.16984 1.16984
+ 1.18340 1.18836 1.24957 1.32889 1.40998 1.40998 1.64036 1.64356 1.64356 1.73120
+ 1.76878 1.76884 1.83492 1.83655 1.83655 1.96005 1.96005 1.97470 2.14525 2.15107
+ 2.16653 2.16653 2.25297 2.33093 2.33093 2.34890 2.47962 2.55271 2.55271 2.89839
+ 3.28025 3.28026 3.60637 3.96145 4.22563 4.22563 5.35435 5.68059
+ == 3-th k-point (0.12246,0.12246,-0.61232) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49205
+ == 4-th k-point (0.24493,0.24493,-0.73479) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 5-th k-point (-0.12246,-0.36739,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 6-th k-point (-0.00000,-0.24493,-0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 7-th k-point (0.12246,-0.12246,-0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 8-th k-point (0.24493,-0.00000,-0.48986) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 9-th k-point (0.36739,0.12246,-0.61232) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 10-th k-point (-0.00000,-0.48986,0.00000) occupation: 14==
+ -64.99141 -64.99141 -4.62053 -4.62044 -3.03140 -3.03140 -3.03109 -3.03092 -3.03065 -3.03065
+ -0.06385 0.04932 0.17586 0.17586 0.29925 0.32674 0.59459 0.59459 0.68723 0.69429
+ 0.75506 0.75506 0.78410 0.83141 0.91130 0.94986 0.94986 0.99514 1.16984 1.16984
+ 1.18340 1.18836 1.24957 1.32889 1.40998 1.40998 1.64036 1.64356 1.64356 1.73120
+ 1.76878 1.76884 1.83492 1.83655 1.83655 1.96005 1.96005 1.97470 2.14525 2.15107
+ 2.16653 2.16653 2.25297 2.33093 2.33093 2.34890 2.47962 2.55271 2.55271 2.89839
+ 3.28025 3.28026 3.60637 3.96145 4.22563 4.22563 5.35435 5.68059
+ == 11-th k-point (0.12246,-0.36739,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 12-th k-point (0.24493,-0.24493,-0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 13-th k-point (0.36739,-0.12246,-0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 14-th k-point (0.48986,0.00000,-0.48986) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49206
+ == 15-th k-point (0.12246,-0.61232,0.12246) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49205
+ == 16-th k-point (0.24493,-0.48986,0.00000) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 17-th k-point (0.36739,-0.36739,-0.12246) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 18-th k-point (0.48986,-0.24493,-0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 19-th k-point (0.61232,-0.12246,-0.36739) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 20-th k-point (0.24493,-0.73479,0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 21-th k-point (0.36739,-0.61232,0.12246) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 22-th k-point (0.48986,-0.48986,0.00000) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49206
+ == 23-th k-point (0.61232,-0.36739,-0.12246) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 24-th k-point (0.73479,-0.24493,-0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 25-th k-point (-0.36739,-0.12246,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 26-th k-point (-0.24493,-0.00000,-0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 27-th k-point (-0.12246,0.12246,-0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 28-th k-point (-0.00000,0.24493,-0.48986) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 29-th k-point (0.12246,0.36739,-0.61232) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 30-th k-point (-0.24493,-0.24493,0.00000) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 31-th k-point (-0.12246,-0.12246,-0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21960 2.21960 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 32-th k-point (-0.00000,-0.00000,-0.24493) occupation: 14==
+ -64.99142 -64.99140 -4.62060 -4.62036 -3.03138 -3.03138 -3.03127 -3.03078 -3.03069 -3.03069
+ -0.13808 0.18038 0.22090 0.22090 0.33113 0.42266 0.45905 0.45905 0.54360 0.60072
+ 0.65972 0.75423 0.75423 0.77914 0.98834 0.98834 1.02977 1.04642 1.08762 1.26436
+ 1.31653 1.33001 1.33001 1.46034 1.46034 1.51295 1.53933 1.56611 1.56611 1.58927
+ 1.75949 1.78466 1.78902 1.78902 1.88866 1.94941 1.99008 1.99008 2.02311 2.03820
+ 2.03820 2.06516 2.14723 2.17850 2.25260 2.25260 2.39461 2.58942 2.61057 2.61057
+ 3.54021 3.81314 3.81314 3.92778 4.15136 4.15136 5.11399 6.06755
+ == 33-th k-point (0.12246,0.12246,-0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 34-th k-point (0.24493,0.24493,-0.48986) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 35-th k-point (-0.12246,-0.36739,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 36-th k-point (-0.00000,-0.24493,0.00000) occupation: 14==
+ -64.99142 -64.99140 -4.62060 -4.62036 -3.03138 -3.03138 -3.03127 -3.03078 -3.03069 -3.03069
+ -0.13808 0.18038 0.22090 0.22090 0.33113 0.42266 0.45905 0.45905 0.54360 0.60072
+ 0.65972 0.75423 0.75423 0.77914 0.98834 0.98834 1.02977 1.04642 1.08762 1.26436
+ 1.31653 1.33001 1.33001 1.46034 1.46034 1.51295 1.53933 1.56611 1.56611 1.58927
+ 1.75949 1.78466 1.78902 1.78902 1.88866 1.94941 1.99008 1.99008 2.02311 2.03820
+ 2.03820 2.06516 2.14723 2.17850 2.25260 2.25260 2.39461 2.58942 2.61057 2.61057
+ 3.54021 3.81314 3.81314 3.92778 4.15136 4.15136 5.11399 6.06755
+ == 37-th k-point (0.12246,-0.12246,-0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21961 2.21961 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 38-th k-point (0.24493,0.00000,-0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 39-th k-point (0.36739,0.12246,-0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 40-th k-point (-0.00000,-0.48986,0.24493) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 41-th k-point (0.12246,-0.36739,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 42-th k-point (0.24493,-0.24493,0.00000) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 43-th k-point (0.36739,-0.12246,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 44-th k-point (0.48986,0.00000,-0.24493) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 45-th k-point (0.12246,-0.61232,0.36739) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 46-th k-point (0.24493,-0.48986,0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 47-th k-point (0.36739,-0.36739,0.12246) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 48-th k-point (0.48986,-0.24493,0.00000) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 49-th k-point (0.61232,-0.12246,-0.12246) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49205
+ == 50-th k-point (-0.48986,-0.00000,-0.00000) occupation: 14==
+ -64.99141 -64.99141 -4.62053 -4.62044 -3.03140 -3.03140 -3.03109 -3.03092 -3.03065 -3.03065
+ -0.06385 0.04932 0.17586 0.17586 0.29925 0.32674 0.59459 0.59459 0.68723 0.69429
+ 0.75506 0.75506 0.78410 0.83141 0.91130 0.94986 0.94986 0.99514 1.16984 1.16984
+ 1.18340 1.18836 1.24957 1.32889 1.40998 1.40998 1.64036 1.64356 1.64356 1.73120
+ 1.76878 1.76884 1.83492 1.83655 1.83655 1.96005 1.96005 1.97470 2.14525 2.15107
+ 2.16653 2.16653 2.25297 2.33093 2.33093 2.34890 2.47962 2.55271 2.55271 2.89839
+ 3.28026 3.28026 3.60637 3.96145 4.22563 4.22563 5.35435 5.68059
+ == 51-th k-point (-0.36739,0.12246,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 52-th k-point (-0.24493,0.24493,-0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 53-th k-point (-0.12246,0.36739,-0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 54-th k-point (0.00000,0.48986,-0.48986) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49206
+ == 55-th k-point (-0.36739,-0.12246,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 56-th k-point (-0.24493,-0.00000,-0.00000) occupation: 14==
+ -64.99142 -64.99140 -4.62060 -4.62036 -3.03138 -3.03138 -3.03127 -3.03078 -3.03069 -3.03069
+ -0.13808 0.18038 0.22090 0.22090 0.33113 0.42266 0.45905 0.45905 0.54360 0.60072
+ 0.65972 0.75423 0.75423 0.77914 0.98834 0.98834 1.02977 1.04642 1.08762 1.26436
+ 1.31653 1.33001 1.33001 1.46034 1.46034 1.51295 1.53933 1.56611 1.56611 1.58927
+ 1.75949 1.78466 1.78902 1.78902 1.88866 1.94941 1.99008 1.99008 2.02311 2.03820
+ 2.03820 2.06516 2.14723 2.17850 2.25260 2.25260 2.39461 2.58942 2.61057 2.61057
+ 3.54021 3.81314 3.81314 3.92778 4.15136 4.15136 5.11399 6.06755
+ == 57-th k-point (-0.12246,0.12246,-0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21961 2.21961 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 58-th k-point (0.00000,0.24493,-0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 59-th k-point (0.12246,0.36739,-0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 60-th k-point (-0.24493,-0.24493,0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 61-th k-point (-0.12246,-0.12246,0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21961 2.21961 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 62-th k-point (0.00000,0.00000,0.00000) occupation: 14==
+ -64.99139 -64.99135 -4.62060 -4.62033 -3.03132 -3.03132 -3.03132 -3.03072 -3.03072 -3.03072
+ -0.16364 0.27670 0.27670 0.27670 0.37150 0.37150 0.37150 0.40215 0.57186 0.57186
+ 0.58496 0.70677 0.70677 0.70677 0.91988 1.18887 1.18887 1.18887 1.22228 1.22228
+ 1.24220 1.24220 1.24220 1.37601 1.37601 1.37601 1.63569 1.63569 1.63569 1.79704
+ 1.79704 1.86395 1.86395 1.86395 1.93296 1.95629 1.95629 1.95629 1.96779 1.96779
+ 2.07225 2.07225 2.07225 2.13503 2.13503 2.13503 2.26820 2.74174 2.86264 2.86264
+ 2.86265 3.46865 3.46865 3.46865 4.11646 4.11646 4.11647 4.46716
+ == 63-th k-point (0.12246,0.12246,-0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21961 2.21961 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 64-th k-point (0.24493,0.24493,-0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 65-th k-point (-0.12246,-0.36739,0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 66-th k-point (-0.00000,-0.24493,0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 67-th k-point (0.12246,-0.12246,0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21961 2.21961 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 68-th k-point (0.24493,0.00000,0.00000) occupation: 14==
+ -64.99142 -64.99140 -4.62060 -4.62036 -3.03138 -3.03138 -3.03127 -3.03078 -3.03069 -3.03069
+ -0.13808 0.18038 0.22090 0.22090 0.33113 0.42266 0.45905 0.45905 0.54360 0.60072
+ 0.65972 0.75423 0.75423 0.77914 0.98834 0.98834 1.02977 1.04642 1.08762 1.26436
+ 1.31653 1.33001 1.33001 1.46034 1.46034 1.51295 1.53933 1.56611 1.56611 1.58927
+ 1.75949 1.78466 1.78902 1.78902 1.88866 1.94941 1.99008 1.99008 2.02311 2.03820
+ 2.03820 2.06516 2.14723 2.17850 2.25260 2.25260 2.39461 2.58942 2.61057 2.61057
+ 3.54021 3.81314 3.81314 3.92778 4.15136 4.15136 5.11399 6.06755
+ == 69-th k-point (0.36739,0.12246,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 70-th k-point (-0.00000,-0.48986,0.48986) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49206
+ == 71-th k-point (0.12246,-0.36739,0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 72-th k-point (0.24493,-0.24493,0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 73-th k-point (0.36739,-0.12246,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 74-th k-point (0.48986,0.00000,0.00000) occupation: 14==
+ -64.99141 -64.99141 -4.62053 -4.62044 -3.03140 -3.03140 -3.03109 -3.03092 -3.03065 -3.03065
+ -0.06385 0.04932 0.17586 0.17586 0.29925 0.32674 0.59459 0.59459 0.68723 0.69429
+ 0.75506 0.75506 0.78410 0.83141 0.91130 0.94986 0.94986 0.99514 1.16984 1.16984
+ 1.18340 1.18836 1.24957 1.32889 1.40998 1.40998 1.64036 1.64356 1.64356 1.73120
+ 1.76878 1.76884 1.83492 1.83655 1.83655 1.96005 1.96005 1.97470 2.14525 2.15107
+ 2.16653 2.16653 2.25297 2.33093 2.33093 2.34890 2.47962 2.55271 2.55271 2.89839
+ 3.28026 3.28026 3.60637 3.96145 4.22563 4.22563 5.35435 5.68059
+ == 75-th k-point (-0.61232,0.12246,0.12246) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49205
+ == 76-th k-point (-0.48986,0.24493,-0.00000) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 77-th k-point (-0.36739,0.36739,-0.12246) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 78-th k-point (-0.24493,0.48986,-0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 79-th k-point (-0.12246,0.61232,-0.36739) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 80-th k-point (-0.48986,-0.00000,0.24493) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 81-th k-point (-0.36739,0.12246,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 82-th k-point (-0.24493,0.24493,-0.00000) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 83-th k-point (-0.12246,0.36739,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 84-th k-point (0.00000,0.48986,-0.24493) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 85-th k-point (-0.36739,-0.12246,0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 86-th k-point (-0.24493,0.00000,0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 87-th k-point (-0.12246,0.12246,0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21961 2.21961 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 88-th k-point (0.00000,0.24493,0.00000) occupation: 14==
+ -64.99142 -64.99140 -4.62060 -4.62036 -3.03138 -3.03138 -3.03127 -3.03078 -3.03069 -3.03069
+ -0.13808 0.18038 0.22090 0.22090 0.33113 0.42266 0.45905 0.45905 0.54360 0.60072
+ 0.65972 0.75423 0.75423 0.77914 0.98834 0.98834 1.02977 1.04642 1.08762 1.26436
+ 1.31653 1.33001 1.33001 1.46034 1.46034 1.51295 1.53933 1.56611 1.56611 1.58927
+ 1.75949 1.78466 1.78902 1.78902 1.88866 1.94941 1.99008 1.99008 2.02311 2.03820
+ 2.03820 2.06516 2.14723 2.17850 2.25260 2.25260 2.39461 2.58942 2.61057 2.61057
+ 3.54021 3.81314 3.81314 3.92778 4.15136 4.15136 5.11399 6.06755
+ == 89-th k-point (0.12246,0.36739,-0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 90-th k-point (-0.24493,-0.24493,0.48986) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 91-th k-point (-0.12246,-0.12246,0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 92-th k-point (0.00000,0.00000,0.24493) occupation: 14==
+ -64.99142 -64.99140 -4.62060 -4.62036 -3.03138 -3.03138 -3.03127 -3.03078 -3.03069 -3.03069
+ -0.13808 0.18038 0.22090 0.22090 0.33113 0.42266 0.45905 0.45905 0.54360 0.60072
+ 0.65972 0.75423 0.75423 0.77914 0.98834 0.98834 1.02977 1.04642 1.08762 1.26436
+ 1.31653 1.33001 1.33001 1.46034 1.46034 1.51295 1.53933 1.56611 1.56611 1.58927
+ 1.75949 1.78466 1.78902 1.78902 1.88866 1.94941 1.99008 1.99008 2.02311 2.03820
+ 2.03820 2.06516 2.14723 2.17850 2.25260 2.25260 2.39461 2.58942 2.61057 2.61057
+ 3.54021 3.81314 3.81314 3.92778 4.15136 4.15136 5.11399 6.06755
+ == 93-th k-point (0.12246,0.12246,0.12246) occupation: 14==
+ -64.99144 -64.99139 -4.62060 -4.62035 -3.03135 -3.03135 -3.03130 -3.03074 -3.03070 -3.03070
+ -0.14462 0.16554 0.25478 0.25478 0.35977 0.40170 0.40170 0.50028 0.54621 0.54621
+ 0.62485 0.68811 0.80556 0.80556 0.98243 1.01317 1.01317 1.04194 1.21915 1.21915
+ 1.28679 1.28679 1.38931 1.39049 1.44794 1.55223 1.55223 1.58715 1.58715 1.66724
+ 1.66724 1.78264 1.78264 1.80674 1.90058 1.94905 1.94905 1.97435 1.99765 2.04379
+ 2.08342 2.08342 2.21960 2.21960 2.23484 2.27123 2.27123 2.44881 2.68387 2.68387
+ 3.33672 3.76892 3.76892 3.89332 4.03909 4.03909 4.44427 7.17787
+ == 94-th k-point (0.24493,0.24493,0.00000) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 95-th k-point (-0.12246,-0.36739,0.61232) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 96-th k-point (0.00000,-0.24493,0.48986) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 97-th k-point (0.12246,-0.12246,0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 98-th k-point (0.24493,0.00000,0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 99-th k-point (0.36739,0.12246,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 100-th k-point (-0.73479,0.24493,0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 101-th k-point (-0.61232,0.36739,0.12246) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 102-th k-point (-0.48986,0.48986,-0.00000) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49206
+ == 103-th k-point (-0.36739,0.61232,-0.12246) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 104-th k-point (-0.24493,0.73479,-0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 105-th k-point (-0.61232,0.12246,0.36739) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 106-th k-point (-0.48986,0.24493,0.24493) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 107-th k-point (-0.36739,0.36739,0.12246) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 108-th k-point (-0.24493,0.48986,-0.00000) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 109-th k-point (-0.12246,0.61232,-0.12246) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49205
+ == 110-th k-point (-0.48986,0.00000,0.48986) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49206
+ == 111-th k-point (-0.36739,0.12246,0.36739) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50279 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 112-th k-point (-0.24493,0.24493,0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ == 113-th k-point (-0.12246,0.36739,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 114-th k-point (0.00000,0.48986,0.00000) occupation: 14==
+ -64.99141 -64.99141 -4.62053 -4.62044 -3.03140 -3.03140 -3.03109 -3.03092 -3.03065 -3.03065
+ -0.06385 0.04932 0.17586 0.17586 0.29925 0.32674 0.59459 0.59459 0.68723 0.69429
+ 0.75506 0.75506 0.78410 0.83141 0.91130 0.94986 0.94986 0.99514 1.16984 1.16984
+ 1.18340 1.18836 1.24957 1.32889 1.40998 1.40998 1.64036 1.64356 1.64356 1.73120
+ 1.76878 1.76884 1.83492 1.83655 1.83655 1.96005 1.96005 1.97470 2.14525 2.15107
+ 2.16653 2.16653 2.25297 2.33093 2.33093 2.34890 2.47962 2.55271 2.55271 2.89839
+ 3.28025 3.28026 3.60637 3.96145 4.22563 4.22563 5.35435 5.68059
+ == 115-th k-point (-0.36739,-0.12246,0.61232) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 116-th k-point (-0.24493,0.00000,0.48986) occupation: 14==
+ -64.99143 -64.99143 -4.62052 -4.62045 -3.03139 -3.03139 -3.03109 -3.03092 -3.03063 -3.03061
+ -0.04759 0.03516 0.12865 0.16509 0.40371 0.41825 0.44193 0.56739 0.59389 0.66159
+ 0.77830 0.81582 0.81969 0.86953 0.90263 0.99339 1.03511 1.04156 1.05879 1.10150
+ 1.16773 1.19334 1.26414 1.36119 1.42269 1.47674 1.50942 1.52664 1.58328 1.58697
+ 1.73069 1.73162 1.84538 1.85190 1.92623 1.95475 1.98744 2.01168 2.04222 2.12583
+ 2.21280 2.21738 2.25062 2.35193 2.37409 2.45384 2.46810 2.49726 2.62038 2.76515
+ 2.92879 3.18702 3.59326 3.77941 3.82278 3.82459 6.50181 6.75639
+ == 117-th k-point (-0.12246,0.12246,0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 118-th k-point (0.00000,0.24493,0.24493) occupation: 14==
+ -64.99144 -64.99143 -4.62058 -4.62039 -3.03136 -3.03136 -3.03124 -3.03079 -3.03068 -3.03066
+ -0.11402 0.11174 0.16498 0.24468 0.38484 0.42496 0.43812 0.48934 0.51178 0.67426
+ 0.68167 0.72359 0.79807 0.85292 0.92740 0.96920 1.03309 1.12037 1.12482 1.15444
+ 1.28671 1.29153 1.37466 1.37510 1.43318 1.48177 1.55038 1.57869 1.59110 1.62987
+ 1.65062 1.73667 1.77603 1.79360 1.89997 1.92240 1.94545 2.03227 2.08399 2.10753
+ 2.12912 2.15017 2.28970 2.33081 2.34234 2.37596 2.48151 2.51830 2.61035 2.67867
+ 2.98717 3.45846 3.57069 3.96529 3.99103 4.05605 7.00489 7.64000
+ == 119-th k-point (0.12246,0.36739,0.12246) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 120-th k-point (-0.24493,-0.24493,0.73479) occupation: 14==
+ -64.99144 -64.99142 -4.62054 -4.62043 -3.03138 -3.03137 -3.03117 -3.03084 -3.03066 -3.03063
+ -0.06335 0.02939 0.14919 0.21228 0.35416 0.44887 0.45668 0.55999 0.58790 0.59755
+ 0.71455 0.81346 0.82151 0.84940 0.92961 1.02600 1.04068 1.04479 1.10652 1.15063
+ 1.27226 1.28214 1.30491 1.31877 1.42305 1.42936 1.45006 1.54732 1.59924 1.65620
+ 1.66554 1.73698 1.79988 1.83747 1.88547 1.92948 1.93070 2.00797 2.10023 2.15117
+ 2.21196 2.26887 2.30626 2.35877 2.42379 2.43797 2.50280 2.52570 2.57237 2.67123
+ 3.06435 3.29993 3.57522 3.66517 3.97334 4.04131 6.15845 7.41218
+ == 121-th k-point (-0.12246,-0.12246,0.61232) occupation: 14==
+ -64.99144 -64.99141 -4.62049 -4.62047 -3.03139 -3.03137 -3.03105 -3.03096 -3.03064 -3.03061
+ -0.01933 0.00277 0.12544 0.18025 0.31609 0.39485 0.57785 0.59890 0.60360 0.62288
+ 0.80626 0.82675 0.83320 0.86949 0.89318 0.93327 1.02760 1.06815 1.08029 1.12016
+ 1.12884 1.17800 1.21926 1.27953 1.41363 1.50439 1.50865 1.52635 1.68390 1.69270
+ 1.79642 1.81255 1.82553 1.85670 1.86405 1.93614 2.01015 2.01999 2.04278 2.12960
+ 2.23424 2.24875 2.25259 2.36569 2.39051 2.42326 2.48279 2.49293 2.57434 2.74020
+ 2.90148 2.95154 3.67868 3.71678 3.83346 3.94512 5.48277 7.49205
+ == 122-th k-point (0.00000,0.00000,0.48986) occupation: 14==
+ -64.99141 -64.99141 -4.62053 -4.62044 -3.03140 -3.03140 -3.03109 -3.03092 -3.03065 -3.03065
+ -0.06385 0.04932 0.17586 0.17586 0.29925 0.32674 0.59459 0.59459 0.68723 0.69429
+ 0.75506 0.75506 0.78410 0.83141 0.91130 0.94986 0.94986 0.99514 1.16984 1.16984
+ 1.18340 1.18836 1.24957 1.32889 1.40998 1.40998 1.64036 1.64356 1.64356 1.73120
+ 1.76878 1.76884 1.83492 1.83655 1.83655 1.96005 1.96005 1.97470 2.14525 2.15107
+ 2.16653 2.16653 2.25297 2.33093 2.33093 2.34890 2.47962 2.55271 2.55271 2.89839
+ 3.28025 3.28026 3.60637 3.96145 4.22563 4.22563 5.35435 5.68059
+ == 123-th k-point (0.12246,0.12246,0.36739) occupation: 14==
+ -64.99145 -64.99141 -4.62056 -4.62040 -3.03139 -3.03138 -3.03119 -3.03083 -3.03066 -3.03065
+ -0.09605 0.08098 0.17911 0.20185 0.34340 0.42964 0.46088 0.48026 0.66167 0.66907
+ 0.67724 0.76178 0.78226 0.84938 0.91341 0.96576 1.01406 1.03571 1.12173 1.19503
+ 1.24525 1.31394 1.32803 1.39581 1.40717 1.48086 1.52503 1.54716 1.61424 1.63669
+ 1.66294 1.71446 1.79196 1.82089 1.86205 1.98475 2.01051 2.02329 2.05380 2.09702
+ 2.17613 2.25120 2.27495 2.28437 2.37618 2.38494 2.45942 2.52820 2.54695 2.71830
+ 3.33900 3.47120 3.62753 3.86056 3.97458 4.06004 5.77430 8.08866
+ == 124-th k-point (0.24493,0.24493,0.24493) occupation: 14==
+ -64.99145 -64.99137 -4.62056 -4.62040 -3.03137 -3.03137 -3.03125 -3.03076 -3.03068 -3.03068
+ -0.09437 0.04505 0.23408 0.23408 0.33816 0.40493 0.40493 0.57134 0.61871 0.61871
+ 0.65541 0.77823 0.77823 0.79778 0.92703 1.02544 1.02544 1.14843 1.19165 1.21142
+ 1.21142 1.30425 1.30425 1.40288 1.40288 1.41626 1.54070 1.54070 1.54218 1.57913
+ 1.57913 1.68928 1.88210 1.91052 1.91052 1.91192 1.99946 2.02543 2.02543 2.18212
+ 2.26470 2.26470 2.37784 2.39885 2.39885 2.47635 2.47635 2.48824 2.48824 2.55563
+ 3.40297 3.52828 3.52828 3.68380 3.85836 4.07909 4.07909 8.25109
+ ---------------------------------------------------------------------------
+ VBM is at 62-th k-point with 7.52929 eV
+ CBM is at 2-th k-point with 8.14298 eV
+ Band gap is 0.61369 eV
+
+
+           Ground-State Mulliken Net Atomic Charges
+
+      Atom                 Charge (a.u.)          Spin (a.u.)
+   --------------------------------------------------------
+      1 Si               (0.000000,-0.000000)    (0.000000,0.000000)
+      2 Si               (-0.000000,0.000000)    (0.000000,0.000000)
+   --------------------------------------------------------
+  Sum of atomic charges =     (-0.000000,-0.000000)
+  Sum of spin   charges =       (0.000000,0.000000)
+
+
+
+ Total job time:  38.90 s.
+ Tue Sep  9 09:17:49 2025
+
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using QCPBC. Have a nice day.    *
+        *                                                           *
+        *************************************************************
+
+Running job 1 of 1

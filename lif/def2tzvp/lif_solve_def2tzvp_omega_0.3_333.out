@@ -1,0 +1,954 @@
+                  Welcome to Q-Chem
+           with Periodic Boundary Condition
+     A Quantum Leap Into The Future Of Chemistry
+
+ Adam Rettig, Xintian Feng, Meng-Fu Chen, Hieu Dinh, Stephen Quiton,
+ Anton Ni, Paul J. Robinson, Jinghong Zhang, Joonho Lee
+
+Contributors to earlier versions of Q-Chem not listed above:
+ Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
+ Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//lif_solve_def2tzvp_omega_0.3_333.scratch20250908232808/lif_solve_def2tzvp_omega_0.3_333.0
+ Scratch folder: /n/netscratch/joonholee_lab/Lab/hieudinh//lif_solve_def2tzvp_omega_0.3_333.scratch20250908232808
+ Auxillary files located at: /n/holylabs/LABS/joonholee_lab/Lab/qchem_base/qcaux
+ Q-Chem begins on Mon Sep  8 23:28:09 2025
+
+ -------------------------------------------------------------
+ User input:
+ -------------------------------------------------------------
+ $lattice
+ 3
+ 0.000000 2.005000 2.005000
+ 2.005000 0.000000 2.005000
+ 2.005000 2.005000 0.000000
+ $end
+ 
+ $unitcell
+ ABSOLUTE
+ 0 1
+ Li 0.000000 0.000000 0.000000
+ F  2.005000 0.000000 0.000000
+ $end
+ 
+ $rem
+ jobtype = sp
+ method = pbe
+ scf_convergence = 5
+ scf_guess = autosad
+ scf_algorithm = gdm
+ basis = def2-tzvp
+ aux_basis = gen
+ input_bohr = false
+ symmetry false
+ is_basis_uctr true
+ rsdf_print_level 1
+ 
+ mp_mesh = [3,3,3]
+ 
+ integral_direct true
+ bvk_cgto true
+ 
+ thresh 14
+ mem_total 100000
+ threads 32
+ 
+ MAX_SCF_CYCLES 400
+ madelung = false
+ omega 0.3
+ do_rij_bigmem true
+ automate_g true
+ print_level 10
+ grid_type_xc 1
+ 
+ thresh_1e2c_sp 1e-14
+ thresh_2e3c_bra_ket_sep 1e-10
+ thresh_g 1e-12
+ $end
+ 
+ $aux_basis
+ Li     0
+ S   7   1.00
+     498.3689730              0.0207908
+     162.9342738              0.0542177
+      57.3246735              0.1776783
+      21.6427314              0.4181150
+       8.7345375              0.6535245
+       3.7491039              0.5492618
+       1.7006754              0.1701425
+ S   1   1.00
+       0.8090859             -0.0097548
+ S   1   1.00
+       0.4000933             -0.0050152
+ S   1   1.00
+       0.2035793              0.0232200
+ !S   1   1.00
+ !      0.1054201              0.0134535
+ !S   1   1.00
+ !      0.0549139              0.0006647
+ P   2   1.00
+      10.7024696              0.0072923
+       3.6551543              0.0060940
+ P   1   1.00
+       1.2464013              0.0172529
+ P   1   1.00
+       0.4246282             -0.0160026
+ P   1   1.00
+       0.1446192             -0.0195111
+ D   2   1.00
+       1.1510647             -0.0014314
+       0.6019112              0.0038969
+ D   1   1.00
+       0.3109573              0.0024683
+ D   1   1.00
+       0.1600032              0.0036451
+ F   2   1.00
+       0.5967918              0.0010494
+       0.1790687              0.0006468
+ G   1   1.00
+       1.0460130             -0.0001971
+ ****
+ F     0
+ S   7   1.00
+    3514.9201549              0.1805835
+    1231.2458815              0.3676084
+     454.1367336              1.2707881
+     175.8376258              2.8274164
+      71.2081775              4.3588226
+      30.0316883              2.7180994
+      13.1259023             -0.0804726
+ S   1   1.00
+       5.9126861             -0.0023370
+ S   1   1.00
+       2.7284431              1.1236274
+ S   1   1.00
+       1.2813993              0.9999042
+ S   1   1.00
+       0.6082793              0.3119579
+ S   1   1.00
+       0.2897894              0.0312295
+ P   2   1.00
+      49.3740409             -0.0346332
+      13.4874956             -0.0096069
+ P   1   1.00
+       3.9664900              0.0762067
+ P   1   1.00
+       1.2226629             -0.0103329
+ P   1   1.00
+       0.3830317              0.0018853
+ D   2   1.00
+      29.9719140             -0.0113316
+       6.7860915             -0.0467639
+ D   1   1.00
+       1.8137313             -0.0167604
+ D   1   1.00
+       0.5157840             -0.0050777
+ F   2   1.00
+       2.8301877              1.0
+       0.9155962              1.0
+ G   1   1.00
+       1.6097500             -0.0005411
+ ****
+ $end
+ -------------------------------------------------------------
+ Running PBC job
+
+ Requested Exchange Correlation Functionals: 
+  DFT Exchange:  1.00000 pbe_x
+  DFT Correlation:  1.00000 pbe_c
+ using 32 threads for computing.
+ ---------------------------------------------------------------
+      Coordinates of Atoms in Central Unit Cell (Angstroms)
+    I     Atom         X            Y            Z
+ ---------------------------------------------------------------
+    1      Li      0.000000     0.000000     0.000000
+    2       F      2.005000     0.000000     0.000000
+ ---------------------------------------------------------------
+ --------------------------------------------------
+              Lattice Vectors (Angstroms)
+              X            Y            Z
+ --------------------------------------------------
+   X       0.000000     2.005000     2.005000
+   Y       2.005000     0.000000     2.005000
+   Z       2.005000     2.005000     0.000000
+ --------------------------------------------------
+ --------------------------------------------------
+       Reciprocal Lattice Vectors (Angstroms^-1)
+              X            Y            Z
+ --------------------------------------------------
+   X      -1.566879     1.566879     1.566879
+   Y       1.566879    -1.566879     1.566879
+   Z       1.566879     1.566879    -1.566879
+ --------------------------------------------------
+
+ Single point calculation requested
+
+ Hamiltonian contributions:
+ List of terms in Hamiltonian: kpts_nn, kpts_kinetic, kpts_vnuc_df, kpts_xc, kpts_rij_bigmem
+
+ K-Points calculation started.
+
+ Basis set information about using solid harmonic (1) or Cartesian (0):
+  li : 
+  f : D(1) D(1) F(1) 
+
+ Basis set information about using solid harmonic (1) or Cartesian (0):
+  li : D(1) D(1) D(1) F(1) G(1) 
+  f : D(1) D(1) D(1) F(1) G(1) 
+
+ There are 45 basis functions in the central unit cell.
+ Print atomic basis of atoms in the central unit cell:
+ -------------------------------------------------------------
+2 34 34 19
+
+  0.00000000000000e+00  0.00000000000000e+00  0.00000000000000e+00
+  3.78890087987467e+00  0.00000000000000e+00  0.00000000000000e+00
+
+  6.26926280100000e+03
+  9.40316124310000e+02
+  2.14221075280000e+02
+  6.07598401840000e+01
+  1.99151520320000e+01
+  7.31715097970000e+00
+  2.97246742160000e+00
+  1.26398523140000e+00
+  5.14274899530000e-01
+  7.70308859010000e-02
+  2.89388964330000e-02
+  3.32700000000000e+00
+  4.00000000000000e-01
+  6.00000000000000e-02
+  3.54791004410000e+04
+  5.31847289830000e+03
+  1.21048109750000e+03
+  3.42855181400000e+02
+  1.12019431810000e+02
+  4.07147402480000e+01
+  1.60396781110000e+01
+  6.50381867400000e+00
+  1.54404775090000e+00
+  6.12234528620000e-01
+  2.40279796980000e-01
+  8.02339004830000e+01
+  1.85940107430000e+01
+  5.68679026530000e+00
+  1.95110062940000e+00
+  6.69702112980000e-01
+  2.16513004100000e-01
+  3.10700000000000e+00
+  8.55000000000000e-01
+  1.91700000000000e+00
+
+  2.60146728801502e-01
+  4.85835841940497e-01
+  8.34119322504559e-01
+  1.32445742735490e+00
+  1.88157694810314e+00
+  2.19520050299083e+00
+  7.26218105813079e-01
+  4.94491916459429e-01
+  4.32819270028068e-01
+  1.04209847805929e-01
+  5.00059366529026e-02
+  6.40480761295544e+00
+  4.53435039044381e-01
+  4.23281366783111e-02
+  1.03516566506933e+00
+  1.93311703276555e+00
+  3.30816792488426e+00
+  5.19043602286014e+00
+  7.14537150961128e+00
+  7.78535976400937e+00
+  3.61564648527820e+00
+  1.16499925171188e+00
+  9.87201115801914e-01
+  4.93285621447351e-01
+  2.44595258796206e-01
+  4.21740775922586e+00
+  4.71742640820820e+00
+  4.08491013761290e+00
+  2.29989742214987e+00
+  8.63559317399815e-01
+  2.10520828359705e-01
+  1.19675885449078e+01
+  1.25126747832287e+00
+  6.36581779142017e+00
+
+0 0 0 0 1 1 1
+0 0 
+6 0
+
+0 1 1 6 1 1 1
+6 0 
+2 0
+
+0 2 2 8 1 1 1
+8 0 
+1 0
+
+0 3 3 9 1 1 1
+9 0 
+1 0
+
+0 4 4 10 1 1 1
+10 0 
+1 0
+
+0 5 5 11 1 3 3
+11 1 
+1 0
+
+0 8 8 12 1 3 3
+12 1 
+1 0
+
+0 11 11 13 1 3 3
+13 1 
+1 0
+
+1 14 14 14 1 1 1
+14 0 
+6 0
+
+1 15 15 20 1 1 1
+20 0 
+2 0
+
+1 16 16 22 1 1 1
+22 0 
+1 0
+
+1 17 17 23 1 1 1
+23 0 
+1 0
+
+1 18 18 24 1 1 1
+24 0 
+1 0
+
+1 19 19 25 1 3 3
+25 1 
+4 0
+
+1 22 22 29 1 3 3
+29 1 
+1 0
+
+1 25 25 30 1 3 3
+30 1 
+1 0
+
+1 28 28 31 1 5 6
+31 2 
+1 1
+
+1 33 33 32 1 5 6
+32 2 
+1 1
+
+1 38 38 33 1 7 10
+33 3 
+1 1
+
+ -------------------------------------------------------------
+ Allocate 134496 B from available memory: 104857600000 B
+ There are 6859 image cells after screening.
+ There are 10216 image cells for CGTO evaluation after screening.
+ Real-Space grid for FFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for FFT: (8,8,8)
+ There are 4913 real-space grid points.
+ There are 27 batches of real-space grid points. 
+ Size of each grid batch is around 128
+ Grid for AFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for AFT: (8,8,8)
+ There are 4913 real-space grid points.
+
+ There are 5740 atom-centered grid points.
+
+ Spacegroup symmetry group: Fm-3m
+ Reducing spacegroup symmetry to symmorphic group: F m -3 m
+ Monkhorst-Pack mesh is [3,3,3]
+ There are 27 k points.
+kpoints in Bohr
+-0.2763855758 -0.2763855758 -0.2763855758
+-0.0000000000 0.0000000000 -0.5527711515
+0.2763855758 0.2763855758 -0.8291567273
+-0.0000000000 -0.5527711515 -0.0000000000
+0.2763855758 -0.2763855758 -0.2763855758
+0.5527711515 0.0000000000 -0.5527711515
+0.2763855758 -0.8291567273 0.2763855758
+0.5527711515 -0.5527711515 -0.0000000000
+0.8291567273 -0.2763855758 -0.2763855758
+-0.5527711515 0.0000000000 0.0000000000
+-0.2763855758 0.2763855758 -0.2763855758
+-0.0000000000 0.5527711515 -0.5527711515
+-0.2763855758 -0.2763855758 0.2763855758
+0.0000000000 0.0000000000 0.0000000000
+0.2763855758 0.2763855758 -0.2763855758
+0.0000000000 -0.5527711515 0.5527711515
+0.2763855758 -0.2763855758 0.2763855758
+0.5527711515 -0.0000000000 0.0000000000
+-0.8291567273 0.2763855758 0.2763855758
+-0.5527711515 0.5527711515 0.0000000000
+-0.2763855758 0.8291567273 -0.2763855758
+-0.5527711515 -0.0000000000 0.5527711515
+-0.2763855758 0.2763855758 0.2763855758
+0.0000000000 0.5527711515 0.0000000000
+-0.2763855758 -0.2763855758 0.8291567273
+0.0000000000 -0.0000000000 0.5527711515
+0.2763855758 0.2763855758 0.2763855758
+ There are 6 alpha and 6 beta electrons
+ Start computing overlap matrix
+ Allocate 874800 B from available memory: 104857465504 B
+ Time for computing overlap matrix: 9.7730000000 s
+ ====== Initialize compute kernels for all-electron RI-J (kpts) ====== 
+ ========================================================== 
+ Range-separated parameter omega        = 0.299999999999999989
+ Threshold for 1e2c shellpair           = 0.000000000000010000
+ Threshold for 2e2c SR integral         = 0.000000000000000001
+ Threshold for 2e3c SR integral         = 0.000000000100000000
+ Threshold for AFT G-space screening is = 0.000000000001000000
+ The exponent cutoff for C/D classification (omega2 / 2) is  = 0.044999999999999998
+ ========================================================== 
+ === Post process the basis set for RI calculation (exp_cutoff = 0.044999999999999998 ) === 
+nshells_b1 before uncontraction = 19
+nshells_b1 after uncontraction = 19
+nshells_baux before uncontraction = 28
+nshells_baux after uncontraction = 28
+===============================================
+nbsf total   = 45
+nbsf compact = 44
+nbsf diffuse = 1
+naux total   = 96
+naux compact = 96
+naux diffuse = 0
+nshells_bnuc = 2
+
+ Number of unique atoms is 2
+ Unique atom #0 (li) has 7 shells.
+ Unique atom #1 (f) has 11 shells.
+
+Shell 0 to 6 belongs to atom li
+Shell 7 to 17 belongs to atom f
+
+ Number of unique atoms is 2
+ Unique atom #0 (li) has 1 shells.
+ Unique atom #1 (f) has 0 shells.
+
+Shell 0 to 0 belongs to atom li
+
+ Number of unique atom is 2
+ Unique atom #0 (li) has 13 auxiliary shells.
+ Unique atom #1 (f) has 15 auxiliary shells.
+
+Auxiliary Shell 0 to 12 belongs to atom li
+Auxiliary Shell 13 to 27 belongs to atom f
+
+================= Automatically determine grid size for reciprocal space summation =================
+ Range-separated parameter = 0.30000000000000 and G-space screening threshold = 0.00000000000100
+The number of grid points along each axis dimension is (3, 3, 3)
+Total number of grid points = 343
+
+Use nonortho shellpair for diffuse density
+======== Initializing relevant kernel for RIJ (DD type) ========
+There are 1 shellpairs in the reference unit cell
+There are 14123 images and we expect to have 14123 in total
+There are 3043 shellpairs in the lattice sum after screening
+======== Initializing relevant kernel for RIJ (CD type) ========
+There are 18 shellpairs in the reference unit cell
+There are 10889 images and we expect to have 196002 in total
+There are 24851 shellpairs in the lattice sum after screening
+****** AFT -> SR ******
+Maximum bra distance cutoff is 36.000000000000
+Maximum bra ket distance cutoff is 34.263081562852
+Maximum bra ket screening distance is 30.968750000000
+Number of auxiliary image is 3307
+There are 18 shellpairs in the reference unit cell
+There are 3307 images and we expect to have 59526 in total
+There are 24851 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 3.276768460000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+======== Initializing relevant kernel for RIJ (CC type) ========
+There are 168 shellpairs in the reference unit cell
+There are 7119 images and we expect to have 1195992 in total
+There are 20408 shellpairs in the lattice sum after screening
+****** AFT -> SR ******
+Maximum bra distance cutoff is 29.000000000000
+Maximum bra ket distance cutoff is 35.843750000000
+Maximum bra ket screening distance is 30.062500000000
+Number of auxiliary image is 3163
+There are 168 shellpairs in the reference unit cell
+There are 1897 images and we expect to have 318696 in total
+There are 20408 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 3.276768460000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+======== Initializing the SR component for Vnuc (CD type) ========
+Maximum bra distance cutoff is 36.000000000000
+Maximum bra ket distance cutoff is 27.875618137235
+Maximum bra ket screening distance is 24.517983484978
+Number of auxiliary image is 3307
+There are 18 shellpairs in the reference unit cell
+There are 3307 images and we expect to have 59526 in total
+There are 24851 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 3.276768460000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+======== Initialize the SR component for Vnuc (CC type) ========
+Maximum bra distance cutoff is 29.000000000000
+Maximum bra ket distance cutoff is 29.402830256687
+Maximum bra ket screening distance is 23.518898877708
+Number of auxiliary image is 1897
+There are 168 shellpairs in the reference unit cell
+There are 1897 images and we expect to have 318696 in total
+There are 20408 shellpairs in the lattice sum after screening
+Available memory per thread for 2e3c calculation is 3.276768460000Gb
+Finish initializing 2e3c SR with the lattice sum!
+=================================================
+ Aufbau occupation scheme, occupation determined by eigenvalue
+ == 0-th k-point nmo = 45 (-0.27639,-0.27639,-0.27639) ==
+ == 1-th k-point nmo = 44 (-0.00000,0.00000,-0.55277) ==
+ == 2-th k-point nmo = 44 (0.27639,0.27639,-0.82916) ==
+ == 3-th k-point nmo = 44 (-0.00000,-0.55277,-0.00000) ==
+ == 4-th k-point nmo = 45 (0.27639,-0.27639,-0.27639) ==
+ == 5-th k-point nmo = 44 (0.55277,0.00000,-0.55277) ==
+ == 6-th k-point nmo = 44 (0.27639,-0.82916,0.27639) ==
+ == 7-th k-point nmo = 44 (0.55277,-0.55277,-0.00000) ==
+ == 8-th k-point nmo = 44 (0.82916,-0.27639,-0.27639) ==
+ == 9-th k-point nmo = 44 (-0.55277,0.00000,0.00000) ==
+ == 10-th k-point nmo = 45 (-0.27639,0.27639,-0.27639) ==
+ == 11-th k-point nmo = 44 (-0.00000,0.55277,-0.55277) ==
+ == 12-th k-point nmo = 45 (-0.27639,-0.27639,0.27639) ==
+ == 13-th k-point nmo = 41 (0.00000,0.00000,0.00000) ==
+ == 14-th k-point nmo = 45 (0.27639,0.27639,-0.27639) ==
+ == 15-th k-point nmo = 44 (0.00000,-0.55277,0.55277) ==
+ == 16-th k-point nmo = 45 (0.27639,-0.27639,0.27639) ==
+ == 17-th k-point nmo = 44 (0.55277,-0.00000,0.00000) ==
+ == 18-th k-point nmo = 44 (-0.82916,0.27639,0.27639) ==
+ == 19-th k-point nmo = 44 (-0.55277,0.55277,0.00000) ==
+ == 20-th k-point nmo = 44 (-0.27639,0.82916,-0.27639) ==
+ == 21-th k-point nmo = 44 (-0.55277,-0.00000,0.55277) ==
+ == 22-th k-point nmo = 45 (-0.27639,0.27639,0.27639) ==
+ == 23-th k-point nmo = 44 (0.00000,0.55277,0.00000) ==
+ == 24-th k-point nmo = 44 (-0.27639,-0.27639,0.82916) ==
+ == 25-th k-point nmo = 44 (0.00000,-0.00000,0.55277) ==
+ == 26-th k-point nmo = 45 (0.27639,0.27639,0.27639) ==
+
+ Generate autoSAD guess
+backing up fragment data
+Atom # 0: li, charge: 0, multiplicity: 2.000000
+Atom # 1: f, charge: 0, multiplicity: 2.000000
+writing autosad to fragment context
+Settings for isolated fragments: 
+  frgm_gamma: TRUE
+  frgm_center: FALSE
+
+    Running SCF for isolated atom #0
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//lif_solve_def2tzvp_omega_0.3_333.scratch20250908232808/autosad_frgmt_0/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//lif_solve_def2tzvp_omega_0.3_333.scratch20250908232808/autosad_frgmt_0/frgmt_job.out
+    Fragment job begins at Mon Sep  8 23:28:21 2025
+
+ Integrated density by DFT XC:
+   Numerical integral  =     2.999999993509
+   Relative error      =     0.0000002164 %
+Final energy components:
+ DFT Correlation            Energy =  -0.05092434039942
+ DFT Exchange               Energy =  -1.75140723515056
+ Kinetic (alpha)            Energy =   3.83066744044889
+ Kinetic (beta)             Energy =   3.58623083148464
+ Nuclear Attraction (alpha) Energy =  -9.10958889983067
+ Nuclear Attraction (beta)  Energy =  -8.02018991527133
+ Nuclear Repulsion          Energy =   0.00000000000000
+ SEOQF                      Energy =  -0.00000000000000
+ Total Coulomb              Energy =   4.05329323490599
+----------------------------------------------
+    SCF Energy: -7.4619188838
+   Total fragment job time:  0.32 s.
+    Running SCF for isolated atom #1
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//lif_solve_def2tzvp_omega_0.3_333.scratch20250908232808/autosad_frgmt_1/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//lif_solve_def2tzvp_omega_0.3_333.scratch20250908232808/autosad_frgmt_1/frgmt_job.out
+    Fragment job begins at Mon Sep  8 23:28:21 2025
+
+ Integrated density by DFT XC:
+   Numerical integral  =     9.000000032991
+   Relative error      =     0.0000003666 %
+Final energy components:
+ DFT Correlation            Energy =  -0.29005331125227
+ DFT Exchange               Energy =  -9.97682915393219
+ Kinetic (alpha)            Energy =  51.55991484248806
+ Kinetic (beta)             Energy =  47.86189754389157
+ Nuclear Attraction (alpha) Energy = -125.32369696155507
+ Nuclear Attraction (beta)  Energy = -113.23357709834451
+ Nuclear Repulsion          Energy =   0.00000000000000
+ SEOQF                      Energy =  -0.00000000020384
+ Total Coulomb              Energy =  49.73321880799703
+----------------------------------------------
+    SCF Energy: -99.6691253309
+   Total fragment job time:  0.38 s.
+restoring fragment data
+
+ ------------------------------------------------------------------------
+ Allocate 7021872 B from available memory: 104856590720 B
+ Time for generating SCF guess: 0.72 s
+
+ Allocate 264964 B from available memory: 104849568864 B
+ Selected algorithms for each term:
+  kpts_kinetic -> @0x152c19e95680
+  kpts_nn -> @0x152c19e95800
+  kpts_rij_bigmem -> @0x152c19e953e0
+  kpts_vnuc_df -> @0x152c19e95380
+  kpts_xc -> @0x152c19e952c0
+ Time for computing kinetic matrix is 11.27 s
+Start calculating Vnuc DD type!
+Start calculating Vnuc CD type!
+Start calculating Vnuc CC type!
+ Time for computing nuclear attraction matrix is 19.99 s
+Compute (P|Q) and use solve on the fly!
+Maximum distance between P and Q is 37.07317869796985
+Number of images for (P|Qn) is 3451
+ Time for computing 2e2c SR integral is 0.17 s
+Maximum dynamic memory per thread for 2e3c SR integrals: 0.001 GiB
+Batch size for basis function pair is 44 out of 44
+ === bvk cell = 0 has 100.000 % of the basis function pairs === 
+ === bvk cell = 1 has 100.000 % of the basis function pairs === 
+ === bvk cell = 2 has 100.000 % of the basis function pairs === 
+ === bvk cell = 3 has 100.000 % of the basis function pairs === 
+ === bvk cell = 4 has 100.000 % of the basis function pairs === 
+ === bvk cell = 5 has 100.000 % of the basis function pairs === 
+ === bvk cell = 6 has 100.000 % of the basis function pairs === 
+ === bvk cell = 7 has 100.000 % of the basis function pairs === 
+ === bvk cell = 8 has 100.000 % of the basis function pairs === 
+ === bvk cell = 9 has 100.000 % of the basis function pairs === 
+ === bvk cell = 10 has 100.000 % of the basis function pairs === 
+ === bvk cell = 11 has 100.000 % of the basis function pairs === 
+ === bvk cell = 12 has 100.000 % of the basis function pairs === 
+ === bvk cell = 13 has 100.000 % of the basis function pairs === 
+ === bvk cell = 14 has 100.000 % of the basis function pairs === 
+ === bvk cell = 15 has 100.000 % of the basis function pairs === 
+ === bvk cell = 16 has 100.000 % of the basis function pairs === 
+ === bvk cell = 17 has 100.000 % of the basis function pairs === 
+ === bvk cell = 18 has 100.000 % of the basis function pairs === 
+ === bvk cell = 19 has 100.000 % of the basis function pairs === 
+ === bvk cell = 20 has 100.000 % of the basis function pairs === 
+ === bvk cell = 21 has 100.000 % of the basis function pairs === 
+ === bvk cell = 22 has 100.000 % of the basis function pairs === 
+ === bvk cell = 23 has 100.000 % of the basis function pairs === 
+ === bvk cell = 24 has 100.000 % of the basis function pairs === 
+ === bvk cell = 25 has 100.000 % of the basis function pairs === 
+ === bvk cell = 26 has 100.000 % of the basis function pairs === 
+Static memory requirement for 2e3c SR integrals: 0.001 GB
+There are 1 munu batches for computing 2e3c SR integrals with latsum
+There are 2 Q batches for computing 2e3c SR integrals with latsum
+ Time for computing 2e3c SR integral (CD) is 1.02 s
+Maximum dynamic memory per thread for 2e3c SR integrals: 0.009 GiB
+Batch size for basis function pair is 1044 out of 1044
+ === bvk cell = 0 has 100.000 % of the basis function pairs === 
+ === bvk cell = 1 has 92.146 % of the basis function pairs === 
+ === bvk cell = 2 has 81.322 % of the basis function pairs === 
+ === bvk cell = 3 has 92.146 % of the basis function pairs === 
+ === bvk cell = 4 has 50.862 % of the basis function pairs === 
+ === bvk cell = 5 has 85.632 % of the basis function pairs === 
+ === bvk cell = 6 has 81.322 % of the basis function pairs === 
+ === bvk cell = 7 has 85.632 % of the basis function pairs === 
+ === bvk cell = 8 has 46.264 % of the basis function pairs === 
+ === bvk cell = 9 has 85.632 % of the basis function pairs === 
+ === bvk cell = 10 has 46.264 % of the basis function pairs === 
+ === bvk cell = 11 has 81.322 % of the basis function pairs === 
+ === bvk cell = 12 has 46.264 % of the basis function pairs === 
+ === bvk cell = 13 has 50.862 % of the basis function pairs === 
+ === bvk cell = 14 has 60.536 % of the basis function pairs === 
+ === bvk cell = 15 has 81.322 % of the basis function pairs === 
+ === bvk cell = 16 has 60.536 % of the basis function pairs === 
+ === bvk cell = 17 has 52.299 % of the basis function pairs === 
+ === bvk cell = 18 has 85.632 % of the basis function pairs === 
+ === bvk cell = 19 has 92.146 % of the basis function pairs === 
+ === bvk cell = 20 has 50.862 % of the basis function pairs === 
+ === bvk cell = 21 has 92.146 % of the basis function pairs === 
+ === bvk cell = 22 has 71.073 % of the basis function pairs === 
+ === bvk cell = 23 has 60.536 % of the basis function pairs === 
+ === bvk cell = 24 has 50.862 % of the basis function pairs === 
+ === bvk cell = 25 has 60.536 % of the basis function pairs === 
+ === bvk cell = 26 has 46.264 % of the basis function pairs === 
+Static memory requirement for 2e3c SR integrals: 0.014 GB
+There are 1 munu batches for computing 2e3c SR integrals with latsum
+There are 2 Q batches for computing 2e3c SR integrals with latsum
+ Time for computing 2e3c SR integral (CC) is 1.49 s
+ Time for RI-J this SCF iteration is 2.84 s
+ Time for RI-J this SCF iteration is 0.14 s
+ ----------------------------------------------
+ Guess energy: -107.4229206977
+ ----------------------------------------------
+ Guess energy components:
+ DFT Correlation    Energy =  -0.39291222744104
+ DFT Exchange       Energy = -12.13975992577794
+ Kinetic            Energy = 108.44859902415769
+ Nuclear Attraction Energy = -201.33139867261647
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  29.10204547984246
+ ----------------------------------------------
+  Cycle       Energy        RMS Gradient
+ ----------------------------------------------
+ Time for RI-J this SCF iteration is 0.14 s
+    1    -107.4455399825      1.49e-01   Descent step
+ Energy components after cycle 1:
+ DFT Correlation    Energy =  -0.39256816267939
+ DFT Exchange       Energy = -12.01766609182895
+ Kinetic            Energy = 107.51100449480116
+ Nuclear Attraction Energy = -199.68304350935500
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  28.24622766242766
+ Time for RI-J this SCF iteration is 0.14 s
+    2    -107.4483874586      4.76e-02   Normal BFGS step
+ Energy components after cycle 2:
+ DFT Correlation    Energy =  -0.39238657476172
+ DFT Exchange       Energy = -11.96204799195096
+ Kinetic            Energy = 107.11629539424585
+ Nuclear Attraction Energy = -198.93564521957583
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  27.83489130927266
+ Time for RI-J this SCF iteration is 0.14 s
+    3    -107.4483947500      1.79e-03   Normal BFGS step
+ Energy components after cycle 3:
+ DFT Correlation    Energy =  -0.39239486664868
+ DFT Exchange       Energy = -11.96242305009849
+ Kinetic            Energy = 107.10717364886584
+ Nuclear Attraction Energy = -198.93257869811245
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  27.84132259186078
+ Time for RI-J this SCF iteration is 0.14 s
+    4    -107.4483948566      2.17e-04   Normal BFGS step
+ Energy components after cycle 4:
+ DFT Correlation    Energy =  -0.39239249043389
+ DFT Exchange       Energy = -11.96269811511654
+ Kinetic            Energy = 107.11034850682466
+ Nuclear Attraction Energy = -198.93638874620046
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  27.84223036412374
+ Time for RI-J this SCF iteration is 0.14 s
+    5    -107.4483948580      2.49e-05   Normal BFGS step
+ Energy components after cycle 5:
+ DFT Correlation    Energy =  -0.39239236321627
+ DFT Exchange       Energy = -11.96265849549459
+ Kinetic            Energy = 107.11010917299166
+ Nuclear Attraction Energy = -198.93602279858462
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  27.84206400214851
+ Time for RI-J this SCF iteration is 0.14 s
+    6    -107.4483948580      1.61e-06   Normal BFGS step
+ Energy components after cycle 6:
+ DFT Correlation    Energy =  -0.39239238432890
+ DFT Exchange       Energy = -11.96265989915158
+ Kinetic            Energy = 107.11010074067219
+ Nuclear Attraction Energy = -198.93601933844488
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  27.84207039908915
+    6    -107.4483948580      1.61e-06  Convergence criterion met
+ ----------------------------------------------
+ Final energy components:
+ DFT Correlation    Energy =  -0.39239238432890
+ DFT Exchange       Energy = -11.96265989915158
+ Kinetic            Energy = 107.11010074067219
+ Nuclear Attraction Energy = -198.93601933844488
+ Nuclear Repulsion  Energy = -31.10949437582012
+ Total Coulomb      Energy =  27.84207039908915
+ ----------------------------------------------
+ Final energy is -107.4483948580
+
+ SCF time:   CPU 1198.43s  wall 57.00s 
+ Total wall time for computing Kinetic: 0.00 s (8)
+ Total wall time for computing RIJ-BIGMEM: 3.80 s (8)
+ Total wall time for computing RSDF Vnuc: 0.00 s (8)
+ Total wall time for computing DFT XC: 8.71 s (8)
+ ---------------------------------------------------------------------------
+                        Orbital Energies (a.u.)
+ ---------------------------------------------------------------------------
+ == 0-th k-point (-0.27639,-0.27639,-0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35353 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23081 58.06986
+ == 1-th k-point (-0.00000,0.00000,-0.55277) occupation: 6==
+ -23.85734 -1.46440 -0.67595 -0.04490 0.00939 0.00939 0.51349 0.72992 0.79341 0.79341
+ 1.33252 1.49536 1.49536 1.62706 1.79035 1.79035 2.17830 2.19593 2.27886 2.60281
+ 2.79355 2.79355 3.30836 4.37072 4.62026 4.62026 5.26076 6.40577 6.40577 6.98402
+ 7.08454 7.08629 7.17595 7.17595 7.22728 7.22728 7.23506 8.44061 8.45416 8.81611
+ 8.81611 8.95977 15.98644 57.91478
+ == 2-th k-point (0.27639,0.27639,-0.82916) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 3-th k-point (-0.00000,-0.55277,-0.00000) occupation: 6==
+ -23.85734 -1.46440 -0.67595 -0.04490 0.00939 0.00939 0.51349 0.72992 0.79341 0.79341
+ 1.33252 1.49536 1.49536 1.62706 1.79035 1.79035 2.17830 2.19593 2.27886 2.60281
+ 2.79355 2.79355 3.30836 4.37072 4.62026 4.62026 5.26076 6.40577 6.40577 6.98402
+ 7.08454 7.08629 7.17595 7.17595 7.22728 7.22728 7.23506 8.44061 8.45416 8.81611
+ 8.81611 8.95977 15.98644 57.91478
+ == 4-th k-point (0.27639,-0.27639,-0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35352 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23080 58.06986
+ == 5-th k-point (0.55277,0.00000,-0.55277) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 6-th k-point (0.27639,-0.82916,0.27639) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 7-th k-point (0.55277,-0.55277,-0.00000) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 8-th k-point (0.82916,-0.27639,-0.27639) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 9-th k-point (-0.55277,0.00000,0.00000) occupation: 6==
+ -23.85734 -1.46440 -0.67595 -0.04490 0.00939 0.00939 0.51349 0.72992 0.79341 0.79341
+ 1.33252 1.49536 1.49536 1.62706 1.79035 1.79035 2.17830 2.19593 2.27886 2.60281
+ 2.79355 2.79355 3.30836 4.37072 4.62026 4.62026 5.26076 6.40577 6.40577 6.98402
+ 7.08454 7.08629 7.17595 7.17595 7.22728 7.22728 7.23506 8.44061 8.45416 8.81611
+ 8.81611 8.95977 15.98644 57.91478
+ == 10-th k-point (-0.27639,0.27639,-0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35352 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23080 58.06986
+ == 11-th k-point (-0.00000,0.55277,-0.55277) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 12-th k-point (-0.27639,-0.27639,0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35352 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23080 58.06986
+ == 13-th k-point (0.00000,0.00000,0.00000) occupation: 6==
+ -23.85738 -1.46657 -0.69465 0.03775 0.03775 0.03775 0.37398 0.93371 0.93371 0.93371
+ 1.75538 1.75538 1.75538 2.14835 2.18386 2.18386 2.18386 2.18447 2.18447 2.57634
+ 4.75834 4.75834 4.75834 6.06160 6.17022 6.17022 6.17022 7.08455 7.08455 7.08455
+ 7.08629 7.20097 7.20097 7.20097 8.44373 8.44373 8.44373 8.44734 8.44734 14.92272
+ 58.84426
+ == 14-th k-point (0.27639,0.27639,-0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35352 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23080 58.06986
+ == 15-th k-point (0.00000,-0.55277,0.55277) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 16-th k-point (0.27639,-0.27639,0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35352 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23080 58.06986
+ == 17-th k-point (0.55277,-0.00000,0.00000) occupation: 6==
+ -23.85734 -1.46440 -0.67595 -0.04490 0.00939 0.00939 0.51349 0.72992 0.79341 0.79341
+ 1.33252 1.49536 1.49536 1.62706 1.79035 1.79035 2.17830 2.19593 2.27886 2.60281
+ 2.79355 2.79355 3.30836 4.37072 4.62026 4.62026 5.26076 6.40577 6.40577 6.98402
+ 7.08454 7.08629 7.17595 7.17595 7.22728 7.22728 7.23506 8.44061 8.45416 8.81611
+ 8.81611 8.95977 15.98644 57.91478
+ == 18-th k-point (-0.82916,0.27639,0.27639) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 19-th k-point (-0.55277,0.55277,0.00000) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 20-th k-point (-0.27639,0.82916,-0.27639) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 21-th k-point (-0.55277,-0.00000,0.55277) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 22-th k-point (-0.27639,0.27639,0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35352 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23080 58.06986
+ == 23-th k-point (0.00000,0.55277,0.00000) occupation: 6==
+ -23.85734 -1.46440 -0.67595 -0.04490 0.00939 0.00939 0.51349 0.72992 0.79341 0.79341
+ 1.33252 1.49536 1.49536 1.62706 1.79035 1.79035 2.17830 2.19593 2.27886 2.60281
+ 2.79355 2.79355 3.30836 4.37072 4.62026 4.62026 5.26076 6.40577 6.40577 6.98402
+ 7.08454 7.08629 7.17595 7.17595 7.22728 7.22728 7.23506 8.44061 8.45416 8.81611
+ 8.81611 8.95977 15.98644 57.91478
+ == 24-th k-point (-0.27639,-0.27639,0.82916) occupation: 6==
+ -23.85730 -1.46383 -0.67132 -0.04284 -0.02929 0.01641 0.54506 0.59496 0.73881 0.75971
+ 1.17227 1.27379 1.38871 1.48227 1.81564 1.83410 2.02160 2.20944 2.46298 2.70477
+ 2.74635 2.75535 3.51018 4.23930 4.41859 4.42929 4.70519 6.55233 6.61004 6.66188
+ 7.08454 7.09485 7.09502 7.09832 7.21807 7.22322 7.33394 8.45888 8.77869 8.81429
+ 8.81547 9.03300 16.05337 57.17320
+ == 25-th k-point (0.00000,-0.00000,0.55277) occupation: 6==
+ -23.85734 -1.46440 -0.67595 -0.04490 0.00939 0.00939 0.51349 0.72992 0.79341 0.79341
+ 1.33252 1.49536 1.49536 1.62706 1.79035 1.79035 2.17830 2.19593 2.27886 2.60281
+ 2.79355 2.79355 3.30836 4.37072 4.62026 4.62026 5.26076 6.40577 6.40577 6.98402
+ 7.08454 7.08629 7.17595 7.17595 7.22728 7.22728 7.23506 8.44061 8.45416 8.81611
+ 8.81611 8.95977 15.98644 57.91478
+ == 26-th k-point (0.27639,0.27639,0.27639) occupation: 6==
+ -23.85735 -1.46487 -0.68255 -0.03594 0.03127 0.03127 0.43348 0.66927 0.76801 0.76801
+ 1.09230 1.27939 1.27939 1.42978 1.42978 1.44488 1.81990 2.31623 2.39502 2.39502
+ 2.73455 2.94745 2.94745 3.35353 4.06968 4.06968 4.22354 5.34263 6.41597 6.41597
+ 6.95116 7.08455 7.09922 7.09922 7.12269 7.12269 7.16452 7.29938 8.61713 8.61713
+ 8.79982 8.93822 8.93822 16.23081 58.06986
+ ---------------------------------------------------------------------------
+ VBM is at 13-th k-point with 1.02721 eV
+ CBM is at 13-th k-point with 10.17641 eV
+ Band gap is 9.14920 eV
+
+
+           Ground-State Mulliken Net Atomic Charges
+
+      Atom                 Charge (a.u.)          Spin (a.u.)
+   --------------------------------------------------------
+      1 Li                (0.843830,0.000000)    (0.000000,0.000000)
+      2  F              (-0.843830,-0.000000)    (0.000000,0.000000)
+   --------------------------------------------------------
+  Sum of atomic charges =      (-0.000000,0.000000)
+  Sum of spin   charges =       (0.000000,0.000000)
+
+
+
+ Total job time:  57.31 s.
+ Mon Sep  8 23:29:06 2025
+
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using QCPBC. Have a nice day.    *
+        *                                                           *
+        *************************************************************
+
+Running job 1 of 1
