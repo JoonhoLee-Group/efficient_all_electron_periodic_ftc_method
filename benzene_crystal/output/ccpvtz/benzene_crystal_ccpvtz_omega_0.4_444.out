@@ -7,10 +7,10 @@
 
 Contributors to earlier versions of Q-Chem not listed above:
  Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
- Input file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250709194132/benzene_crystal_ccpvtz_omega_0.4_444.0
- Scratch folder: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250709194132
- Auxillary files located at: /u/hdinh/qcpbc/qcaux
- Q-Chem begins on Wed Jul  9 19:41:33 2025
+ Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250917102522/benzene_crystal_ccpvtz_omega_0.4_444.0
+ Scratch folder: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250917102522
+ Auxillary files located at: /n/home02/hieudinh/qcpbc/qcaux
+ Q-Chem begins on Wed Sep 17 10:25:55 2025
 
  -------------------------------------------------------------
  User input:
@@ -85,6 +85,10 @@ Contributors to earlier versions of Q-Chem not listed above:
  basis = cc-pvtz
  aux_basis = cc-pvtz-jk
  input_bohr = false
+ symmetry = false
+ rsdf_print_level 1
+ is_basis_uctr true
+ do_nonortho true
  
  mp_mesh = [4,4,4]
  
@@ -92,7 +96,7 @@ Contributors to earlier versions of Q-Chem not listed above:
  bvk_cgto true
  
  thresh 14
- mem_total 500000
+ mem_total 1000000
  threads 32
  
  MAX_SCF_CYCLES 500
@@ -105,7 +109,7 @@ Contributors to earlier versions of Q-Chem not listed above:
  
  thresh_1e2c_sp 1e-14
  thresh_2e3c_bra_ket_sep 1e-10
- thresh_g 1e-10
+ thresh_g 1e-12
  $end
  
  $rem_autosad
@@ -3334,17 +3338,17 @@ Contributors to earlier versions of Q-Chem not listed above:
 1 1
 
  -------------------------------------------------------------
- Allocate 9936184 B from available memory: 524288000000 B
+ Allocate 3841336 B from available memory: 1048576000000 B
  There are 343 image cells after screening.
  There are 187 image cells for CGTO evaluation after screening.
  Real-Space grid for FFT initialized based on kinetic energy cutoff (eV) = 500.0
- Real-Space grid for FFT: (25,27,35)
- There are 199155 real-space grid points.
- There are 1331 batches of real-space grid points. 
+ Real-Space grid for FFT: (18,20,25)
+ There are 77367 real-space grid points.
+ There are 512 batches of real-space grid points. 
  Size of each grid batch is around 128
- Grid for AFT initialized based on kinetic energy cutoff (eV) = 200.0
- Real-Space grid for AFT: (16,18,22)
- There are 54945 real-space grid points.
+ Grid for AFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for AFT: (18,20,25)
+ There are 77367 real-space grid points.
 
  There are 142416 atom-centered grid points.
 
@@ -3356,6 +3360,8 @@ Contributors to earlier versions of Q-Chem not listed above:
  a1  =   4.28900e-01
  a2  =   4.44070e+00
  ----------------------------------------------------------------
+ Spacegroup symmetry group: Pbca
+ Reducing spacegroup symmetry to symmorphic group: P -1
  Monkhorst-Pack mesh is [4,4,4]
  There are 64 k points.
 kpoints in Bohr
@@ -3425,19 +3431,19 @@ kpoints in Bohr
 0.2441202993 0.2249606547 0.1764818724
  There are 84 alpha and 84 beta electrons
  Start computing overlap matrix
- Allocate 1141899264 B from available memory: 524278063840 B
- Time for computing overlap matrix: 17.3270000000 s
+ Allocate 1141899264 B from available memory: 1048572158688 B
+ Time for computing overlap matrix: 12.4880000000 s
  ====== Initialize compute kernels for all-electron RI-J (kpts) ====== 
- ==== The unitcell is orthorombic! => Use orthorombic code ==== 
+ ==== The unitcell is non-orthorombic! => Use AFT non-orthorombic code ==== 
  ========================================================== 
  Range-separated parameter omega        = 0.400000000000000022
  Threshold for 1e2c shellpair           = 0.000000000000010000
  Threshold for 2e2c SR integral         = 0.000000000000000001
  Threshold for 2e3c SR integral         = 0.000000000100000000
- Threshold for AFT G-space screening is = 0.000000000100000000
+ Threshold for AFT G-space screening is = 0.000000000001000000
  The exponent cutoff for C/D classification (omega2 / 2) is  = 0.080000000000000016
  ========================================================== 
- === Post process the basis set for RI calculation (exp_cutoff = 0.080000000000000016 ) === 
+ === Process the basis set for RI calculation (exp_cutoff = 0.080000000000000016 ) === 
 nshells_b1 before uncontraction = 384
 nshells_b1 after uncontraction = 384
 nshells_baux before uncontraction = 840
@@ -3450,36 +3456,142 @@ naux total   = 2616
 naux compact = 2616
 naux diffuse = 0
 nshells_bnuc = 48
+
+ Number of unique atoms is 2
+ Unique atom #0 (h) has 6 shells.
+ Unique atom #1 (c) has 10 shells.
+
+Shell 0 to 9 belongs to atom c
+Shell 10 to 19 belongs to atom c
+Shell 20 to 29 belongs to atom c
+Shell 30 to 39 belongs to atom c
+Shell 40 to 49 belongs to atom c
+Shell 50 to 59 belongs to atom c
+Shell 60 to 69 belongs to atom c
+Shell 70 to 79 belongs to atom c
+Shell 80 to 89 belongs to atom c
+Shell 90 to 99 belongs to atom c
+Shell 100 to 109 belongs to atom c
+Shell 110 to 119 belongs to atom c
+Shell 120 to 129 belongs to atom c
+Shell 130 to 139 belongs to atom c
+Shell 140 to 149 belongs to atom c
+Shell 150 to 159 belongs to atom c
+Shell 160 to 169 belongs to atom c
+Shell 170 to 179 belongs to atom c
+Shell 180 to 189 belongs to atom c
+Shell 190 to 199 belongs to atom c
+Shell 200 to 209 belongs to atom c
+Shell 210 to 219 belongs to atom c
+Shell 220 to 229 belongs to atom c
+Shell 230 to 239 belongs to atom c
+Shell 240 to 245 belongs to atom h
+Shell 246 to 251 belongs to atom h
+Shell 252 to 257 belongs to atom h
+Shell 258 to 263 belongs to atom h
+Shell 264 to 269 belongs to atom h
+Shell 270 to 275 belongs to atom h
+Shell 276 to 281 belongs to atom h
+Shell 282 to 287 belongs to atom h
+Shell 288 to 293 belongs to atom h
+Shell 294 to 299 belongs to atom h
+Shell 300 to 305 belongs to atom h
+Shell 306 to 311 belongs to atom h
+Shell 312 to 317 belongs to atom h
+Shell 318 to 323 belongs to atom h
+Shell 324 to 329 belongs to atom h
+Shell 330 to 335 belongs to atom h
+Shell 336 to 341 belongs to atom h
+Shell 342 to 347 belongs to atom h
+Shell 348 to 353 belongs to atom h
+Shell 354 to 359 belongs to atom h
+Shell 360 to 365 belongs to atom h
+Shell 366 to 371 belongs to atom h
+Shell 372 to 377 belongs to atom h
+Shell 378 to 383 belongs to atom h
+
+ Number of unique atom is 2
+ Unique atom #0 (h) has 10 auxiliary shells.
+ Unique atom #1 (c) has 25 auxiliary shells.
+
+Auxiliary Shell 0 to 24 belongs to atom c
+Auxiliary Shell 25 to 49 belongs to atom c
+Auxiliary Shell 50 to 74 belongs to atom c
+Auxiliary Shell 75 to 99 belongs to atom c
+Auxiliary Shell 100 to 124 belongs to atom c
+Auxiliary Shell 125 to 149 belongs to atom c
+Auxiliary Shell 150 to 174 belongs to atom c
+Auxiliary Shell 175 to 199 belongs to atom c
+Auxiliary Shell 200 to 224 belongs to atom c
+Auxiliary Shell 225 to 249 belongs to atom c
+Auxiliary Shell 250 to 274 belongs to atom c
+Auxiliary Shell 275 to 299 belongs to atom c
+Auxiliary Shell 300 to 324 belongs to atom c
+Auxiliary Shell 325 to 349 belongs to atom c
+Auxiliary Shell 350 to 374 belongs to atom c
+Auxiliary Shell 375 to 399 belongs to atom c
+Auxiliary Shell 400 to 424 belongs to atom c
+Auxiliary Shell 425 to 449 belongs to atom c
+Auxiliary Shell 450 to 474 belongs to atom c
+Auxiliary Shell 475 to 499 belongs to atom c
+Auxiliary Shell 500 to 524 belongs to atom c
+Auxiliary Shell 525 to 549 belongs to atom c
+Auxiliary Shell 550 to 574 belongs to atom c
+Auxiliary Shell 575 to 599 belongs to atom c
+Auxiliary Shell 600 to 609 belongs to atom h
+Auxiliary Shell 610 to 619 belongs to atom h
+Auxiliary Shell 620 to 629 belongs to atom h
+Auxiliary Shell 630 to 639 belongs to atom h
+Auxiliary Shell 640 to 649 belongs to atom h
+Auxiliary Shell 650 to 659 belongs to atom h
+Auxiliary Shell 660 to 669 belongs to atom h
+Auxiliary Shell 670 to 679 belongs to atom h
+Auxiliary Shell 680 to 689 belongs to atom h
+Auxiliary Shell 690 to 699 belongs to atom h
+Auxiliary Shell 700 to 709 belongs to atom h
+Auxiliary Shell 710 to 719 belongs to atom h
+Auxiliary Shell 720 to 729 belongs to atom h
+Auxiliary Shell 730 to 739 belongs to atom h
+Auxiliary Shell 740 to 749 belongs to atom h
+Auxiliary Shell 750 to 759 belongs to atom h
+Auxiliary Shell 760 to 769 belongs to atom h
+Auxiliary Shell 770 to 779 belongs to atom h
+Auxiliary Shell 780 to 789 belongs to atom h
+Auxiliary Shell 790 to 799 belongs to atom h
+Auxiliary Shell 800 to 809 belongs to atom h
+Auxiliary Shell 810 to 819 belongs to atom h
+Auxiliary Shell 820 to 829 belongs to atom h
+Auxiliary Shell 830 to 839 belongs to atom h
+
 ================= Automatically determine grid size for reciprocal space summation =================
- Range-separated parameter = 0.40000000000000 and G-space screening threshold = 0.00000000010000
-The number of grid points along each axis dimension is (9, 10, 12)
-The total number of grid points is 9975
+ Range-separated parameter = 0.40000000000000 and G-space screening threshold = 0.00000000000100
+The number of grid points along each axis dimension is (9, 10, 13)
+Total number of grid points = 10773
+
 ======== Initializing relevant kernel for RIJ (CC type) ========
 There are 64048 shellpairs in the reference unit cell
-There are 157 images and we expect to have 10055536 in total
+There are 447 images and we expect to have 28629456 in total
 There are 262044 shellpairs in the lattice sum after screening
 ****** AFT -> SR ******
 Maximum bra distance cutoff is 23.000000000000
-Maximum bra ket distance cutoff is 26.843750000000
-Number of auxiliary image is 331
+Maximum bra ket distance cutoff is 28.781059169873
+Maximum bra ket screening distance is 23.062500000000
+Number of auxiliary image is 161
 There are 64048 shellpairs in the reference unit cell
-There are 259 images and we expect to have 16588432 in total
+There are 117 images and we expect to have 7493616 in total
 There are 262044 shellpairs in the lattice sum after screening
-Available memory for 2e3c calculation is 16348005143
-Batch size for auxiliary basis is 67 out of 2616
-Batch size for basis function pair is 12205 out of 475344
+Available memory per thread for 2e3c calculation is 32.732195607000Gb
 Finish initializing 2e3c SR with the lattice sum!
 =================================================
 ======== Initialize the SR component for Vnuc (CC type) ========
 Maximum bra distance cutoff is 23.000000000000
-Maximum bra ket distance cutoff is 21.003846166574
-Number of auxiliary image is 239
+Maximum bra ket distance cutoff is 23.072618114210
+Maximum bra ket screening distance is 16.960353445237
+Number of auxiliary image is 117
 There are 64048 shellpairs in the reference unit cell
-There are 259 images and we expect to have 16588432 in total
+There are 117 images and we expect to have 7493616 in total
 There are 262044 shellpairs in the lattice sum after screening
-Available memory for 2e3c calculation is 16348005143
-Batch size for auxiliary basis is 48 out of 48
-Batch size for basis function pair is 475344 out of 475344
+Available memory per thread for 2e3c calculation is 32.732195607000Gb
 Finish initializing 2e3c SR with the lattice sum!
 =================================================
  Aufbau occupation scheme, occupation determined by eigenvalue
@@ -3554,36 +3666,35 @@ Atom # 0: c, charge: 0, multiplicity: 3.000000
 Atom # 1: h, charge: 0, multiplicity: 2.000000
 writing autosad to fragment context
 Settings for isolated fragments: 
-  BSSE: FALSE
   frgm_gamma: TRUE
   frgm_center: FALSE
 
     Running SCF for isolated atom #0
-    Fragment Input file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250709194132/autosad_frgmt_0/frgmt_input.in
-    Fragment Output file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250709194132/autosad_frgmt_0/frgmt_job.out
-    Fragment job begins at Wed Jul  9 19:44:18 2025
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250917102522/autosad_frgmt_0/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250917102522/autosad_frgmt_0/frgmt_job.out
+    Fragment job begins at Wed Sep 17 10:27:59 2025
 
  Integrated density by DFT XC:
    Numerical integral  =     6.000000028259
    Relative error      =     0.0000004710 %
 Final energy components:
- DFT Correlation                 Energy =  -0.14423436857987
- DFT Exchange                    Energy =  -5.01556263013802
+ DFT Correlation                 Energy =  -0.14423436389155
+ DFT Exchange                    Energy =  -5.01556242157701
  Empirical Dispersion Correction Energy =   0.00000000000000
- Kinetic (alpha)                 Energy =  20.06581790909399
- Kinetic (beta)                  Energy =  17.48562681983169
- Nuclear Attraction (alpha)      Energy = -48.76912463025330
- Nuclear Attraction (beta)       Energy = -39.23746551803642
+ Kinetic (alpha)                 Energy =  20.06581710933482
+ Kinetic (beta)                  Energy =  17.48562583235450
+ Nuclear Attraction (alpha)      Energy = -48.76912332851676
+ Nuclear Attraction (beta)       Energy = -39.23746427707189
  Nuclear Repulsion               Energy =   0.00000000000000
  SEOQF                           Energy =  -0.00000000043259
- Total Coulomb                   Energy =  17.82001884656440
+ Total Coulomb                   Energy =  17.82001787785087
 ----------------------------------------------
-    SCF Energy: -37.7949235720
-   Total fragment job time:  1.17 s.
+    SCF Energy: -37.7949235719
+   Total fragment job time:  1.35 s.
     Running SCF for isolated atom #1
-    Fragment Input file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250709194132/autosad_frgmt_1/frgmt_input.in
-    Fragment Output file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250709194132/autosad_frgmt_1/frgmt_job.out
-    Fragment job begins at Wed Jul  9 19:44:19 2025
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250917102522/autosad_frgmt_1/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_444.scratch20250917102522/autosad_frgmt_1/frgmt_job.out
+    Fragment job begins at Wed Sep 17 10:28:00 2025
 
  Integrated density by DFT XC:
    Numerical integral  =     1.000000000312
@@ -3601,298 +3712,324 @@ Final energy components:
  Total Coulomb                   Energy =   0.30725039235798
 ----------------------------------------------
     SCF Energy: -0.4995878822
-   Total fragment job time:  0.96 s.
+   Total fragment job time:  0.31 s.
 restoring fragment data
 
  ------------------------------------------------------------------------
- Allocate 3425889280 B from available memory: 523136164576 B
- Time for generating SCF guess: 2.98 s
+ Allocate 3425889280 B from available memory: 1047430259424 B
+ Time for generating SCF guess: 3.30 s
 
- Allocate 5224072 B from available memory: 519710275296 B
+ Allocate 2052136 B from available memory: 1044004370144 B
  Selected algorithms for each term:
-  kpts_dftd3 -> @0x7f20ce2906a0
-  kpts_kinetic -> @0x7f20ce2905e0
-  kpts_nn -> @0x7f20ce290760
-  kpts_rij_bigmem -> @0x7f20ce290340
-  kpts_vnuc_df -> @0x7f20ce2902e0
-  kpts_xc -> @0x7f20ce290220
+  kpts_dftd3 -> @0x152454bb7740
+  kpts_kinetic -> @0x152454bb7680
+  kpts_nn -> @0x152454bb7800
+  kpts_rij_bigmem -> @0x152454bb73e0
+  kpts_vnuc_df -> @0x152454bb7380
+  kpts_xc -> @0x152454bb72c0
 
- Time for computing kinetic matrix is 15.10 s
+ Time for computing kinetic matrix is 10.27 s
 Start calculating Vnuc CC type!
- Time for computing nuclear attraction matrix is 21.82 s
-Maximum distance between P and Q is 48.46736674611299
-Number of images for (P|Qn) is 157
- Time for computing 2e2c SR integral is 1.60 s
- === bvk cell = 0 has 70.77 % of the basis function pairs === 
- === bvk cell = 1 has 16.93 % of the basis function pairs === 
- === bvk cell = 2 has 0.05 % of the basis function pairs === 
- === bvk cell = 3 has 17.26 % of the basis function pairs === 
- === bvk cell = 4 has 23.67 % of the basis function pairs === 
- === bvk cell = 5 has 4.98 % of the basis function pairs === 
- === bvk cell = 6 has 0.01 % of the basis function pairs === 
- === bvk cell = 7 has 5.89 % of the basis function pairs === 
- === bvk cell = 8 has 0.82 % of the basis function pairs === 
- === bvk cell = 9 has 0.11 % of the basis function pairs === 
- === bvk cell = 10 has 0.00 % of the basis function pairs === 
- === bvk cell = 11 has 0.09 % of the basis function pairs === 
- === bvk cell = 12 has 24.08 % of the basis function pairs === 
- === bvk cell = 13 has 6.06 % of the basis function pairs === 
- === bvk cell = 14 has 0.01 % of the basis function pairs === 
- === bvk cell = 15 has 5.02 % of the basis function pairs === 
- === bvk cell = 16 has 27.28 % of the basis function pairs === 
- === bvk cell = 17 has 6.50 % of the basis function pairs === 
- === bvk cell = 18 has 0.01 % of the basis function pairs === 
- === bvk cell = 19 has 6.26 % of the basis function pairs === 
- === bvk cell = 20 has 9.27 % of the basis function pairs === 
- === bvk cell = 21 has 1.43 % of the basis function pairs === 
- === bvk cell = 22 has 0.00 % of the basis function pairs === 
- === bvk cell = 23 has 2.15 % of the basis function pairs === 
- === bvk cell = 24 has 0.16 % of the basis function pairs === 
- === bvk cell = 25 has 0.01 % of the basis function pairs === 
- === bvk cell = 26 has 0.00 % of the basis function pairs === 
- === bvk cell = 27 has 0.06 % of the basis function pairs === 
- === bvk cell = 28 has 7.95 % of the basis function pairs === 
- === bvk cell = 29 has 2.00 % of the basis function pairs === 
- === bvk cell = 30 has 0.00 % of the basis function pairs === 
- === bvk cell = 31 has 1.55 % of the basis function pairs === 
- === bvk cell = 32 has 1.86 % of the basis function pairs === 
- === bvk cell = 33 has 0.28 % of the basis function pairs === 
- === bvk cell = 34 has 0.00 % of the basis function pairs === 
- === bvk cell = 35 has 0.27 % of the basis function pairs === 
- === bvk cell = 36 has 0.37 % of the basis function pairs === 
- === bvk cell = 37 has 0.04 % of the basis function pairs === 
- === bvk cell = 38 has 0.00 % of the basis function pairs === 
- === bvk cell = 39 has 0.10 % of the basis function pairs === 
- === bvk cell = 40 has 0.00 % of the basis function pairs === 
- === bvk cell = 41 has 0.00 % of the basis function pairs === 
- === bvk cell = 42 has 0.00 % of the basis function pairs === 
- === bvk cell = 43 has 0.00 % of the basis function pairs === 
- === bvk cell = 44 has 0.41 % of the basis function pairs === 
- === bvk cell = 45 has 0.13 % of the basis function pairs === 
- === bvk cell = 46 has 0.00 % of the basis function pairs === 
- === bvk cell = 47 has 0.03 % of the basis function pairs === 
- === bvk cell = 48 has 27.70 % of the basis function pairs === 
- === bvk cell = 49 has 6.27 % of the basis function pairs === 
- === bvk cell = 50 has 0.01 % of the basis function pairs === 
- === bvk cell = 51 has 6.63 % of the basis function pairs === 
- === bvk cell = 52 has 7.92 % of the basis function pairs === 
- === bvk cell = 53 has 1.63 % of the basis function pairs === 
- === bvk cell = 54 has 0.00 % of the basis function pairs === 
- === bvk cell = 55 has 1.91 % of the basis function pairs === 
- === bvk cell = 56 has 0.18 % of the basis function pairs === 
- === bvk cell = 57 has 0.09 % of the basis function pairs === 
- === bvk cell = 58 has 0.00 % of the basis function pairs === 
- === bvk cell = 59 has 0.01 % of the basis function pairs === 
- === bvk cell = 60 has 9.70 % of the basis function pairs === 
- === bvk cell = 61 has 2.28 % of the basis function pairs === 
- === bvk cell = 62 has 0.00 % of the basis function pairs === 
- === bvk cell = 63 has 1.51 % of the basis function pairs === 
+ Time for computing nuclear attraction matrix is 27.91 s
+Compute (P|Q) and solve linear equation on the fly!
+Maximum distance between P and Q is 30.66614665213823
+Number of images for (P|Qn) is 173
+ Time for computing 2e2c SR integral without init time is 2.09 s
+ Time for computing 2e2c SR integral is 2.25 s
+Maximum dynamic memory per thread for 2e3c SR integrals: 0.702 GiB
+Batch size for basis function pair is 475344 out of 475344
+ === bvk cell = 0 has 70.766 % of the basis function pairs === 
+ === bvk cell = 1 has 16.932 % of the basis function pairs === 
+ === bvk cell = 2 has 0.048 % of the basis function pairs === 
+ === bvk cell = 3 has 17.261 % of the basis function pairs === 
+ === bvk cell = 4 has 23.675 % of the basis function pairs === 
+ === bvk cell = 5 has 4.983 % of the basis function pairs === 
+ === bvk cell = 6 has 0.005 % of the basis function pairs === 
+ === bvk cell = 7 has 5.894 % of the basis function pairs === 
+ === bvk cell = 8 has 0.815 % of the basis function pairs === 
+ === bvk cell = 9 has 0.109 % of the basis function pairs === 
+ === bvk cell = 10 has 0.000 % of the basis function pairs === 
+ === bvk cell = 11 has 0.086 % of the basis function pairs === 
+ === bvk cell = 12 has 24.076 % of the basis function pairs === 
+ === bvk cell = 13 has 6.056 % of the basis function pairs === 
+ === bvk cell = 14 has 0.006 % of the basis function pairs === 
+ === bvk cell = 15 has 5.021 % of the basis function pairs === 
+ === bvk cell = 16 has 27.284 % of the basis function pairs === 
+ === bvk cell = 17 has 6.503 % of the basis function pairs === 
+ === bvk cell = 18 has 0.007 % of the basis function pairs === 
+ === bvk cell = 19 has 6.262 % of the basis function pairs === 
+ === bvk cell = 20 has 9.272 % of the basis function pairs === 
+ === bvk cell = 21 has 1.427 % of the basis function pairs === 
+ === bvk cell = 22 has 0.000 % of the basis function pairs === 
+ === bvk cell = 23 has 2.146 % of the basis function pairs === 
+ === bvk cell = 24 has 0.161 % of the basis function pairs === 
+ === bvk cell = 25 has 0.011 % of the basis function pairs === 
+ === bvk cell = 26 has 0.000 % of the basis function pairs === 
+ === bvk cell = 27 has 0.062 % of the basis function pairs === 
+ === bvk cell = 28 has 7.949 % of the basis function pairs === 
+ === bvk cell = 29 has 2.001 % of the basis function pairs === 
+ === bvk cell = 30 has 0.004 % of the basis function pairs === 
+ === bvk cell = 31 has 1.553 % of the basis function pairs === 
+ === bvk cell = 32 has 1.857 % of the basis function pairs === 
+ === bvk cell = 33 has 0.280 % of the basis function pairs === 
+ === bvk cell = 34 has 0.000 % of the basis function pairs === 
+ === bvk cell = 35 has 0.268 % of the basis function pairs === 
+ === bvk cell = 36 has 0.369 % of the basis function pairs === 
+ === bvk cell = 37 has 0.036 % of the basis function pairs === 
+ === bvk cell = 38 has 0.000 % of the basis function pairs === 
+ === bvk cell = 39 has 0.100 % of the basis function pairs === 
+ === bvk cell = 40 has 0.000 % of the basis function pairs === 
+ === bvk cell = 41 has 0.004 % of the basis function pairs === 
+ === bvk cell = 42 has 0.000 % of the basis function pairs === 
+ === bvk cell = 43 has 0.001 % of the basis function pairs === 
+ === bvk cell = 44 has 0.405 % of the basis function pairs === 
+ === bvk cell = 45 has 0.127 % of the basis function pairs === 
+ === bvk cell = 46 has 0.000 % of the basis function pairs === 
+ === bvk cell = 47 has 0.030 % of the basis function pairs === 
+ === bvk cell = 48 has 27.701 % of the basis function pairs === 
+ === bvk cell = 49 has 6.271 % of the basis function pairs === 
+ === bvk cell = 50 has 0.007 % of the basis function pairs === 
+ === bvk cell = 51 has 6.635 % of the basis function pairs === 
+ === bvk cell = 52 has 7.923 % of the basis function pairs === 
+ === bvk cell = 53 has 1.629 % of the basis function pairs === 
+ === bvk cell = 54 has 0.001 % of the basis function pairs === 
+ === bvk cell = 55 has 1.907 % of the basis function pairs === 
+ === bvk cell = 56 has 0.177 % of the basis function pairs === 
+ === bvk cell = 57 has 0.088 % of the basis function pairs === 
+ === bvk cell = 58 has 0.000 % of the basis function pairs === 
+ === bvk cell = 59 has 0.008 % of the basis function pairs === 
+ === bvk cell = 60 has 9.700 % of the basis function pairs === 
+ === bvk cell = 61 has 2.283 % of the basis function pairs === 
+ === bvk cell = 62 has 0.000 % of the basis function pairs === 
+ === bvk cell = 63 has 1.507 % of the basis function pairs === 
 Static memory requirement for 2e3c SR integrals: 28.692 GB
-Dynamic memory requirement for 2e3c SR integrals: 1.548 GB
-There are 1884 munu batches for computing 2e3c SR integrals with latsum
+There are 1 munu batches for computing 2e3c SR integrals with latsum
 There are 42 Q batches for computing 2e3c SR integrals with latsum
- Time for computing 2e3c SR integral (CC) is 718.26 s
+ Time for computing 2e3c SR integral (CC) is 149.73 s
+ Time for RI-J this SCF iteration is 163.89 s
+ Time for RI-J this SCF iteration is 13.59 s
+ ----------------------------------------------
+ Guess energy: -927.5237533857
  ----------------------------------------------
  Guess energy components:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.57683682690757
- DFT Exchange       Energy = -134.70118536466074
- Kinetic            Energy = 935.84537217465618
- Nuclear Attraction Energy = -1961.89908695760528
+ DFT Correlation    Energy =  -5.57685156161768
+ DFT Exchange       Energy = -134.70145157211476
+ Kinetic            Energy = 935.84653471333286
+ Nuclear Attraction Energy = -1961.90204173146049
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 367.01245757763672
+ Total Coulomb      Energy = 367.01466575766153
  ----------------------------------------------
   Cycle       Energy        RMS Gradient
  ----------------------------------------------
-    1    -927.6211339558      1.41e-01   Descent step
+ Time for RI-J this SCF iteration is 13.14 s
+    1    -927.6210094098      1.41e-01   Descent step
  Energy components after cycle 1:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.57241599952708
- DFT Exchange       Energy = -134.53784578121522
- Kinetic            Energy = 934.82320056907452
- Nuclear Attraction Energy = -1959.52671924822766
+ DFT Correlation    Energy =  -5.57242994526336
+ DFT Exchange       Energy = -134.53811093837717
+ Kinetic            Energy = 934.82436990461508
+ Nuclear Attraction Energy = -1959.52968602727356
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 365.39725549562178
-    2    -928.1377808360      1.28e-01  Line search: understep
+ Total Coulomb      Energy = 365.39945658803941
+ Time for RI-J this SCF iteration is 14.66 s
+    2    -928.1377514991      1.28e-01  Line search: understep
  Energy components after cycle 2:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.53760358771321
- DFT Exchange       Energy = -133.06113511204842
- Kinetic            Energy = 925.68076478251419
- Nuclear Attraction Energy = -1937.74484836564238
+ DFT Correlation    Energy =  -5.53761076919137
+ DFT Exchange       Energy = -133.06138100759961
+ Kinetic            Energy = 925.68196579360938
+ Nuclear Attraction Energy = -1937.74783182675628
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 350.72965043844113
-    3    -928.1589170916      2.74e-02   Descent step
+ Total Coulomb      Energy = 350.73171530241740
+ Time for RI-J this SCF iteration is 13.24 s
+    3    -928.1588952676      2.74e-02   Descent step
  Energy components after cycle 3:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.53751773528462
- DFT Exchange       Energy = -132.90508508452018
- Kinetic            Energy = 924.75356131109720
- Nuclear Attraction Energy = -1935.75709187520101
+ DFT Correlation    Energy =  -5.53752282673878
+ DFT Exchange       Energy = -132.90531351523143
+ Kinetic            Energy = 924.75468182755128
+ Nuclear Attraction Energy = -1935.75978069483017
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 349.49182528380913
-    4    -928.1742334247      2.11e-02   Descent step
+ Total Coulomb      Energy = 349.49364893317016
+ Time for RI-J this SCF iteration is 14.86 s
+    4    -928.1742186041      2.11e-02   Descent step
  Energy components after cycle 4:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.53804269768177
- DFT Exchange       Energy = -132.75400613515643
- Kinetic            Energy = 923.87258403467763
- Nuclear Attraction Energy = -1933.88677641339928
+ DFT Correlation    Energy =  -5.53804555413130
+ DFT Exchange       Energy = -132.75421470204145
+ Kinetic            Energy = 923.87360864941911
+ Nuclear Attraction Energy = -1933.88913587105412
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 348.33661677837500
-    5    -928.1840428289      1.47e-02   Descent step
+ Total Coulomb      Energy = 348.33817786521570
+ Time for RI-J this SCF iteration is 12.66 s
+    5    -928.1840343883      1.48e-02   Descent step
  Energy components after cycle 5:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.53935467739739
- DFT Exchange       Energy = -132.61143457091640
- Kinetic            Energy = 923.06727111179987
- Nuclear Attraction Energy = -1932.20150431773072
+ DFT Correlation    Energy =  -5.53935503899050
+ DFT Exchange       Energy = -132.61161651692427
+ Kinetic            Energy = 923.06815429720234
+ Nuclear Attraction Energy = -1932.20343837924224
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 347.30558861691634
-    6    -928.1887613803      8.43e-03   Descent step
+ Total Coulomb      Energy = 347.30683024118878
+ Time for RI-J this SCF iteration is 11.76 s
+    6    -928.1887586129      8.44e-03   Descent step
  Energy components after cycle 6:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54179026849224
- DFT Exchange       Energy = -132.48574653795220
- Kinetic            Energy = 922.40611610380961
- Nuclear Attraction Energy = -1930.84989146180760
+ DFT Correlation    Energy =  -5.54178757679357
+ DFT Exchange       Energy = -132.48588503244406
+ Kinetic            Energy = 922.40673668568036
+ Nuclear Attraction Energy = -1930.85115913793447
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.48715977564177
-    7    -928.1894926437      2.77e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.48794544012048
+ Time for RI-J this SCF iteration is 12.99 s
+    7    -928.1894926327      2.78e-03   Normal BFGS step
  Energy components after cycle 7:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54469434145313
- DFT Exchange       Energy = -132.44975476380515
- Kinetic            Energy = 922.34126213064553
- Nuclear Attraction Energy = -1930.68601165118480
+ DFT Correlation    Energy =  -5.54469482448769
+ DFT Exchange       Energy = -132.44975900421548
+ Kinetic            Energy = 922.34129277440798
+ Nuclear Attraction Energy = -1930.68613888889877
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.35431497360884
-    8    -928.1894924681      5.44e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.35441630201916
+ Time for RI-J this SCF iteration is 12.68 s
+    8    -928.1894925247      5.41e-04   Normal BFGS step
  Energy components after cycle 8:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443419013642
- DFT Exchange       Energy = -132.44879158902430
- Kinetic            Energy = 922.32629608688615
- Nuclear Attraction Energy = -1930.64569887901280
+ DFT Correlation    Energy =  -5.54443393381029
+ DFT Exchange       Energy = -132.44878855869658
+ Kinetic            Energy = 922.32627807583651
+ Nuclear Attraction Energy = -1930.64562802764203
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.32774509470272
-    9    -928.1894962762      1.71e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.32768891116609
+ Time for RI-J this SCF iteration is 12.60 s
+    9    -928.1894962713      1.70e-03   Normal BFGS step
  Energy components after cycle 9:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54431111305347
- DFT Exchange       Energy = -132.44878961815229
- Kinetic            Energy = 922.32106436206595
- Nuclear Attraction Energy = -1930.63260315069192
+ DFT Correlation    Energy =  -5.54431102675317
+ DFT Exchange       Energy = -132.44878693667931
+ Kinetic            Energy = 922.32105403503999
+ Nuclear Attraction Energy = -1930.63254955214347
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.31975223513950
-   10    -928.1894977528      1.12e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.31970620080818
+ Time for RI-J this SCF iteration is 14.73 s
+   10    -928.1894977512      1.13e-03   Normal BFGS step
  Energy components after cycle 10:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54445207934558
- DFT Exchange       Energy = -132.44929673008684
- Kinetic            Energy = 922.32850316361350
- Nuclear Attraction Energy = -1930.65417523802284
+ DFT Correlation    Energy =  -5.54445191442961
+ DFT Exchange       Energy = -132.44929826783337
+ Kinetic            Energy = 922.32849923127321
+ Nuclear Attraction Energy = -1930.65418148813933
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33453212255301
-   11    -928.1895000964      7.31e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.33454367949867
+ Time for RI-J this SCF iteration is 14.12 s
+   11    -928.1895000892      7.36e-04   Normal BFGS step
  Energy components after cycle 11:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54448705898589
- DFT Exchange       Energy = -132.44920996207239
- Kinetic            Energy = 922.32953419022806
- Nuclear Attraction Energy = -1930.65636919297367
+ DFT Correlation    Energy =  -5.54448737130744
+ DFT Exchange       Energy = -132.44921194472082
+ Kinetic            Energy = 922.32955242813932
+ Nuclear Attraction Energy = -1930.65643248834658
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33564091895965
-   12    -928.1895008579      2.49e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.33568827860194
+ Time for RI-J this SCF iteration is 13.71 s
+   12    -928.1895008590      2.50e-04   Normal BFGS step
  Energy components after cycle 12:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54441278534024
- DFT Exchange       Energy = -132.44911306738820
- Kinetic            Energy = 922.32630589256712
- Nuclear Attraction Energy = -1930.64764262034282
+ DFT Correlation    Energy =  -5.54441278446286
+ DFT Exchange       Energy = -132.44911186414581
+ Kinetic            Energy = 922.32630287246786
+ Nuclear Attraction Energy = -1930.64762365900060
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.32997071413450
-   13    -928.1895008964      1.26e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.32995356763843
+ Time for RI-J this SCF iteration is 12.94 s
+   13    -928.1895008960      1.25e-04   Normal BFGS step
  Energy components after cycle 13:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54442421293965
- DFT Exchange       Energy = -132.44910603654472
- Kinetic            Energy = 922.32676522805309
- Nuclear Attraction Energy = -1930.64864348599031
+ DFT Correlation    Energy =  -5.54442418391921
+ DFT Exchange       Energy = -132.44910581211045
+ Kinetic            Energy = 922.32676328465664
+ Nuclear Attraction Energy = -1930.64863671598232
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33051660256922
-   14    -928.1895010116      1.55e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.33051152288175
+ Time for RI-J this SCF iteration is 14.27 s
+   14    -928.1895010129      1.55e-04   Normal BFGS step
  Energy components after cycle 14:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54444244281904
- DFT Exchange       Energy = -132.44913430142068
- Kinetic            Energy = 922.32756285121536
- Nuclear Attraction Energy = -1930.65084285485182
+ DFT Correlation    Energy =  -5.54444240531602
+ DFT Exchange       Energy = -132.44913492787333
+ Kinetic            Energy = 922.32756292377780
+ Nuclear Attraction Energy = -1930.65084910257701
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33196472784545
-   15    -928.1895010323      5.82e-05   Normal BFGS step
+ Total Coulomb      Energy = 346.33197149060493
+ Time for RI-J this SCF iteration is 14.47 s
+   15    -928.1895010330      5.75e-05   Normal BFGS step
  Energy components after cycle 15:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443306225760
- DFT Exchange       Energy = -132.44914642690918
- Kinetic            Energy = 922.32720996645844
- Nuclear Attraction Energy = -1930.65011708194334
+ DFT Correlation    Energy =  -5.54443302593876
+ DFT Exchange       Energy = -132.44914622120183
+ Kinetic            Energy = 922.32720804306609
+ Nuclear Attraction Energy = -1930.65011042114747
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33159456393099
-   16    -928.1895010391      3.97e-05   Normal BFGS step
+ Total Coulomb      Energy = 346.33158958372695
+ Time for RI-J this SCF iteration is 13.42 s
+   16    -928.1895010400      3.93e-05   Normal BFGS step
  Energy components after cycle 16:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54442918896311
- DFT Exchange       Energy = -132.44913173339302
- Kinetic            Energy = 922.32701982613878
- Nuclear Attraction Energy = -1930.64951922934779
+ DFT Correlation    Energy =  -5.54442922111448
+ DFT Exchange       Energy = -132.44913153329341
+ Kinetic            Energy = 922.32702062200644
+ Nuclear Attraction Energy = -1930.64951919757550
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33116827797153
-   17    -928.1895010457      3.96e-05   Normal BFGS step
+ Total Coulomb      Energy = 346.33116728147814
+ Time for RI-J this SCF iteration is 14.22 s
+   17    -928.1895010464      3.91e-05   Normal BFGS step
  Energy components after cycle 17:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443344939493
- DFT Exchange       Energy = -132.44912656412416
- Kinetic            Energy = 922.32718273638216
- Nuclear Attraction Energy = -1930.64985441167119
+ DFT Correlation    Energy =  -5.54443346945322
+ DFT Exchange       Energy = -132.44912666186735
+ Kinetic            Energy = 922.32718376558648
+ Nuclear Attraction Energy = -1930.64985785316367
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33133963460068
-   18    -928.1895010466      1.73e-05   Normal BFGS step
+ Total Coulomb      Energy = 346.33134216403596
+ Time for RI-J this SCF iteration is 14.05 s
+   18    -928.1895010473      1.87e-05   Normal BFGS step
  Energy components after cycle 18:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443445836631
- DFT Exchange       Energy = -132.44913393017572
- Kinetic            Energy = 922.32723800032454
- Nuclear Attraction Energy = -1930.65006204657107
+ DFT Correlation    Energy =  -5.54443445536259
+ DFT Exchange       Energy = -132.44913396556993
+ Kinetic            Energy = 922.32723800462759
+ Nuclear Attraction Energy = -1930.65006234895986
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33150037971529
-   19    -928.1895010485      9.93e-06   Normal BFGS step
+ Total Coulomb      Energy = 346.33150070947653
+ Time for RI-J this SCF iteration is 13.31 s
+   19    -928.1895010492      9.94e-06   Normal BFGS step
  Energy components after cycle 19:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443267858855
- DFT Exchange       Energy = -132.44913609274428
- Kinetic            Energy = 922.32717121309281
- Nuclear Attraction Energy = -1930.64992382818855
+ DFT Correlation    Energy =  -5.54443266383740
+ DFT Exchange       Energy = -132.44913606520799
+ Kinetic            Energy = 922.32717054474506
+ Nuclear Attraction Energy = -1930.64992197456058
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33142932943122
-   19    -928.1895010485      9.93e-06  Convergence criterion met
+ Total Coulomb      Energy = 346.33142810116698
+   19    -928.1895010492      9.94e-06  Convergence criterion met
  ----------------------------------------------
  Final energy components:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443267858855
- DFT Exchange       Energy = -132.44913609274428
- Kinetic            Energy = 922.32717121309281
- Nuclear Attraction Energy = -1930.64992382818855
+ DFT Correlation    Energy =  -5.54443266383740
+ DFT Exchange       Energy = -132.44913606520799
+ Kinetic            Energy = 922.32717054474506
+ Nuclear Attraction Energy = -1930.64992197456058
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33142932943122
+ Total Coulomb      Energy = 346.33142810116698
  ----------------------------------------------
- Final energy is -928.1895010485
+ Final energy is -928.1895010492
 
- SCF time:   CPU 126699.41s  wall 5679.00s 
- Total wall time for computing Kinetic: 4.32 s (21)
- Total wall time for computing RIJ-BIGMEM: 1022.87 s (21)
- Total wall time for computing RSDF Vnuc: 5.14 s (21)
- Total wall time for computing DFT XC: 1799.06 s (21)
+ SCF time:   CPU 150695.72s  wall 7084.00s 
+ Total wall time for computing Kinetic: 8.08 s (21)
+ Total wall time for computing RIJ-BIGMEM: 435.83 s (21)
+ Total wall time for computing RSDF Vnuc: 8.76 s (21)
+ Total wall time for computing DFT XC: 4209.27 s (21)
  ---------------------------------------------------------------------------
                         Orbital Energies (a.u.)
  ---------------------------------------------------------------------------
@@ -4111,7 +4248,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  13.01668 13.18099 13.18149 13.23936 13.50340 13.57551 13.61780 13.65337 13.77145 13.86001
  13.88827 14.11032 16.11033 16.12597 16.14158 16.26005
  == 2-th k-point (-0.12206,-0.11248,0.08824) occupation: 84==
- -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68201 -9.68201
+ -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68202 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68194 -9.68193 -9.68062 -9.68062 -9.68061 -9.68061
  -9.68061 -9.68060 -9.68060 -9.68060 -0.57459 -0.57275 -0.57154 -0.57131 -0.47322 -0.47058
  -0.46996 -0.46939 -0.46798 -0.46743 -0.46647 -0.46582 -0.33935 -0.33835 -0.33697 -0.33576
@@ -4495,7 +4632,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.19520 3.19977 3.20354 3.20967 3.21396 3.21751 3.22442 3.22670 3.22775 3.23150
  3.23343 3.23619 3.23659 3.24293 3.24483 3.24528 3.24780 3.25241 3.25376 3.25729
  3.26186 3.26373 3.26407 3.26477 3.27718 3.27763 3.27770 3.27833 3.29752 3.29908
- 3.29965 3.30272 3.30642 3.30927 3.31253 3.31532 3.32811 3.33211 3.33254 3.33266
+ 3.29965 3.30272 3.30642 3.30927 3.31253 3.31531 3.32811 3.33211 3.33254 3.33266
  3.33898 3.34578 3.34896 3.36691 3.36821 3.37421 3.37694 3.38027 3.38545 3.38625
  3.38792 3.39272 3.40024 3.41532 3.41752 3.41977 3.42600 3.43800 3.44343 3.45056
  3.45612 3.46010 3.46415 3.46564 3.46684 3.47368 3.48079 3.48305 3.49072 3.50052
@@ -4685,7 +4822,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.60633 1.60633 1.61450 1.61450 1.62395 1.62395 1.63511 1.63511 1.65041 1.65041
  1.65723 1.65723 1.67447 1.67447 1.68327 1.68327 1.69250 1.69250 1.70823 1.70823
  1.72153 1.72153 1.72940 1.72940 1.74539 1.74539 1.75223 1.75223 1.76628 1.76628
- 1.76980 1.76980 1.78535 1.78535 1.79929 1.79929 1.81083 1.81083 1.82755 1.82755
+ 1.76979 1.76980 1.78535 1.78535 1.79929 1.79929 1.81083 1.81083 1.82755 1.82755
  1.87067 1.87067 1.88775 1.88775 1.90117 1.90117 1.90641 1.90641 1.91857 1.91857
  1.96368 1.96368 1.96720 1.96720 1.99305 1.99305 2.00033 2.00033 2.01929 2.01929
  2.02730 2.02730 2.03834 2.03834 2.06311 2.06311 2.08127 2.08127 2.09817 2.09817
@@ -4759,7 +4896,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.46996 -0.46939 -0.46798 -0.46743 -0.46647 -0.46582 -0.33935 -0.33835 -0.33697 -0.33576
  -0.33466 -0.33360 -0.33302 -0.33035 -0.27221 -0.26390 -0.26366 -0.25877 -0.20615 -0.20256
  -0.19914 -0.19654 -0.19224 -0.19167 -0.19101 -0.19061 -0.17496 -0.17427 -0.17330 -0.16682
- -0.16311 -0.16168 -0.15876 -0.15661 -0.13083 -0.12626 -0.12226 -0.11953 -0.09770 -0.09627
+ -0.16312 -0.16168 -0.15876 -0.15661 -0.13083 -0.12626 -0.12226 -0.11953 -0.09770 -0.09627
  -0.09443 -0.09306 -0.09005 -0.08713 -0.08471 -0.08280 -0.03211 -0.03144 -0.02810 -0.02741
  -0.02492 -0.02191 -0.01916 -0.01806 0.15330 0.15397 0.15910 0.16116 0.16350 0.16699
  0.17078 0.17354 0.21631 0.24492 0.25386 0.25874 0.26195 0.26901 0.27266 0.28628
@@ -5044,7 +5181,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.90817 3.91287 3.91520 3.92149 3.92378 3.92614 3.93006 3.93437 3.93742 3.94110
  3.94265 3.94480 3.95035 3.95393 3.95623 3.96116 3.96962 3.97714 3.97943 3.98321
  3.98953 3.99478 4.00443 4.00684 4.01332 4.01571 4.02178 4.02427 4.02657 4.02726
- 4.03767 4.04489 4.04776 4.05198 4.05466 4.05839 4.06688 4.07236 4.07393 4.07611
+ 4.03767 4.04489 4.04776 4.05199 4.05466 4.05839 4.06688 4.07236 4.07393 4.07611
  4.08264 4.08424 4.08860 4.09617 4.10033 4.10932 4.11454 4.11927 4.12308 4.12866
  4.14098 4.14587 4.16085 4.16410 4.18016 4.18240 4.18465 4.19916 4.20183 4.20722
  4.21117 4.21894 4.22662 4.22962 4.23439 4.23682 4.24586 4.24965 4.26121 4.26751
@@ -5288,7 +5425,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  13.11470 13.11470 13.20656 13.20656 13.53680 13.53680 13.63343 13.63343 13.85508 13.85509
  13.97211 13.97211 16.14727 16.14727 16.19709 16.19709
  == 13-th k-point (-0.12206,0.22496,0.00000) occupation: 84==
- -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68201 -9.68201
+ -9.68238 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68194 -9.68193 -9.68062 -9.68062 -9.68061 -9.68061
  -9.68061 -9.68061 -9.68060 -9.68060 -0.57329 -0.57329 -0.57180 -0.57180 -0.47174 -0.47174
  -0.46953 -0.46953 -0.46783 -0.46783 -0.46643 -0.46643 -0.33722 -0.33722 -0.33539 -0.33539
@@ -5945,7 +6082,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  0.39693 0.39693 0.41444 0.41444 0.43164 0.43164 0.43798 0.43798 0.44797 0.44797
  0.45060 0.45060 0.46876 0.46876 0.47711 0.47711 0.49116 0.49116 0.49538 0.49538
  0.50622 0.50622 0.50809 0.50809 0.52856 0.52856 0.53199 0.53199 0.55181 0.55181
- 0.55324 0.55324 0.58604 0.58604 0.58800 0.58800 0.59678 0.59678 0.61479 0.61479
+ 0.55324 0.55324 0.58603 0.58604 0.58800 0.58800 0.59678 0.59678 0.61479 0.61479
  0.62212 0.62212 0.63072 0.63072 0.64260 0.64260 0.65103 0.65103 0.66051 0.66051
  0.67419 0.67419 0.67837 0.67838 0.68276 0.68276 0.69827 0.69827 0.71653 0.71653
  0.72302 0.72302 0.72855 0.72855 0.73495 0.73495 0.73865 0.73865 0.74916 0.74916
@@ -6152,7 +6289,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.19783 -0.19488 -0.19329 -0.19315 -0.19067 -0.19049 -0.17862 -0.17797 -0.17594 -0.16264
  -0.16224 -0.16061 -0.16011 -0.15393 -0.12434 -0.12189 -0.11839 -0.11690 -0.10186 -0.10029
  -0.09891 -0.09277 -0.09110 -0.09065 -0.08539 -0.07937 -0.03667 -0.03604 -0.03278 -0.02867
- -0.02258 -0.01868 -0.01453 -0.01291 0.15164 0.15319 0.15746 0.16407 0.16525 0.16673
+ -0.02258 -0.01868 -0.01453 -0.01291 0.15164 0.15319 0.15745 0.16407 0.16525 0.16673
  0.17427 0.17674 0.19568 0.24027 0.24977 0.26784 0.27579 0.28091 0.28915 0.29049
  0.29452 0.29472 0.29604 0.30091 0.30804 0.31963 0.32487 0.32626 0.33521 0.34066
  0.34413 0.35325 0.36109 0.36265 0.36497 0.37108 0.37154 0.37758 0.38155 0.38373
@@ -6190,7 +6327,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.12615 2.13093 2.13644 2.14662 2.15406 2.17194 2.17280 2.19591 2.19696 2.19903
  2.20118 2.20432 2.20811 2.23752 2.24324 2.24780 2.25266 2.26021 2.29367 2.29419
  2.29678 2.29995 2.31236 2.32003 2.33881 2.34713 2.35846 2.37709 2.38763 2.39992
- 2.41415 2.41642 2.42067 2.43106 2.43455 2.44591 2.45177 2.46032 2.47174 2.48962
+ 2.41415 2.41642 2.42067 2.43106 2.43454 2.44591 2.45177 2.46032 2.47174 2.48962
  2.49576 2.49719 2.50074 2.50394 2.51012 2.51788 2.52265 2.52618 2.53281 2.54011
  2.54350 2.55569 2.56116 2.56123 2.56173 2.57501 2.57612 2.59712 2.60591 2.61071
  2.63517 2.63966 2.64303 2.65088 2.66536 2.66650 2.67074 2.68035 2.70024 2.70148
@@ -6801,7 +6938,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  0.39693 0.39693 0.41444 0.41444 0.43164 0.43164 0.43798 0.43798 0.44797 0.44797
  0.45060 0.45060 0.46876 0.46876 0.47711 0.47711 0.49116 0.49116 0.49538 0.49538
  0.50622 0.50622 0.50809 0.50809 0.52856 0.52856 0.53199 0.53199 0.55181 0.55181
- 0.55324 0.55324 0.58604 0.58604 0.58800 0.58800 0.59678 0.59678 0.61479 0.61479
+ 0.55324 0.55324 0.58603 0.58604 0.58800 0.58800 0.59678 0.59678 0.61479 0.61479
  0.62212 0.62212 0.63072 0.63072 0.64260 0.64260 0.65103 0.65103 0.66051 0.66051
  0.67419 0.67419 0.67837 0.67838 0.68276 0.68276 0.69827 0.69827 0.71653 0.71653
  0.72302 0.72302 0.72855 0.72855 0.73495 0.73495 0.73865 0.73865 0.74916 0.74916
@@ -7398,7 +7535,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.90817 3.91287 3.91520 3.92149 3.92378 3.92614 3.93006 3.93437 3.93742 3.94110
  3.94265 3.94480 3.95035 3.95393 3.95623 3.96116 3.96962 3.97714 3.97943 3.98321
  3.98953 3.99478 4.00443 4.00684 4.01332 4.01571 4.02178 4.02427 4.02657 4.02726
- 4.03767 4.04489 4.04776 4.05198 4.05466 4.05839 4.06688 4.07236 4.07393 4.07611
+ 4.03767 4.04489 4.04776 4.05199 4.05466 4.05839 4.06688 4.07236 4.07393 4.07611
  4.08264 4.08424 4.08860 4.09617 4.10033 4.10932 4.11454 4.11927 4.12308 4.12866
  4.14098 4.14587 4.16085 4.16410 4.18016 4.18240 4.18465 4.19916 4.20183 4.20722
  4.21117 4.21894 4.22662 4.22962 4.23439 4.23682 4.24586 4.24965 4.26121 4.26751
@@ -7541,7 +7678,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.46996 -0.46939 -0.46798 -0.46743 -0.46647 -0.46582 -0.33935 -0.33835 -0.33697 -0.33576
  -0.33466 -0.33360 -0.33302 -0.33035 -0.27221 -0.26390 -0.26366 -0.25877 -0.20615 -0.20256
  -0.19914 -0.19654 -0.19224 -0.19167 -0.19101 -0.19061 -0.17496 -0.17427 -0.17330 -0.16682
- -0.16311 -0.16168 -0.15876 -0.15661 -0.13083 -0.12626 -0.12226 -0.11953 -0.09770 -0.09627
+ -0.16312 -0.16168 -0.15876 -0.15661 -0.13083 -0.12626 -0.12226 -0.11953 -0.09770 -0.09627
  -0.09443 -0.09306 -0.09005 -0.08713 -0.08471 -0.08280 -0.03211 -0.03144 -0.02810 -0.02741
  -0.02492 -0.02191 -0.01916 -0.01806 0.15330 0.15397 0.15910 0.16116 0.16350 0.16699
  0.17078 0.17354 0.21631 0.24492 0.25386 0.25874 0.26195 0.26901 0.27266 0.28628
@@ -7919,7 +8056,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.19520 3.19977 3.20354 3.20967 3.21396 3.21751 3.22442 3.22670 3.22775 3.23150
  3.23343 3.23619 3.23659 3.24293 3.24483 3.24528 3.24780 3.25241 3.25376 3.25729
  3.26186 3.26373 3.26407 3.26477 3.27718 3.27763 3.27770 3.27833 3.29752 3.29908
- 3.29965 3.30272 3.30642 3.30927 3.31253 3.31532 3.32811 3.33211 3.33254 3.33266
+ 3.29965 3.30272 3.30642 3.30927 3.31253 3.31531 3.32811 3.33211 3.33254 3.33266
  3.33898 3.34578 3.34896 3.36691 3.36821 3.37421 3.37694 3.38027 3.38545 3.38625
  3.38792 3.39272 3.40024 3.41532 3.41752 3.41977 3.42600 3.43800 3.44343 3.45056
  3.45612 3.46010 3.46415 3.46564 3.46684 3.47368 3.48079 3.48305 3.49072 3.50052
@@ -8109,7 +8246,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.60633 1.60633 1.61450 1.61450 1.62395 1.62395 1.63511 1.63511 1.65041 1.65041
  1.65723 1.65723 1.67447 1.67447 1.68327 1.68327 1.69250 1.69250 1.70823 1.70823
  1.72153 1.72153 1.72940 1.72940 1.74539 1.74539 1.75223 1.75223 1.76628 1.76628
- 1.76980 1.76980 1.78535 1.78535 1.79929 1.79929 1.81083 1.81083 1.82755 1.82755
+ 1.76979 1.76980 1.78535 1.78535 1.79929 1.79929 1.81083 1.81083 1.82755 1.82755
  1.87067 1.87067 1.88775 1.88775 1.90117 1.90117 1.90641 1.90641 1.91857 1.91857
  1.96368 1.96368 1.96720 1.96720 1.99305 1.99305 2.00033 2.00033 2.01929 2.01929
  2.02730 2.02730 2.03834 2.03834 2.06311 2.06311 2.08127 2.08127 2.09817 2.09817
@@ -8177,7 +8314,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  13.11426 13.11427 13.12877 13.12878 13.62699 13.62700 13.66440 13.66440 13.76414 13.76414
  13.98248 13.98248 16.08575 16.08575 16.21034 16.21034
  == 40-th k-point (0.12206,0.11248,-0.08824) occupation: 84==
- -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68201 -9.68201
+ -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68202 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68194 -9.68193 -9.68062 -9.68062 -9.68061 -9.68061
  -9.68061 -9.68060 -9.68060 -9.68060 -0.57459 -0.57275 -0.57154 -0.57131 -0.47322 -0.47058
  -0.46996 -0.46939 -0.46798 -0.46743 -0.46647 -0.46582 -0.33935 -0.33835 -0.33697 -0.33576
@@ -8712,7 +8849,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  13.11470 13.11470 13.20656 13.20656 13.53680 13.53680 13.63343 13.63343 13.85508 13.85508
  13.97211 13.97211 16.14727 16.14727 16.19709 16.19709
  == 45-th k-point (0.12206,0.22496,0.00000) occupation: 84==
- -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68201 -9.68201
+ -9.68238 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68235 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68194 -9.68193 -9.68062 -9.68062 -9.68061 -9.68061
  -9.68061 -9.68061 -9.68060 -9.68060 -0.57329 -0.57329 -0.57180 -0.57180 -0.47174 -0.47174
  -0.46953 -0.46953 -0.46783 -0.46783 -0.46643 -0.46643 -0.33722 -0.33722 -0.33539 -0.33539
@@ -10754,62 +10891,62 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
 
       Atom                 Charge (a.u.)          Spin (a.u.)
    --------------------------------------------------------
-      1  C              (-0.197809,-0.000000)    (0.000000,0.000000)
+      1  C              (-0.197810,-0.000000)    (0.000000,0.000000)
       2  C              (-0.197804,-0.000000)    (0.000000,0.000000)
       3  C               (-0.197805,0.000000)    (0.000000,0.000000)
-      4  C               (-0.197806,0.000000)    (0.000000,0.000000)
-      5  C               (-0.197803,0.000000)    (0.000000,0.000000)
+      4  C              (-0.197806,-0.000000)    (0.000000,0.000000)
+      5  C              (-0.197803,-0.000000)    (0.000000,0.000000)
       6  C               (-0.197809,0.000000)    (0.000000,0.000000)
       7  C              (-0.197806,-0.000000)    (0.000000,0.000000)
-      8  C              (-0.197807,-0.000000)    (0.000000,0.000000)
+      8  C               (-0.197807,0.000000)    (0.000000,0.000000)
       9  C               (-0.040388,0.000000)    (0.000000,0.000000)
      10  C               (-0.040391,0.000000)    (0.000000,0.000000)
      11  C              (-0.040396,-0.000000)    (0.000000,0.000000)
-     12  C              (-0.040391,-0.000000)    (0.000000,0.000000)
+     12  C               (-0.040391,0.000000)    (0.000000,0.000000)
      13  C              (-0.040386,-0.000000)    (0.000000,0.000000)
      14  C              (-0.040401,-0.000000)    (0.000000,0.000000)
      15  C               (-0.040392,0.000000)    (0.000000,0.000000)
-     16  C               (-0.040385,0.000000)    (0.000000,0.000000)
-     17  C               (-0.126301,0.000000)    (0.000000,0.000000)
+     16  C               (-0.040384,0.000000)    (0.000000,0.000000)
+     17  C              (-0.126301,-0.000000)    (0.000000,0.000000)
      18  C               (-0.126304,0.000000)    (0.000000,0.000000)
      19  C              (-0.126307,-0.000000)    (0.000000,0.000000)
-     20  C              (-0.126308,-0.000000)    (0.000000,0.000000)
+     20  C               (-0.126308,0.000000)    (0.000000,0.000000)
      21  C              (-0.126310,-0.000000)    (0.000000,0.000000)
      22  C              (-0.126304,-0.000000)    (0.000000,0.000000)
      23  C               (-0.126306,0.000000)    (0.000000,0.000000)
      24  C               (-0.126305,0.000000)    (0.000000,0.000000)
      25  H               (0.134561,-0.000000)    (0.000000,0.000000)
      26  H               (0.134560,-0.000000)    (0.000000,0.000000)
-     27  H               (0.134562,-0.000000)    (0.000000,0.000000)
-     28  H                (0.134560,0.000000)    (0.000000,0.000000)
-     29  H                (0.134559,0.000000)    (0.000000,0.000000)
-     30  H               (0.134562,-0.000000)    (0.000000,0.000000)
-     31  H               (0.134560,-0.000000)    (0.000000,0.000000)
-     32  H               (0.134560,-0.000000)    (0.000000,0.000000)
-     33  H                (0.107219,0.000000)    (0.000000,0.000000)
+     27  H                (0.134562,0.000000)    (0.000000,0.000000)
+     28  H               (0.134560,-0.000000)    (0.000000,0.000000)
+     29  H               (0.134559,-0.000000)    (0.000000,0.000000)
+     30  H                (0.134562,0.000000)    (0.000000,0.000000)
+     31  H                (0.134560,0.000000)    (0.000000,0.000000)
+     32  H                (0.134560,0.000000)    (0.000000,0.000000)
+     33  H               (0.107219,-0.000000)    (0.000000,0.000000)
      34  H                (0.107219,0.000000)    (0.000000,0.000000)
      35  H               (0.107221,-0.000000)    (0.000000,0.000000)
      36  H               (0.107218,-0.000000)    (0.000000,0.000000)
-     37  H               (0.107217,-0.000000)    (0.000000,0.000000)
-     38  H               (0.107222,-0.000000)    (0.000000,0.000000)
-     39  H               (0.107219,-0.000000)    (0.000000,0.000000)
-     40  H                (0.107218,0.000000)    (0.000000,0.000000)
-     41  H                (0.122722,0.000000)    (0.000000,0.000000)
-     42  H               (0.122724,-0.000000)    (0.000000,0.000000)
-     43  H               (0.122725,-0.000000)    (0.000000,0.000000)
+     37  H               (0.107216,-0.000000)    (0.000000,0.000000)
+     38  H               (0.107221,-0.000000)    (0.000000,0.000000)
+     39  H                (0.107219,0.000000)    (0.000000,0.000000)
+     40  H               (0.107218,-0.000000)    (0.000000,0.000000)
+     41  H               (0.122722,-0.000000)    (0.000000,0.000000)
+     42  H                (0.122724,0.000000)    (0.000000,0.000000)
+     43  H               (0.122724,-0.000000)    (0.000000,0.000000)
      44  H                (0.122723,0.000000)    (0.000000,0.000000)
      45  H               (0.122723,-0.000000)    (0.000000,0.000000)
      46  H                (0.122725,0.000000)    (0.000000,0.000000)
      47  H                (0.122724,0.000000)    (0.000000,0.000000)
-     48  H                (0.122724,0.000000)    (0.000000,0.000000)
+     48  H               (0.122723,-0.000000)    (0.000000,0.000000)
    --------------------------------------------------------
-  Sum of atomic charges =      (0.000000,-0.000000)
+  Sum of atomic charges =     (-0.000000,-0.000000)
   Sum of spin   charges =       (0.000000,0.000000)
 
 
 
- Total job time:  5708.75 s.
- Wed Jul  9 21:16:42 2025
+ Total job time:  7101.36 s.
+ Wed Sep 17 12:24:16 2025
 
 
         *************************************************************

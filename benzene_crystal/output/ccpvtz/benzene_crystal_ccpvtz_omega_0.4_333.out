@@ -7,10 +7,10 @@
 
 Contributors to earlier versions of Q-Chem not listed above:
  Evgeny Epifanovsky, Leo Cunha, Jerome F. Gonthier, Kuan-Yu Liu
- Input file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250709191843/benzene_crystal_ccpvtz_omega_0.4_333.0
- Scratch folder: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250709191843
- Auxillary files located at: /u/hdinh/qcpbc/qcaux
- Q-Chem begins on Wed Jul  9 19:18:43 2025
+ Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250917094835/benzene_crystal_ccpvtz_omega_0.4_333.0
+ Scratch folder: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250917094835
+ Auxillary files located at: /n/home02/hieudinh/qcpbc/qcaux
+ Q-Chem begins on Wed Sep 17 09:48:36 2025
 
  -------------------------------------------------------------
  User input:
@@ -85,6 +85,10 @@ Contributors to earlier versions of Q-Chem not listed above:
  basis = cc-pvtz
  aux_basis = cc-pvtz-jk
  input_bohr = false
+ symmetry = false
+ rsdf_print_level 1
+ is_basis_uctr true
+ do_nonortho true
  
  mp_mesh = [3,3,3]
  
@@ -92,7 +96,7 @@ Contributors to earlier versions of Q-Chem not listed above:
  bvk_cgto true
  
  thresh 14
- mem_total 500000
+ mem_total 1000000
  threads 32
  
  MAX_SCF_CYCLES 500
@@ -105,7 +109,7 @@ Contributors to earlier versions of Q-Chem not listed above:
  
  thresh_1e2c_sp 1e-14
  thresh_2e3c_bra_ket_sep 1e-10
- thresh_g 1e-10
+ thresh_g 1e-12
  $end
  
  $rem_autosad
@@ -3334,17 +3338,17 @@ Contributors to earlier versions of Q-Chem not listed above:
 1 1
 
  -------------------------------------------------------------
- Allocate 9936184 B from available memory: 524288000000 B
+ Allocate 3841336 B from available memory: 1048576000000 B
  There are 343 image cells after screening.
  There are 187 image cells for CGTO evaluation after screening.
  Real-Space grid for FFT initialized based on kinetic energy cutoff (eV) = 500.0
- Real-Space grid for FFT: (25,27,35)
- There are 199155 real-space grid points.
- There are 1331 batches of real-space grid points. 
+ Real-Space grid for FFT: (18,20,25)
+ There are 77367 real-space grid points.
+ There are 512 batches of real-space grid points. 
  Size of each grid batch is around 128
- Grid for AFT initialized based on kinetic energy cutoff (eV) = 200.0
- Real-Space grid for AFT: (16,18,22)
- There are 54945 real-space grid points.
+ Grid for AFT initialized based on kinetic energy cutoff (eV) = 500.0
+ Real-Space grid for AFT: (18,20,25)
+ There are 77367 real-space grid points.
 
  There are 142416 atom-centered grid points.
 
@@ -3356,6 +3360,8 @@ Contributors to earlier versions of Q-Chem not listed above:
  a1  =   4.28900e-01
  a2  =   4.44070e+00
  ----------------------------------------------------------------
+ Spacegroup symmetry group: Pbca
+ Reducing spacegroup symmetry to symmorphic group: P -1
  Monkhorst-Pack mesh is [3,3,3]
  There are 27 k points.
 kpoints in Bohr
@@ -3388,19 +3394,19 @@ kpoints in Bohr
 0.1627468662 0.1499737698 0.1176545816
  There are 84 alpha and 84 beta electrons
  Start computing overlap matrix
- Allocate 481738752 B from available memory: 524278063840 B
- Time for computing overlap matrix: 17.5270000000 s
+ Allocate 481738752 B from available memory: 1048572158688 B
+ Time for computing overlap matrix: 11.4240000000 s
  ====== Initialize compute kernels for all-electron RI-J (kpts) ====== 
- ==== The unitcell is orthorombic! => Use orthorombic code ==== 
+ ==== The unitcell is non-orthorombic! => Use AFT non-orthorombic code ==== 
  ========================================================== 
  Range-separated parameter omega        = 0.400000000000000022
  Threshold for 1e2c shellpair           = 0.000000000000010000
  Threshold for 2e2c SR integral         = 0.000000000000000001
  Threshold for 2e3c SR integral         = 0.000000000100000000
- Threshold for AFT G-space screening is = 0.000000000100000000
+ Threshold for AFT G-space screening is = 0.000000000001000000
  The exponent cutoff for C/D classification (omega2 / 2) is  = 0.080000000000000016
  ========================================================== 
- === Post process the basis set for RI calculation (exp_cutoff = 0.080000000000000016 ) === 
+ === Process the basis set for RI calculation (exp_cutoff = 0.080000000000000016 ) === 
 nshells_b1 before uncontraction = 384
 nshells_b1 after uncontraction = 384
 nshells_baux before uncontraction = 840
@@ -3413,36 +3419,142 @@ naux total   = 2616
 naux compact = 2616
 naux diffuse = 0
 nshells_bnuc = 48
+
+ Number of unique atoms is 2
+ Unique atom #0 (h) has 6 shells.
+ Unique atom #1 (c) has 10 shells.
+
+Shell 0 to 9 belongs to atom c
+Shell 10 to 19 belongs to atom c
+Shell 20 to 29 belongs to atom c
+Shell 30 to 39 belongs to atom c
+Shell 40 to 49 belongs to atom c
+Shell 50 to 59 belongs to atom c
+Shell 60 to 69 belongs to atom c
+Shell 70 to 79 belongs to atom c
+Shell 80 to 89 belongs to atom c
+Shell 90 to 99 belongs to atom c
+Shell 100 to 109 belongs to atom c
+Shell 110 to 119 belongs to atom c
+Shell 120 to 129 belongs to atom c
+Shell 130 to 139 belongs to atom c
+Shell 140 to 149 belongs to atom c
+Shell 150 to 159 belongs to atom c
+Shell 160 to 169 belongs to atom c
+Shell 170 to 179 belongs to atom c
+Shell 180 to 189 belongs to atom c
+Shell 190 to 199 belongs to atom c
+Shell 200 to 209 belongs to atom c
+Shell 210 to 219 belongs to atom c
+Shell 220 to 229 belongs to atom c
+Shell 230 to 239 belongs to atom c
+Shell 240 to 245 belongs to atom h
+Shell 246 to 251 belongs to atom h
+Shell 252 to 257 belongs to atom h
+Shell 258 to 263 belongs to atom h
+Shell 264 to 269 belongs to atom h
+Shell 270 to 275 belongs to atom h
+Shell 276 to 281 belongs to atom h
+Shell 282 to 287 belongs to atom h
+Shell 288 to 293 belongs to atom h
+Shell 294 to 299 belongs to atom h
+Shell 300 to 305 belongs to atom h
+Shell 306 to 311 belongs to atom h
+Shell 312 to 317 belongs to atom h
+Shell 318 to 323 belongs to atom h
+Shell 324 to 329 belongs to atom h
+Shell 330 to 335 belongs to atom h
+Shell 336 to 341 belongs to atom h
+Shell 342 to 347 belongs to atom h
+Shell 348 to 353 belongs to atom h
+Shell 354 to 359 belongs to atom h
+Shell 360 to 365 belongs to atom h
+Shell 366 to 371 belongs to atom h
+Shell 372 to 377 belongs to atom h
+Shell 378 to 383 belongs to atom h
+
+ Number of unique atom is 2
+ Unique atom #0 (h) has 10 auxiliary shells.
+ Unique atom #1 (c) has 25 auxiliary shells.
+
+Auxiliary Shell 0 to 24 belongs to atom c
+Auxiliary Shell 25 to 49 belongs to atom c
+Auxiliary Shell 50 to 74 belongs to atom c
+Auxiliary Shell 75 to 99 belongs to atom c
+Auxiliary Shell 100 to 124 belongs to atom c
+Auxiliary Shell 125 to 149 belongs to atom c
+Auxiliary Shell 150 to 174 belongs to atom c
+Auxiliary Shell 175 to 199 belongs to atom c
+Auxiliary Shell 200 to 224 belongs to atom c
+Auxiliary Shell 225 to 249 belongs to atom c
+Auxiliary Shell 250 to 274 belongs to atom c
+Auxiliary Shell 275 to 299 belongs to atom c
+Auxiliary Shell 300 to 324 belongs to atom c
+Auxiliary Shell 325 to 349 belongs to atom c
+Auxiliary Shell 350 to 374 belongs to atom c
+Auxiliary Shell 375 to 399 belongs to atom c
+Auxiliary Shell 400 to 424 belongs to atom c
+Auxiliary Shell 425 to 449 belongs to atom c
+Auxiliary Shell 450 to 474 belongs to atom c
+Auxiliary Shell 475 to 499 belongs to atom c
+Auxiliary Shell 500 to 524 belongs to atom c
+Auxiliary Shell 525 to 549 belongs to atom c
+Auxiliary Shell 550 to 574 belongs to atom c
+Auxiliary Shell 575 to 599 belongs to atom c
+Auxiliary Shell 600 to 609 belongs to atom h
+Auxiliary Shell 610 to 619 belongs to atom h
+Auxiliary Shell 620 to 629 belongs to atom h
+Auxiliary Shell 630 to 639 belongs to atom h
+Auxiliary Shell 640 to 649 belongs to atom h
+Auxiliary Shell 650 to 659 belongs to atom h
+Auxiliary Shell 660 to 669 belongs to atom h
+Auxiliary Shell 670 to 679 belongs to atom h
+Auxiliary Shell 680 to 689 belongs to atom h
+Auxiliary Shell 690 to 699 belongs to atom h
+Auxiliary Shell 700 to 709 belongs to atom h
+Auxiliary Shell 710 to 719 belongs to atom h
+Auxiliary Shell 720 to 729 belongs to atom h
+Auxiliary Shell 730 to 739 belongs to atom h
+Auxiliary Shell 740 to 749 belongs to atom h
+Auxiliary Shell 750 to 759 belongs to atom h
+Auxiliary Shell 760 to 769 belongs to atom h
+Auxiliary Shell 770 to 779 belongs to atom h
+Auxiliary Shell 780 to 789 belongs to atom h
+Auxiliary Shell 790 to 799 belongs to atom h
+Auxiliary Shell 800 to 809 belongs to atom h
+Auxiliary Shell 810 to 819 belongs to atom h
+Auxiliary Shell 820 to 829 belongs to atom h
+Auxiliary Shell 830 to 839 belongs to atom h
+
 ================= Automatically determine grid size for reciprocal space summation =================
- Range-separated parameter = 0.40000000000000 and G-space screening threshold = 0.00000000010000
-The number of grid points along each axis dimension is (9, 10, 12)
-The total number of grid points is 9975
+ Range-separated parameter = 0.40000000000000 and G-space screening threshold = 0.00000000000100
+The number of grid points along each axis dimension is (9, 10, 13)
+Total number of grid points = 10773
+
 ======== Initializing relevant kernel for RIJ (CC type) ========
 There are 64048 shellpairs in the reference unit cell
-There are 157 images and we expect to have 10055536 in total
+There are 447 images and we expect to have 28629456 in total
 There are 262044 shellpairs in the lattice sum after screening
 ****** AFT -> SR ******
 Maximum bra distance cutoff is 23.000000000000
-Maximum bra ket distance cutoff is 26.843750000000
-Number of auxiliary image is 331
+Maximum bra ket distance cutoff is 28.781059169873
+Maximum bra ket screening distance is 23.062500000000
+Number of auxiliary image is 161
 There are 64048 shellpairs in the reference unit cell
-There are 259 images and we expect to have 16588432 in total
+There are 117 images and we expect to have 7493616 in total
 There are 262044 shellpairs in the lattice sum after screening
-Available memory for 2e3c calculation is 16368635159
-Batch size for auxiliary basis is 159 out of 2616
-Batch size for basis function pair is 28968 out of 475344
+Available memory per thread for 2e3c calculation is 32.752825623000Gb
 Finish initializing 2e3c SR with the lattice sum!
 =================================================
 ======== Initialize the SR component for Vnuc (CC type) ========
 Maximum bra distance cutoff is 23.000000000000
-Maximum bra ket distance cutoff is 21.003846166574
-Number of auxiliary image is 239
+Maximum bra ket distance cutoff is 23.072618114210
+Maximum bra ket screening distance is 16.960353445237
+Number of auxiliary image is 117
 There are 64048 shellpairs in the reference unit cell
-There are 259 images and we expect to have 16588432 in total
+There are 117 images and we expect to have 7493616 in total
 There are 262044 shellpairs in the lattice sum after screening
-Available memory for 2e3c calculation is 16368635159
-Batch size for auxiliary basis is 48 out of 48
-Batch size for basis function pair is 475344 out of 475344
+Available memory per thread for 2e3c calculation is 32.752825623000Gb
 Finish initializing 2e3c SR with the lattice sum!
 =================================================
  Aufbau occupation scheme, occupation determined by eigenvalue
@@ -3480,36 +3592,35 @@ Atom # 0: c, charge: 0, multiplicity: 3.000000
 Atom # 1: h, charge: 0, multiplicity: 2.000000
 writing autosad to fragment context
 Settings for isolated fragments: 
-  BSSE: FALSE
   frgm_gamma: TRUE
   frgm_center: FALSE
 
     Running SCF for isolated atom #0
-    Fragment Input file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250709191843/autosad_frgmt_0/frgmt_input.in
-    Fragment Output file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250709191843/autosad_frgmt_0/frgmt_job.out
-    Fragment job begins at Wed Jul  9 19:20:01 2025
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250917094835/autosad_frgmt_0/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250917094835/autosad_frgmt_0/frgmt_job.out
+    Fragment job begins at Wed Sep 17 09:49:36 2025
 
  Integrated density by DFT XC:
    Numerical integral  =     6.000000028259
    Relative error      =     0.0000004710 %
 Final energy components:
- DFT Correlation                 Energy =  -0.14423436698835
- DFT Exchange                    Energy =  -5.01556253122315
+ DFT Correlation                 Energy =  -0.14423436613719
+ DFT Exchange                    Energy =  -5.01556255857454
  Empirical Dispersion Correction Energy =   0.00000000000000
- Kinetic (alpha)                 Energy =  20.06581744906608
- Kinetic (beta)                  Energy =  17.48562630373291
- Nuclear Attraction (alpha)      Energy = -48.76912388748111
- Nuclear Attraction (beta)       Energy = -39.23746494571247
+ Kinetic (alpha)                 Energy =  20.06581750680112
+ Kinetic (beta)                  Energy =  17.48562660964290
+ Nuclear Attraction (alpha)      Energy = -48.76912397723522
+ Nuclear Attraction (beta)       Energy = -39.23746533565851
  Nuclear Repulsion               Energy =   0.00000000000000
  SEOQF                           Energy =  -0.00000000043259
- Total Coulomb                   Energy =  17.82001840708849
+ Total Coulomb                   Energy =  17.82001854964348
 ----------------------------------------------
     SCF Energy: -37.7949235720
-   Total fragment job time:  1.19 s.
+   Total fragment job time:  0.63 s.
     Running SCF for isolated atom #1
-    Fragment Input file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250709191843/autosad_frgmt_1/frgmt_input.in
-    Fragment Output file: /scratch/bdxq/hdinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250709191843/autosad_frgmt_1/frgmt_job.out
-    Fragment job begins at Wed Jul  9 19:20:02 2025
+    Fragment Input file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250917094835/autosad_frgmt_1/frgmt_input.in
+    Fragment Output file: /n/netscratch/joonholee_lab/Lab/hieudinh//benzene_crystal_ccpvtz_omega_0.4_333.scratch20250917094835/autosad_frgmt_1/frgmt_job.out
+    Fragment job begins at Wed Sep 17 09:49:37 2025
 
  Integrated density by DFT XC:
    Numerical integral  =     1.000000000312
@@ -3527,283 +3638,311 @@ Final energy components:
  Total Coulomb                   Energy =   0.30725039235798
 ----------------------------------------------
     SCF Energy: -0.4995878822
-   Total fragment job time:  0.85 s.
+   Total fragment job time:  0.34 s.
 restoring fragment data
 
  ------------------------------------------------------------------------
- Allocate 1445297040 B from available memory: 523796325088 B
- Time for generating SCF guess: 2.50 s
+ Allocate 1445297040 B from available memory: 1048090419936 B
+ Time for generating SCF guess: 1.69 s
 
- Allocate 5224072 B from available memory: 522351028064 B
+ Allocate 2052136 B from available memory: 1046645122912 B
  Selected algorithms for each term:
-  kpts_dftd3 -> @0x7f62341536a0
-  kpts_kinetic -> @0x7f62341535e0
-  kpts_nn -> @0x7f6234153760
-  kpts_rij_bigmem -> @0x7f6234153340
-  kpts_vnuc_df -> @0x7f62341532e0
-  kpts_xc -> @0x7f6234153220
+  kpts_dftd3 -> @0x14814467c740
+  kpts_kinetic -> @0x14814467c680
+  kpts_nn -> @0x14814467c800
+  kpts_rij_bigmem -> @0x14814467c3e0
+  kpts_vnuc_df -> @0x14814467c380
+  kpts_xc -> @0x14814467c2c0
 
- Time for computing kinetic matrix is 17.11 s
+ Time for computing kinetic matrix is 10.68 s
 Start calculating Vnuc CC type!
- Time for computing nuclear attraction matrix is 24.54 s
-Maximum distance between P and Q is 48.46736674611299
-Number of images for (P|Qn) is 157
- Time for computing 2e2c SR integral is 1.59 s
- === bvk cell = 0 has 70.77 % of the basis function pairs === 
- === bvk cell = 1 has 16.96 % of the basis function pairs === 
- === bvk cell = 2 has 17.28 % of the basis function pairs === 
- === bvk cell = 3 has 24.05 % of the basis function pairs === 
- === bvk cell = 4 has 5.06 % of the basis function pairs === 
- === bvk cell = 5 has 5.92 % of the basis function pairs === 
- === bvk cell = 6 has 24.44 % of the basis function pairs === 
- === bvk cell = 7 has 6.09 % of the basis function pairs === 
- === bvk cell = 8 has 5.08 % of the basis function pairs === 
- === bvk cell = 9 has 28.11 % of the basis function pairs === 
- === bvk cell = 10 has 6.64 % of the basis function pairs === 
- === bvk cell = 11 has 6.38 % of the basis function pairs === 
- === bvk cell = 12 has 9.46 % of the basis function pairs === 
- === bvk cell = 13 has 1.47 % of the basis function pairs === 
- === bvk cell = 14 has 2.19 % of the basis function pairs === 
- === bvk cell = 15 has 8.29 % of the basis function pairs === 
- === bvk cell = 16 has 2.08 % of the basis function pairs === 
- === bvk cell = 17 has 1.61 % of the basis function pairs === 
- === bvk cell = 18 has 28.49 % of the basis function pairs === 
- === bvk cell = 19 has 6.39 % of the basis function pairs === 
- === bvk cell = 20 has 6.76 % of the basis function pairs === 
- === bvk cell = 21 has 8.24 % of the basis function pairs === 
- === bvk cell = 22 has 1.70 % of the basis function pairs === 
- === bvk cell = 23 has 1.97 % of the basis function pairs === 
- === bvk cell = 24 has 9.89 % of the basis function pairs === 
- === bvk cell = 25 has 2.35 % of the basis function pairs === 
- === bvk cell = 26 has 1.54 % of the basis function pairs === 
+ Time for computing nuclear attraction matrix is 17.65 s
+Compute (P|Q) and solve linear equation on the fly!
+Maximum distance between P and Q is 30.66614665213823
+Number of images for (P|Qn) is 173
+ Time for computing 2e2c SR integral without init time is 1.89 s
+ Time for computing 2e2c SR integral is 2.00 s
+Maximum dynamic memory per thread for 2e3c SR integrals: 0.701 GiB
+Batch size for basis function pair is 475344 out of 475344
+ === bvk cell = 0 has 70.766 % of the basis function pairs === 
+ === bvk cell = 1 has 16.957 % of the basis function pairs === 
+ === bvk cell = 2 has 17.284 % of the basis function pairs === 
+ === bvk cell = 3 has 24.054 % of the basis function pairs === 
+ === bvk cell = 4 has 5.058 % of the basis function pairs === 
+ === bvk cell = 5 has 5.921 % of the basis function pairs === 
+ === bvk cell = 6 has 24.445 % of the basis function pairs === 
+ === bvk cell = 7 has 6.091 % of the basis function pairs === 
+ === bvk cell = 8 has 5.080 % of the basis function pairs === 
+ === bvk cell = 9 has 28.110 % of the basis function pairs === 
+ === bvk cell = 10 has 6.635 % of the basis function pairs === 
+ === bvk cell = 11 has 6.378 % of the basis function pairs === 
+ === bvk cell = 12 has 9.465 % of the basis function pairs === 
+ === bvk cell = 13 has 1.469 % of the basis function pairs === 
+ === bvk cell = 14 has 2.195 % of the basis function pairs === 
+ === bvk cell = 15 has 8.287 % of the basis function pairs === 
+ === bvk cell = 16 has 2.084 % of the basis function pairs === 
+ === bvk cell = 17 has 1.607 % of the basis function pairs === 
+ === bvk cell = 18 has 28.490 % of the basis function pairs === 
+ === bvk cell = 19 has 6.390 % of the basis function pairs === 
+ === bvk cell = 20 has 6.758 % of the basis function pairs === 
+ === bvk cell = 21 has 8.240 % of the basis function pairs === 
+ === bvk cell = 22 has 1.696 % of the basis function pairs === 
+ === bvk cell = 23 has 1.972 % of the basis function pairs === 
+ === bvk cell = 24 has 9.892 % of the basis function pairs === 
+ === bvk cell = 25 has 2.354 % of the basis function pairs === 
+ === bvk cell = 26 has 1.538 % of the basis function pairs === 
 Static memory requirement for 2e3c SR integrals: 28.648 GB
-Dynamic memory requirement for 2e3c SR integrals: 0.870 GB
-There are 1884 munu batches for computing 2e3c SR integrals with latsum
+There are 1 munu batches for computing 2e3c SR integrals with latsum
 There are 42 Q batches for computing 2e3c SR integrals with latsum
- Time for computing 2e3c SR integral (CC) is 713.53 s
+ Time for computing 2e3c SR integral (CC) is 148.18 s
+ Time for RI-J this SCF iteration is 159.21 s
+ Time for RI-J this SCF iteration is 9.68 s
+ ----------------------------------------------
+ Guess energy: -927.5024052783
  ----------------------------------------------
  Guess energy components:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.57504202273785
- DFT Exchange       Energy = -134.73531111409622
- Kinetic            Energy = 936.12812425709137
- Nuclear Attraction Energy = -1962.19844117513617
+ DFT Correlation    Energy =  -5.57498821092428
+ DFT Exchange       Energy = -134.73524734338505
+ Kinetic            Energy = 936.12998784972569
+ Nuclear Attraction Energy = -1962.20243517850440
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 367.08288466857618
+ Total Coulomb      Energy = 367.08488659634213
  ----------------------------------------------
   Cycle       Energy        RMS Gradient
  ----------------------------------------------
-    1    -927.6508600224      1.46e-01   Descent step
+ Time for RI-J this SCF iteration is 8.39 s
+    1    -927.6508629746      1.47e-01   Descent step
  Energy components after cycle 1:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.56843634663560
- DFT Exchange       Energy = -134.48440855370350
- Kinetic            Energy = 934.55400911688662
- Nuclear Attraction Energy = -1958.56986759634970
+ DFT Correlation    Energy =  -5.56838613699995
+ DFT Exchange       Energy = -134.48431535185887
+ Kinetic            Energy = 934.55555892279335
+ Nuclear Attraction Energy = -1958.57311650261545
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 364.62245234889872
-    2    -927.7800193627      1.31e-01   Descent step
+ Total Coulomb      Energy = 364.62400508556732
+ Time for RI-J this SCF iteration is 9.51 s
+    2    -927.7800165564      1.31e-01   Descent step
  Energy components after cycle 2:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.56233555013469
- DFT Exchange       Energy = -134.23337496176188
- Kinetic            Energy = 932.98242421407656
- Nuclear Attraction Energy = -1954.94185218016105
+ DFT Correlation    Energy =  -5.56228917835124
+ DFT Exchange       Energy = -134.23325722608823
+ Kinetic            Energy = 932.98368166524187
+ Nuclear Attraction Energy = -1954.94441375411179
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 362.17972810685967
-    3    -927.8903630511      1.14e-01   Descent step
+ Total Coulomb      Energy = 362.18087092841910
+ Time for RI-J this SCF iteration is 8.84 s
+    3    -927.8903564678      1.14e-01   Descent step
  Energy components after cycle 3:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.55676783026594
- DFT Exchange       Energy = -133.98211183315141
- Kinetic            Energy = 931.41375458474431
- Nuclear Attraction Energy = -1951.31769310382811
+ DFT Correlation    Energy =  -5.55672555215499
+ DFT Exchange       Energy = -133.98197542012389
+ Kinetic            Energy = 931.41474501092648
+ Nuclear Attraction Energy = -1951.31963475195857
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 359.75706412297313
-    4    -927.9823602192      9.58e-02   Descent step
+ Total Coulomb      Energy = 359.75784323703283
+ Time for RI-J this SCF iteration is 9.82 s
+    4    -927.9823516281      9.59e-02   Descent step
  Energy components after cycle 4:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.55177650932499
- DFT Exchange       Energy = -133.73054146050521
- Kinetic            Energy = 929.84894226587426
- Nuclear Attraction Energy = -1947.70276370633133
+ DFT Correlation    Energy =  -5.55173860664822
+ DFT Exchange       Energy = -133.73039336268513
+ Kinetic            Energy = 929.84969497550446
+ Nuclear Attraction Energy = -1947.70416314602721
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 357.35838818257918
-    5    -928.0564904736      7.70e-02   Descent step
+ Total Coulomb      Energy = 357.35885750329447
+ Time for RI-J this SCF iteration is 10.21 s
+    5    -928.0564814190      7.72e-02   Descent step
  Energy components after cycle 5:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54742927881980
- DFT Exchange       Energy = -133.47865483955161
- Kinetic            Energy = 928.29006008271756
- Nuclear Attraction Energy = -1944.10632733267948
+ DFT Correlation    Energy =  -5.54739607210472
+ DFT Exchange       Energy = -133.47850349143789
+ Kinetic            Energy = 928.29060873346646
+ Nuclear Attraction Energy = -1944.10727405515900
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 354.99046988621683
-    6    -928.1132879916      5.60e-02   Descent step
+ Total Coulomb      Energy = 354.99069245779731
+ Time for RI-J this SCF iteration is 9.71 s
+    6    -928.1132797712      5.60e-02   Descent step
  Energy components after cycle 6:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54383718398276
- DFT Exchange       Energy = -133.22664419391927
- Kinetic            Energy = 926.74171842029125
- Nuclear Attraction Energy = -1940.54563167696210
+ DFT Correlation    Energy =  -5.54380907650333
+ DFT Exchange       Energy = -133.22650014595001
+ Kinetic            Energy = 926.74210421506586
+ Nuclear Attraction Energy = -1940.54623240220621
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 352.66571563455443
-    7    -928.1534172397      4.04e-02   Descent step
+ Total Coulomb      Energy = 352.66576662996351
+ Time for RI-J this SCF iteration is 10.73 s
+    7    -928.1534108686      4.04e-02   Descent step
  Energy components after cycle 7:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54119556225438
- DFT Exchange       Energy = -132.97528968570018
- Kinetic            Energy = 925.21474040977625
- Nuclear Attraction Energy = -1937.05631227100002
+ DFT Correlation    Energy =  -5.54117307621957
+ DFT Exchange       Energy = -132.97516639750614
+ Kinetic            Energy = 925.21501063356129
+ Nuclear Attraction Energy = -1937.05669106824234
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 350.40924886104006
-    8    -928.1778338506      2.75e-02   Descent step
+ Total Coulomb      Energy = 350.40921803137604
+ Time for RI-J this SCF iteration is 10.19 s
+    8    -928.1778300033      2.75e-02   Descent step
  Energy components after cycle 8:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.53989866014473
- DFT Exchange       Energy = -132.72743368512604
- Kinetic            Energy = 923.73904665807083
- Nuclear Attraction Energy = -1933.72620839273736
+ DFT Correlation    Energy =  -5.53988256094408
+ DFT Exchange       Energy = -132.72734926504512
+ Kinetic            Energy = 923.73925453820732
+ Nuclear Attraction Energy = -1933.72650966705010
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 348.28126922082708
-    9    -928.1882188920      1.17e-02   Descent step
+ Total Coulomb      Energy = 348.28126594308850
+ Time for RI-J this SCF iteration is 9.53 s
+    9    -928.1882177965      1.17e-02   Descent step
  Energy components after cycle 9:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54095511643766
- DFT Exchange       Energy = -132.49594977599907
- Kinetic            Energy = 922.42704036293480
- Nuclear Attraction Energy = -1930.85262555007012
+ DFT Correlation    Energy =  -5.54094675874860
+ DFT Exchange       Energy = -132.49592954689297
+ Kinetic            Energy = 922.42722567826502
+ Nuclear Attraction Energy = -1930.85296888286143
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.47888017914607
-   10    -928.1894023340      4.42e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.47901070525728
+ Time for RI-J this SCF iteration is 9.42 s
+   10    -928.1894022474      4.42e-03   Normal BFGS step
  Energy components after cycle 10:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54528801970726
- DFT Exchange       Energy = -132.44997178873106
- Kinetic            Energy = 922.34096211367853
- Nuclear Attraction Energy = -1930.77391818288379
+ DFT Correlation    Energy =  -5.54528845115663
+ DFT Exchange       Energy = -132.44997151987445
+ Kinetic            Energy = 922.34092440458869
+ Nuclear Attraction Energy = -1930.77392073189867
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.44342253522552
-   11    -928.1894879682      1.71e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.44346304243885
+ Time for RI-J this SCF iteration is 10.01 s
+   11    -928.1894876965      1.71e-03   Normal BFGS step
  Energy components after cycle 11:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54446779017923
- DFT Exchange       Energy = -132.44619236883540
- Kinetic            Energy = 922.32416288681657
- Nuclear Attraction Energy = -1930.60978857726900
+ DFT Correlation    Energy =  -5.54446853960626
+ DFT Exchange       Energy = -132.44619475688643
+ Kinetic            Energy = 922.32416973619138
+ Nuclear Attraction Energy = -1930.60981934816596
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.29140687283814
-   12    -928.1894948297      5.03e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.29143420352955
+ Time for RI-J this SCF iteration is 10.27 s
+   12    -928.1894932752      5.55e-04   Normal BFGS step
  Energy components after cycle 12:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54435568321952
- DFT Exchange       Energy = -132.44965052957076
- Kinetic            Energy = 922.32779755153103
- Nuclear Attraction Energy = -1930.64782267681699
+ DFT Correlation    Energy =  -5.54435096696916
+ DFT Exchange       Energy = -132.44962734944090
+ Kinetic            Energy = 922.32770150181841
+ Nuclear Attraction Energy = -1930.64687090074062
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.32914549992796
-   13    -928.1894931554      1.12e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.32826343170069
+ Time for RI-J this SCF iteration is 9.12 s
+   13    -928.1894921484      1.38e-03   Normal BFGS step
  Energy components after cycle 13:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54440356905245
- DFT Exchange       Energy = -132.45045956508588
- Kinetic            Energy = 922.32773102735780
- Nuclear Attraction Energy = -1930.66656326706175
+ DFT Correlation    Energy =  -5.54439924245494
+ DFT Exchange       Energy = -132.45065366134551
+ Kinetic            Energy = 922.32805894833837
+ Nuclear Attraction Energy = -1930.66900573946191
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.34881121001405
-   14    -928.1894986797      1.45e-03   Normal BFGS step
+ Total Coulomb      Energy = 346.35111653802312
+ Time for RI-J this SCF iteration is 9.80 s
+   14    -928.1894984535      1.50e-03   Normal BFGS step
  Energy components after cycle 14:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54446229839105
- DFT Exchange       Energy = -132.44883357754341
- Kinetic            Energy = 922.32631505981465
- Nuclear Attraction Energy = -1930.64919620844967
+ DFT Correlation    Energy =  -5.54446484889190
+ DFT Exchange       Energy = -132.44878055122666
+ Kinetic            Energy = 922.32624047325896
+ Nuclear Attraction Energy = -1930.64871594566898
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33128733639637
-   15    -928.1894984104      5.06e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.33083141053089
+ Time for RI-J this SCF iteration is 9.76 s
+   15    -928.1894984192      5.51e-04   Normal BFGS step
  Energy components after cycle 15:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54444528605765
- DFT Exchange       Energy = -132.44861006320201
- Kinetic            Energy = 922.32782069596840
- Nuclear Attraction Energy = -1930.64319084815907
+ DFT Correlation    Energy =  -5.54444608448647
+ DFT Exchange       Energy = -132.44857994760778
+ Kinetic            Energy = 922.32772864877074
+ Nuclear Attraction Energy = -1930.64281670687069
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.32353608262866
-   16    -928.1895008805      4.55e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.32322466252083
+ Time for RI-J this SCF iteration is 9.28 s
+   16    -928.1895008239      4.93e-04   Normal BFGS step
  Energy components after cycle 16:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54442365624159
- DFT Exchange       Energy = -132.44926017277615
- Kinetic            Energy = 922.32724733448629
- Nuclear Attraction Energy = -1930.65067314506609
+ DFT Correlation    Energy =  -5.54442247866687
+ DFT Exchange       Energy = -132.44928496131229
+ Kinetic            Energy = 922.32729376428233
+ Nuclear Attraction Energy = -1930.65090140052871
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33221775066886
-   17    -928.1895005586      1.40e-04   Normal BFGS step
+ Total Coulomb      Energy = 346.33242324390426
+ Time for RI-J this SCF iteration is 9.15 s
+   17    -928.1895004123      1.70e-04   Normal BFGS step
  Energy components after cycle 17:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443364931425
- DFT Exchange       Energy = -132.44916686818132
- Kinetic            Energy = 922.32698674043604
- Nuclear Attraction Energy = -1930.65054927262190
+ DFT Correlation    Energy =  -5.54443270895565
+ DFT Exchange       Energy = -132.44919311220630
+ Kinetic            Energy = 922.32691554045607
+ Nuclear Attraction Energy = -1930.65085802440967
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33227148261778
+ Total Coulomb      Energy = 346.33267688435046
   GDM::WARNING energy changes are now smaller than effective accuracy.
   GDM::        calculation will continue, but THRESH should be increased
   GDM::        or SCF_CONVERGENCE decreased. 
   GDM::        effective_thresh = 0.00000044089920
-   18    -928.1895009918      2.74e-04   Normal BFGS step
+ Time for RI-J this SCF iteration is 9.63 s
+   18    -928.1895009907      2.64e-04   Normal BFGS step
  Energy components after cycle 18:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443587590782
- DFT Exchange       Energy = -132.44910221898189
- Kinetic            Energy = 922.32718013182864
- Nuclear Attraction Energy = -1930.64978705367162
+ DFT Correlation    Energy =  -5.54443630045163
+ DFT Exchange       Energy = -132.44909472724007
+ Kinetic            Energy = 922.32717707116785
+ Nuclear Attraction Energy = -1930.64972444834052
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33125301647271
-   19    -928.1895009889      1.33e-05   Normal BFGS step
+ Total Coulomb      Energy = 346.33118640568682
+ Time for RI-J this SCF iteration is 9.76 s
+   19    -928.1895009843      1.82e-05   Normal BFGS step
  Energy components after cycle 19:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443183455020
- DFT Exchange       Energy = -132.44914440176558
- Kinetic            Energy = 922.32717977880350
- Nuclear Attraction Energy = -1930.64993167205944
+ DFT Correlation    Energy =  -5.54443168664923
+ DFT Exchange       Energy = -132.44914657464975
+ Kinetic            Energy = 922.32718557532507
+ Nuclear Attraction Energy = -1930.64994568572001
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33143613219835
-   20    -928.1895009944      3.05e-05   Normal BFGS step
+ Total Coulomb      Energy = 346.33144637892127
+ Time for RI-J this SCF iteration is 10.01 s
+   20    -928.1895009950      4.18e-05   Normal BFGS step
  Energy components after cycle 20:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443176261416
- DFT Exchange       Energy = -132.44914636450881
- Kinetic            Energy = 922.32717542004298
- Nuclear Attraction Energy = -1930.64995258605927
+ DFT Correlation    Energy =  -5.54443162593161
+ DFT Exchange       Energy = -132.44914870065497
+ Kinetic            Energy = 922.32717625680255
+ Nuclear Attraction Energy = -1930.64997171704454
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33146329024652
-   21    -928.1895009947      7.75e-06   Normal BFGS step
+ Total Coulomb      Energy = 346.33148378336369
+ Time for RI-J this SCF iteration is 10.10 s
+   21    -928.1895009953      7.34e-06   Normal BFGS step
  Energy components after cycle 21:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443396318726
- DFT Exchange       Energy = -132.44912443650421
- Kinetic            Energy = 922.32717990727804
- Nuclear Attraction Energy = -1930.64988893305872
+ DFT Correlation    Energy =  -5.54443403533467
+ DFT Exchange       Energy = -132.44912305471127
+ Kinetic            Energy = 922.32717890303297
+ Nuclear Attraction Energy = -1930.64987662182034
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33137542228002
-   21    -928.1895009947      7.75e-06  Convergence criterion met
+ Total Coulomb      Energy = 346.33136280504436
+   21    -928.1895009953      7.34e-06  Convergence criterion met
  ----------------------------------------------
  Final energy components:
  D3 correction      Energy =  -0.12328073067621
- DFT Correlation    Energy =  -5.54443396318726
- DFT Exchange       Energy = -132.44912443650421
- Kinetic            Energy = 922.32717990727804
- Nuclear Attraction Energy = -1930.64988893305872
+ DFT Correlation    Energy =  -5.54443403533467
+ DFT Exchange       Energy = -132.44912305471127
+ Kinetic            Energy = 922.32717890303297
+ Nuclear Attraction Energy = -1930.64987662182034
  Nuclear Repulsion  Energy = -128.08132826085716
- Total Coulomb      Energy = 346.33137542228002
+ Total Coulomb      Energy = 346.33136280504436
  ----------------------------------------------
- Final energy is -928.1895009947
+ Final energy is -928.1895009953
 
- SCF time:   CPU 92262.41s  wall 3826.00s 
- Total wall time for computing Kinetic: 1.88 s (23)
- Total wall time for computing RIJ-BIGMEM: 1000.45 s (23)
- Total wall time for computing RSDF Vnuc: 2.31 s (23)
- Total wall time for computing DFT XC: 1415.04 s (23)
+ SCF time:   CPU 106974.29s  wall 4514.00s 
+ Total wall time for computing Kinetic: 3.89 s (23)
+ Total wall time for computing RIJ-BIGMEM: 372.42 s (23)
+ Total wall time for computing RSDF Vnuc: 4.31 s (23)
+ Total wall time for computing DFT XC: 2988.45 s (23)
  ---------------------------------------------------------------------------
                         Orbital Energies (a.u.)
  ---------------------------------------------------------------------------
@@ -3814,7 +3953,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.47085 -0.47057 -0.46721 -0.46672 -0.46621 -0.46585 -0.33918 -0.33857 -0.33798 -0.33720
  -0.33324 -0.33265 -0.33236 -0.33119 -0.26838 -0.26394 -0.26373 -0.26129 -0.20399 -0.20227
  -0.20060 -0.19907 -0.19182 -0.19136 -0.19119 -0.19098 -0.17591 -0.17543 -0.17463 -0.17110
- -0.16059 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
+ -0.16060 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
  -0.09553 -0.09469 -0.08801 -0.08615 -0.08520 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
  -0.02455 -0.02262 -0.02057 -0.01987 0.15225 0.15266 0.15505 0.15609 0.16801 0.16949
  0.17207 0.17338 0.22775 0.24444 0.24991 0.25067 0.26087 0.26622 0.26995 0.27795
@@ -3845,9 +3984,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.51143 1.51711 1.52334 1.52695 1.52829 1.53652 1.53819 1.54311 1.55398 1.55758
  1.56058 1.56296 1.56576 1.56982 1.57410 1.57874 1.58320 1.58959 1.59083 1.59358
  1.60305 1.60534 1.60805 1.61859 1.62322 1.62846 1.63617 1.64001 1.64881 1.65267
- 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68255 1.68887 1.69196 1.70109
+ 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68254 1.68887 1.69196 1.70109
  1.70850 1.71360 1.72211 1.72990 1.73220 1.73741 1.74564 1.75157 1.76641 1.77180
- 1.77723 1.78279 1.78650 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
+ 1.77723 1.78279 1.78649 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
  1.85895 1.86344 1.87088 1.87332 1.88371 1.90398 1.90822 1.92123 1.92794 1.93385
  1.94009 1.94394 1.95203 1.96028 1.97566 1.98229 1.99212 1.99291 2.00799 2.01974
  2.03101 2.03331 2.03391 2.04360 2.05250 2.06712 2.07990 2.08896 2.09505 2.10450
@@ -3855,7 +3994,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.21962 2.22970 2.23490 2.24696 2.25211 2.25919 2.28715 2.29580 2.30596 2.31633
  2.31924 2.32362 2.32973 2.35186 2.35428 2.35820 2.36705 2.37704 2.39039 2.39735
  2.40430 2.40959 2.41588 2.42526 2.44408 2.45423 2.45694 2.46276 2.47390 2.48318
- 2.48804 2.48949 2.50510 2.50573 2.51023 2.52228 2.52350 2.52752 2.53268 2.53758
+ 2.48804 2.48949 2.50510 2.50573 2.51023 2.52228 2.52349 2.52752 2.53268 2.53758
  2.54354 2.55328 2.56775 2.56941 2.57574 2.58345 2.58661 2.59409 2.61543 2.61917
  2.62583 2.63691 2.64410 2.64998 2.65452 2.67073 2.67688 2.68815 2.69094 2.69802
  2.70589 2.71103 2.71879 2.73031 2.74061 2.74839 2.75280 2.75589 2.76726 2.76909
@@ -3872,7 +4011,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.22798 3.23135 3.23456 3.23689 3.23795 3.24590 3.24981 3.25133 3.25320 3.25373
  3.26143 3.26249 3.26764 3.27126 3.27524 3.27901 3.28033 3.28358 3.28652 3.29001
  3.29254 3.29477 3.30191 3.30683 3.31034 3.31635 3.32328 3.33286 3.33760 3.34004
- 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38644 3.39279 3.39705
+ 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38643 3.39279 3.39705
  3.40205 3.40530 3.41039 3.41718 3.41959 3.42738 3.43341 3.43660 3.43824 3.44202
  3.45375 3.45672 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
  3.50096 3.50721 3.51506 3.51944 3.52030 3.53310 3.53628 3.54161 3.54580 3.55220
@@ -3908,7 +4047,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.38640 5.40256 5.41733 5.42397 5.42951 5.43649 5.44571 5.46174 5.46382 5.47433
  5.58441 5.58755 5.59108 5.59315 5.68685 5.69116 5.69368 5.70077 5.73874 5.75578
  5.75866 5.77457 5.84773 5.85572 5.86246 5.86896 5.88665 5.88734 5.89135 5.89824
- 5.98992 5.99785 6.00356 6.00887 6.12044 6.12206 6.13611 6.14271 6.15720 6.16772
+ 5.98992 5.99785 6.00356 6.00886 6.12044 6.12206 6.13611 6.14271 6.15720 6.16772
  6.17622 6.17874 6.18703 6.19695 6.20566 6.21767 6.28035 6.28367 6.28575 6.28803
  6.30328 6.30520 6.31093 6.31449 6.71250 6.71519 6.71997 6.72559 7.03324 7.03408
  7.03486 7.03768 10.34881 10.42103 10.70444 10.88079 12.84407 12.91421 12.97380 13.04639
@@ -3917,7 +4056,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  == 1-th k-point (-0.16275,-0.14997,0.00000) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
- -9.68061 -9.68061 -9.68061 -9.68060 -0.57403 -0.57216 -0.57209 -0.57187 -0.47269 -0.47020
+ -9.68061 -9.68061 -9.68061 -9.68060 -0.57403 -0.57216 -0.57209 -0.57187 -0.47269 -0.47021
  -0.46987 -0.46926 -0.46872 -0.46739 -0.46687 -0.46620 -0.33850 -0.33767 -0.33602 -0.33514
  -0.33498 -0.33394 -0.33385 -0.33149 -0.27207 -0.26452 -0.26448 -0.25806 -0.20514 -0.20315
  -0.19789 -0.19676 -0.19240 -0.19177 -0.19108 -0.19072 -0.17272 -0.17222 -0.17150 -0.16685
@@ -3969,7 +4108,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.76855 2.77591 2.78763 2.79151 2.79327 2.80138 2.80264 2.80440 2.81209 2.81516
  2.82049 2.82200 2.82239 2.82519 2.83712 2.85072 2.85566 2.85649 2.85796 2.86514
  2.86659 2.87081 2.87390 2.87710 2.88117 2.89118 2.89164 2.89615 2.89970 2.89996
- 2.90798 2.91118 2.91313 2.91714 2.92483 2.93050 2.93423 2.94433 2.94779 2.95278
+ 2.90798 2.91118 2.91313 2.91714 2.92483 2.93050 2.93422 2.94433 2.94779 2.95278
  2.95532 2.95713 2.95875 2.96843 2.97250 2.97271 2.98068 2.98166 2.98175 2.99501
  2.99928 3.00430 3.00636 3.01085 3.01499 3.01790 3.02242 3.02676 3.03075 3.03093
  3.03720 3.03859 3.04626 3.05050 3.05577 3.05872 3.06457 3.07263 3.07455 3.09106
@@ -4004,7 +4143,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.51801 4.52224 4.52810 4.52829 4.53417 4.53751 4.53940 4.54794 4.55317 4.56147
  4.56409 4.56998 4.57775 4.58591 4.59462 4.60678 4.60926 4.61500 4.63174 4.63933
  4.64803 4.65273 4.65654 4.65784 4.66333 4.66690 4.67471 4.67803 4.67986 4.69185
- 4.69774 4.71528 4.73176 4.73851 4.75061 4.77539 4.78103 4.79832 4.81928 4.82217
+ 4.69774 4.71528 4.73176 4.73851 4.75061 4.77539 4.78102 4.79832 4.81928 4.82217
  4.83035 4.83061 4.83963 4.84372 4.85258 4.85292 4.85694 4.85949 4.88465 4.89420
  4.89488 4.89667 4.89762 4.90434 4.90971 4.91450 4.91563 4.91781 4.92048 4.92432
  4.94081 4.94266 4.94441 4.94958 4.95912 4.96819 4.97436 4.97721 4.97971 5.00929
@@ -4028,7 +4167,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.47085 -0.47057 -0.46721 -0.46672 -0.46621 -0.46585 -0.33918 -0.33857 -0.33798 -0.33720
  -0.33324 -0.33265 -0.33236 -0.33119 -0.26838 -0.26394 -0.26373 -0.26129 -0.20399 -0.20227
  -0.20060 -0.19907 -0.19182 -0.19136 -0.19119 -0.19098 -0.17591 -0.17543 -0.17463 -0.17110
- -0.16059 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
+ -0.16060 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
  -0.09553 -0.09469 -0.08801 -0.08615 -0.08520 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
  -0.02455 -0.02262 -0.02057 -0.01987 0.15225 0.15266 0.15505 0.15609 0.16801 0.16949
  0.17207 0.17338 0.22775 0.24444 0.24991 0.25067 0.26087 0.26622 0.26995 0.27795
@@ -4059,9 +4198,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.51143 1.51711 1.52334 1.52695 1.52829 1.53652 1.53819 1.54311 1.55398 1.55758
  1.56058 1.56296 1.56576 1.56982 1.57410 1.57874 1.58320 1.58959 1.59083 1.59358
  1.60305 1.60534 1.60805 1.61859 1.62322 1.62846 1.63617 1.64001 1.64881 1.65267
- 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68255 1.68887 1.69196 1.70109
+ 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68254 1.68887 1.69196 1.70109
  1.70850 1.71360 1.72211 1.72990 1.73220 1.73741 1.74564 1.75157 1.76641 1.77180
- 1.77723 1.78279 1.78650 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
+ 1.77723 1.78279 1.78649 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
  1.85895 1.86344 1.87088 1.87332 1.88371 1.90398 1.90822 1.92123 1.92794 1.93385
  1.94009 1.94394 1.95203 1.96028 1.97566 1.98229 1.99212 1.99291 2.00799 2.01974
  2.03101 2.03331 2.03391 2.04360 2.05250 2.06712 2.07990 2.08896 2.09505 2.10450
@@ -4086,7 +4225,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.22798 3.23135 3.23456 3.23689 3.23795 3.24590 3.24981 3.25133 3.25320 3.25373
  3.26143 3.26249 3.26764 3.27126 3.27524 3.27901 3.28033 3.28358 3.28652 3.29001
  3.29254 3.29477 3.30191 3.30683 3.31034 3.31635 3.32328 3.33286 3.33760 3.34004
- 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38644 3.39280 3.39705
+ 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38644 3.39279 3.39705
  3.40205 3.40530 3.41039 3.41718 3.41959 3.42738 3.43341 3.43660 3.43824 3.44202
  3.45375 3.45672 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
  3.50096 3.50721 3.51506 3.51944 3.52030 3.53310 3.53628 3.54161 3.54580 3.55220
@@ -4125,13 +4264,13 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.98992 5.99785 6.00356 6.00886 6.12044 6.12206 6.13611 6.14271 6.15720 6.16772
  6.17622 6.17874 6.18703 6.19695 6.20566 6.21767 6.28035 6.28367 6.28575 6.28803
  6.30328 6.30520 6.31093 6.31449 6.71250 6.71519 6.71997 6.72559 7.03324 7.03408
- 7.03486 7.03769 10.34881 10.42103 10.70444 10.88079 12.84407 12.91421 12.97380 13.04639
- 13.05737 13.09958 13.19049 13.20427 13.55268 13.56929 13.61146 13.62218 13.84311 13.86561
+ 7.03486 7.03768 10.34881 10.42103 10.70444 10.88079 12.84407 12.91421 12.97380 13.04639
+ 13.05737 13.09958 13.19049 13.20427 13.55268 13.56930 13.61146 13.62218 13.84311 13.86561
  13.90736 13.99299 16.11863 16.14501 16.15426 16.18870
  == 3-th k-point (-0.16275,0.00000,-0.11765) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
- -9.68061 -9.68061 -9.68060 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
+ -9.68061 -9.68061 -9.68061 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
  -0.46959 -0.46954 -0.46785 -0.46777 -0.46647 -0.46637 -0.34003 -0.33870 -0.33749 -0.33622
  -0.33435 -0.33286 -0.33240 -0.33004 -0.27096 -0.26595 -0.26207 -0.26097 -0.20411 -0.20087
  -0.20019 -0.19753 -0.19193 -0.19163 -0.19131 -0.19072 -0.17257 -0.17201 -0.17122 -0.17047
@@ -4142,7 +4281,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  0.28518 0.29040 0.29070 0.29492 0.30297 0.30905 0.32327 0.32484 0.33171 0.34473
  0.34534 0.34904 0.35774 0.36136 0.36339 0.37439 0.37672 0.38190 0.39145 0.39360
  0.39813 0.39948 0.41056 0.41624 0.41923 0.42678 0.42903 0.43669 0.43813 0.44922
- 0.45340 0.45574 0.46187 0.46609 0.46847 0.47553 0.47957 0.48148 0.48848 0.49574
+ 0.45340 0.45574 0.46187 0.46608 0.46847 0.47553 0.47957 0.48148 0.48848 0.49574
  0.50221 0.50798 0.52074 0.52384 0.52394 0.52872 0.54445 0.54928 0.55244 0.55670
  0.56920 0.57010 0.57463 0.58036 0.58393 0.58958 0.60214 0.60674 0.60931 0.61346
  0.61925 0.62202 0.62762 0.62855 0.63752 0.64502 0.64977 0.65075 0.65175 0.65469
@@ -4180,14 +4319,14 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.54955 2.55431 2.55838 2.56072 2.56996 2.58107 2.58284 2.58687 2.60315 2.61347
  2.62366 2.62682 2.65132 2.66501 2.66644 2.67454 2.67706 2.68984 2.70591 2.70707
  2.71475 2.71539 2.72336 2.73273 2.73782 2.74990 2.75599 2.75702 2.75999 2.76425
- 2.76819 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
+ 2.76818 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
  2.81902 2.82307 2.82500 2.82736 2.83006 2.83633 2.84236 2.84642 2.84805 2.85108
  2.85953 2.86164 2.86522 2.87206 2.87552 2.88272 2.88680 2.89754 2.89957 2.90542
  2.90609 2.91110 2.91675 2.92016 2.92512 2.92780 2.93368 2.93439 2.94071 2.95181
  2.95379 2.95931 2.96457 2.96727 2.97050 2.97399 2.97568 2.97689 2.98044 2.98976
  2.99724 2.99797 3.00078 3.00431 3.01548 3.01837 3.01845 3.02213 3.02892 3.04021
  3.05005 3.05102 3.05671 3.05888 3.06388 3.06681 3.07753 3.07999 3.08209 3.08551
- 3.09090 3.09847 3.10147 3.10964 3.11862 3.12767 3.13153 3.13164 3.13640 3.14143
+ 3.09090 3.09847 3.10147 3.10963 3.11862 3.12767 3.13153 3.13164 3.13640 3.14143
  3.14844 3.15297 3.16031 3.16371 3.16521 3.16573 3.18025 3.18320 3.18859 3.18961
  3.19605 3.19748 3.20015 3.20675 3.21178 3.21338 3.21944 3.22634 3.22711 3.22835
  3.23061 3.23455 3.23787 3.24465 3.24506 3.24675 3.25123 3.25571 3.25839 3.26020
@@ -4199,9 +4338,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.50123 3.50667 3.50789 3.51510 3.53036 3.53877 3.53982 3.54744 3.55142 3.55353
  3.55574 3.55937 3.56839 3.57061 3.58791 3.59031 3.59203 3.59663 3.59871 3.60798
  3.60805 3.61707 3.62148 3.62588 3.63197 3.63751 3.64256 3.64431 3.64684 3.65141
- 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70384 3.71309
+ 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70383 3.71309
  3.71457 3.71710 3.71744 3.73200 3.73328 3.75921 3.76419 3.76649 3.78201 3.78522
- 3.78859 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
+ 3.78858 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
  3.86723 3.86758 3.87737 3.88445 3.89176 3.89410 3.89463 3.89463 3.90031 3.90343
  3.90708 3.91220 3.91266 3.92093 3.92236 3.92839 3.93099 3.93486 3.93674 3.94232
  3.94446 3.94851 3.94861 3.95322 3.96522 3.96893 3.97342 3.97716 3.98639 3.98642
@@ -4213,7 +4352,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.27498 4.28083 4.29271 4.29298 4.29535 4.30662 4.31635 4.31955 4.32099 4.32725
  4.33511 4.34305 4.34541 4.35407 4.35529 4.35610 4.37104 4.37144 4.37313 4.37475
  4.38467 4.39837 4.40249 4.41195 4.41207 4.41337 4.42194 4.42611 4.42723 4.43046
- 4.43127 4.43318 4.43993 4.44231 4.44722 4.44883 4.45107 4.45453 4.45520 4.46441
+ 4.43127 4.43318 4.43993 4.44231 4.44722 4.44883 4.45107 4.45452 4.45520 4.46441
  4.46683 4.46897 4.46976 4.48033 4.48202 4.48265 4.49369 4.49711 4.50084 4.50227
  4.50281 4.51210 4.51239 4.52217 4.52912 4.53379 4.53692 4.54565 4.54768 4.55195
  4.56721 4.56859 4.57742 4.58794 4.59053 4.60602 4.61674 4.62031 4.62050 4.62653
@@ -4266,7 +4405,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.13341 1.15001 1.15168 1.15597 1.16517 1.16803 1.18199 1.18618 1.18645 1.18732
  1.20339 1.20904 1.21127 1.21723 1.21761 1.22438 1.22494 1.22672 1.22788 1.23578
  1.24119 1.24765 1.24838 1.25473 1.26211 1.26622 1.26682 1.27241 1.28160 1.28170
- 1.28631 1.29476 1.29612 1.31009 1.31134 1.31459 1.31694 1.32132 1.33491 1.33851
+ 1.28631 1.29476 1.29611 1.31009 1.31134 1.31459 1.31694 1.32132 1.33491 1.33851
  1.34761 1.34804 1.36685 1.36723 1.36833 1.37314 1.38767 1.39001 1.39639 1.39718
  1.40796 1.42072 1.42077 1.42936 1.43044 1.43251 1.43435 1.44783 1.45558 1.45670
  1.45804 1.46021 1.47445 1.49115 1.49378 1.49844 1.50190 1.50561 1.50758 1.50857
@@ -4322,7 +4461,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.38263 4.38416 4.38577 4.40089 4.40529 4.40713 4.41719 4.42247 4.42380 4.42811
  4.42862 4.43377 4.43975 4.44125 4.44378 4.44559 4.45539 4.46204 4.46921 4.46928
  4.47695 4.47966 4.48204 4.48351 4.48723 4.49046 4.49197 4.49384 4.50121 4.50340
- 4.50346 4.51172 4.51537 4.51874 4.53409 4.54312 4.54550 4.55191 4.56221 4.56388
+ 4.50346 4.51171 4.51537 4.51874 4.53409 4.54312 4.54549 4.55191 4.56221 4.56388
  4.56863 4.58261 4.58758 4.58967 4.59228 4.59639 4.62047 4.62361 4.63031 4.63450
  4.63622 4.63800 4.64099 4.65991 4.66092 4.66619 4.66876 4.67765 4.68224 4.70246
  4.70781 4.71506 4.72028 4.72909 4.74218 4.75424 4.75587 4.80719 4.81153 4.81229
@@ -4333,19 +4472,19 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.11130 5.11154 5.11222 5.14177 5.16627 5.16735 5.17026 5.17083 5.17664 5.17698
  5.17887 5.17945 5.18587 5.20153 5.20350 5.20699 5.21595 5.22839 5.25329 5.25888
  5.28712 5.30604 5.30875 5.31384 5.31763 5.32505 5.32761 5.32919 5.36427 5.37019
- 5.39273 5.39357 5.41940 5.42945 5.43296 5.43995 5.44128 5.45594 5.47709 5.48411
+ 5.39273 5.39357 5.41940 5.42945 5.43295 5.43995 5.44128 5.45594 5.47709 5.48411
  5.58038 5.58059 5.59705 5.59978 5.66241 5.66638 5.67099 5.71348 5.71706 5.75223
  5.75741 5.75985 5.83042 5.84101 5.86678 5.86771 5.87359 5.88467 5.88628 5.90126
  5.99757 6.01041 6.01061 6.02184 6.13060 6.13382 6.13563 6.13976 6.16442 6.16959
  6.17312 6.17385 6.19662 6.20554 6.22397 6.25553 6.27303 6.27318 6.28108 6.28714
- 6.29469 6.30522 6.31033 6.31312 6.72281 6.72924 6.73387 6.73938 7.03318 7.03435
+ 6.29469 6.30522 6.31033 6.31312 6.72281 6.72924 6.73387 6.73938 7.03318 7.03434
  7.03955 7.04037 10.20622 10.26880 10.65509 10.84884 12.88101 12.90707 12.90844 13.02775
- 13.07421 13.08932 13.11105 13.11612 13.53362 13.58660 13.60218 13.60283 13.71232 13.89928
+ 13.07421 13.08932 13.11105 13.11612 13.53362 13.58660 13.60218 13.60283 13.71231 13.89928
  13.93284 14.13293 16.09256 16.12278 16.13366 16.21473
  == 5-th k-point (-0.16275,0.00000,0.11765) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
- -9.68061 -9.68061 -9.68061 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
+ -9.68061 -9.68061 -9.68060 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
  -0.46959 -0.46954 -0.46785 -0.46777 -0.46647 -0.46637 -0.34003 -0.33870 -0.33749 -0.33622
  -0.33435 -0.33286 -0.33240 -0.33004 -0.27096 -0.26595 -0.26207 -0.26097 -0.20411 -0.20087
  -0.20019 -0.19753 -0.19193 -0.19163 -0.19131 -0.19072 -0.17257 -0.17201 -0.17122 -0.17047
@@ -4394,7 +4533,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.54955 2.55431 2.55838 2.56072 2.56996 2.58107 2.58284 2.58687 2.60315 2.61347
  2.62366 2.62682 2.65132 2.66501 2.66644 2.67454 2.67706 2.68984 2.70591 2.70707
  2.71475 2.71539 2.72336 2.73273 2.73782 2.74990 2.75599 2.75702 2.75999 2.76425
- 2.76819 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
+ 2.76818 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
  2.81902 2.82307 2.82500 2.82736 2.83006 2.83633 2.84236 2.84642 2.84805 2.85108
  2.85953 2.86164 2.86522 2.87206 2.87552 2.88272 2.88680 2.89754 2.89957 2.90542
  2.90609 2.91110 2.91675 2.92016 2.92512 2.92780 2.93368 2.93439 2.94071 2.95181
@@ -4404,7 +4543,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.09090 3.09847 3.10147 3.10964 3.11862 3.12767 3.13153 3.13164 3.13640 3.14143
  3.14844 3.15297 3.16031 3.16371 3.16521 3.16573 3.18025 3.18320 3.18859 3.18961
  3.19605 3.19748 3.20015 3.20675 3.21178 3.21338 3.21944 3.22634 3.22711 3.22835
- 3.23061 3.23456 3.23787 3.24465 3.24506 3.24675 3.25123 3.25571 3.25839 3.26020
+ 3.23061 3.23455 3.23787 3.24465 3.24506 3.24675 3.25123 3.25571 3.25839 3.26020
  3.26200 3.26488 3.26734 3.26740 3.27427 3.27682 3.27914 3.28397 3.28702 3.29102
  3.29521 3.30253 3.30261 3.31066 3.31607 3.31870 3.32031 3.32649 3.33392 3.34204
  3.34429 3.34664 3.35245 3.36552 3.36623 3.37167 3.37601 3.38089 3.38564 3.38863
@@ -4413,9 +4552,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.50123 3.50667 3.50789 3.51510 3.53036 3.53877 3.53982 3.54744 3.55142 3.55353
  3.55574 3.55937 3.56839 3.57061 3.58791 3.59031 3.59203 3.59663 3.59871 3.60798
  3.60805 3.61707 3.62148 3.62588 3.63197 3.63751 3.64256 3.64431 3.64684 3.65141
- 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70384 3.71309
+ 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70383 3.71309
  3.71457 3.71710 3.71744 3.73200 3.73328 3.75921 3.76419 3.76649 3.78201 3.78522
- 3.78859 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
+ 3.78858 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
  3.86723 3.86758 3.87737 3.88445 3.89176 3.89410 3.89463 3.89463 3.90031 3.90343
  3.90708 3.91220 3.91266 3.92093 3.92236 3.92839 3.93099 3.93486 3.93674 3.94232
  3.94446 3.94851 3.94861 3.95322 3.96522 3.96893 3.97342 3.97716 3.98639 3.98642
@@ -4565,7 +4704,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.19789 -0.19676 -0.19239 -0.19177 -0.19108 -0.19072 -0.17272 -0.17222 -0.17150 -0.16685
  -0.16588 -0.16331 -0.16278 -0.15836 -0.12862 -0.12500 -0.12268 -0.11986 -0.09600 -0.09568
  -0.09375 -0.09224 -0.09127 -0.08735 -0.08490 -0.08407 -0.03022 -0.02771 -0.02769 -0.02659
- -0.02506 -0.02197 -0.02127 -0.02087 0.15455 0.15503 0.15750 0.15970 0.16543 0.16669
+ -0.02506 -0.02197 -0.02127 -0.02087 0.15455 0.15503 0.15750 0.15970 0.16542 0.16669
  0.16831 0.17153 0.22017 0.24466 0.24662 0.24897 0.26798 0.26899 0.27629 0.28585
  0.29277 0.29283 0.29529 0.29671 0.30288 0.30757 0.31593 0.31870 0.34375 0.34627
  0.35167 0.35246 0.36644 0.36904 0.37154 0.37575 0.37817 0.38424 0.39342 0.39365
@@ -4609,7 +4748,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.62259 2.62499 2.63391 2.63964 2.65512 2.66015 2.67198 2.68764 2.70000 2.70268
  2.70800 2.71382 2.72888 2.73164 2.73988 2.74727 2.75322 2.75376 2.75782 2.76545
  2.76855 2.77591 2.78763 2.79151 2.79327 2.80138 2.80264 2.80440 2.81209 2.81516
- 2.82048 2.82200 2.82239 2.82519 2.83712 2.85073 2.85566 2.85649 2.85796 2.86514
+ 2.82048 2.82200 2.82239 2.82519 2.83712 2.85072 2.85566 2.85649 2.85796 2.86514
  2.86659 2.87081 2.87390 2.87710 2.88117 2.89118 2.89164 2.89615 2.89970 2.89996
  2.90798 2.91118 2.91313 2.91714 2.92483 2.93050 2.93423 2.94433 2.94779 2.95278
  2.95532 2.95713 2.95875 2.96843 2.97250 2.97271 2.98068 2.98166 2.98175 2.99501
@@ -4671,7 +4810,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.33324 -0.33265 -0.33236 -0.33119 -0.26838 -0.26394 -0.26373 -0.26129 -0.20399 -0.20227
  -0.20060 -0.19907 -0.19182 -0.19136 -0.19119 -0.19098 -0.17591 -0.17543 -0.17463 -0.17110
  -0.16060 -0.15951 -0.15765 -0.15634 -0.12776 -0.12514 -0.12145 -0.12002 -0.09747 -0.09645
- -0.09554 -0.09470 -0.08801 -0.08615 -0.08519 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
+ -0.09554 -0.09470 -0.08801 -0.08615 -0.08520 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
  -0.02455 -0.02262 -0.02057 -0.01987 0.15225 0.15266 0.15505 0.15609 0.16801 0.16949
  0.17207 0.17338 0.22775 0.24444 0.24991 0.25067 0.26087 0.26622 0.26995 0.27795
  0.29278 0.29479 0.30091 0.30218 0.30467 0.31164 0.32115 0.32393 0.32753 0.33367
@@ -4730,7 +4869,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.29254 3.29477 3.30191 3.30683 3.31034 3.31635 3.32328 3.33286 3.33760 3.34004
  3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38643 3.39279 3.39705
  3.40205 3.40530 3.41039 3.41718 3.41959 3.42738 3.43341 3.43660 3.43824 3.44202
- 3.45375 3.45673 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
+ 3.45375 3.45672 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
  3.50096 3.50721 3.51506 3.51944 3.52030 3.53310 3.53628 3.54161 3.54580 3.55220
  3.55743 3.55961 3.56368 3.57080 3.57351 3.57791 3.58873 3.59339 3.59821 3.60306
  3.61194 3.61460 3.62165 3.62481 3.63045 3.63767 3.64085 3.65636 3.65897 3.66131
@@ -4743,7 +4882,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.99092 3.99591 4.00052 4.00385 4.01041 4.01484 4.01862 4.02463 4.02809 4.03824
  4.04157 4.04225 4.05224 4.05482 4.05815 4.05994 4.06238 4.07243 4.07497 4.08038
  4.08407 4.08798 4.09032 4.09811 4.10858 4.11315 4.11719 4.12552 4.12950 4.13103
- 4.14370 4.14527 4.17025 4.17474 4.17745 4.18128 4.18600 4.19584 4.19935 4.20391
+ 4.14370 4.14527 4.17025 4.17474 4.17745 4.18128 4.18600 4.19584 4.19934 4.20391
  4.20788 4.21610 4.22423 4.23262 4.23379 4.24081 4.24314 4.25127 4.25835 4.26679
  4.27474 4.28424 4.28740 4.29624 4.29797 4.30399 4.30756 4.31032 4.31842 4.32706
  4.32867 4.33446 4.33830 4.34775 4.34994 4.35403 4.36785 4.37112 4.37796 4.37957
@@ -4836,7 +4975,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.25990 3.26143 3.26406 3.26857 3.27569 3.27785 3.28109 3.28862 3.28892 3.29305
  3.29631 3.29772 3.29883 3.30092 3.30963 3.31291 3.31827 3.32050 3.32709 3.33273
  3.33512 3.33998 3.34346 3.35094 3.35659 3.36838 3.36905 3.37506 3.37532 3.38562
- 3.38990 3.39957 3.40167 3.40193 3.41401 3.42565 3.42963 3.43803 3.44978 3.45136
+ 3.38990 3.39957 3.40167 3.40193 3.41401 3.42565 3.42963 3.43803 3.44978 3.45135
  3.45807 3.46251 3.46456 3.46644 3.46901 3.47622 3.48739 3.49080 3.50082 3.50529
  3.51095 3.52320 3.52706 3.52730 3.53957 3.54282 3.54741 3.54930 3.55139 3.55638
  3.55720 3.56110 3.57502 3.58105 3.58147 3.58956 3.59146 3.59384 3.59763 3.60493
@@ -4872,14 +5011,14 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.58574 5.58891 5.59096 5.59615 5.65831 5.67003 5.68405 5.69674 5.70994 5.75017
  5.76013 5.77903 5.85210 5.85870 5.85903 5.87193 5.88504 5.88842 5.88852 5.90380
  5.98613 5.99562 5.99772 6.01218 6.10407 6.10834 6.11954 6.14136 6.14976 6.15666
- 6.16359 6.16600 6.18769 6.21926 6.22273 6.24045 6.26812 6.27360 6.27379 6.27897
+ 6.16358 6.16600 6.18769 6.21926 6.22273 6.24045 6.26812 6.27360 6.27379 6.27897
  6.30313 6.30540 6.31678 6.32450 6.70745 6.71681 6.72677 6.73412 7.03280 7.03473
  7.03622 7.03741 10.14468 10.24697 10.59556 10.88638 12.85822 12.95679 12.95980 13.03050
- 13.10814 13.11438 13.21874 13.27949 13.53450 13.57001 13.61170 13.64606 13.84571 13.88814
+ 13.10813 13.11438 13.21874 13.27949 13.53450 13.57001 13.61170 13.64606 13.84570 13.88814
  13.93758 14.05149 16.16860 16.17543 16.19262 16.27532
  == 10-th k-point (0.00000,-0.14997,0.00000) occupation: 84==
  -9.68238 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
- -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68061
+ -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
  -9.68061 -9.68061 -9.68061 -9.68060 -0.57511 -0.57224 -0.57210 -0.57080 -0.47412 -0.47042
  -0.46953 -0.46891 -0.46849 -0.46693 -0.46654 -0.46561 -0.33864 -0.33715 -0.33666 -0.33568
  -0.33523 -0.33428 -0.33405 -0.33013 -0.27542 -0.26815 -0.26023 -0.25538 -0.20924 -0.20568
@@ -4930,8 +5069,8 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.62427 2.63229 2.64264 2.64576 2.65461 2.65844 2.66852 2.67338 2.68604 2.69032
  2.69062 2.70721 2.71149 2.71567 2.72977 2.73080 2.75096 2.75557 2.75807 2.75930
  2.76786 2.76989 2.77731 2.77974 2.78059 2.78324 2.79477 2.79767 2.79885 2.80950
- 2.81384 2.82331 2.82475 2.82528 2.83023 2.83507 2.84384 2.84450 2.84664 2.85012
- 2.85384 2.86233 2.86495 2.86865 2.88330 2.88536 2.88976 2.89093 2.90147 2.90872
+ 2.81384 2.82331 2.82475 2.82528 2.83023 2.83507 2.84383 2.84450 2.84664 2.85012
+ 2.85384 2.86233 2.86495 2.86864 2.88330 2.88536 2.88976 2.89093 2.90147 2.90872
  2.90970 2.91001 2.92106 2.92128 2.92641 2.93458 2.93735 2.93803 2.95058 2.95183
  2.95279 2.95684 2.96088 2.96420 2.96863 2.97103 2.97237 2.97883 2.98656 2.99354
  2.99442 2.99863 3.00155 3.00739 3.00832 3.01491 3.01696 3.01725 3.02818 3.02915
@@ -4949,7 +5088,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.55930 3.56528 3.56636 3.57130 3.57651 3.59233 3.59253 3.59453 3.59473 3.59623
  3.60860 3.60990 3.61066 3.61743 3.62558 3.63089 3.63533 3.63673 3.64450 3.65565
  3.66441 3.67091 3.67515 3.68273 3.68509 3.69201 3.69242 3.70150 3.70907 3.71749
- 3.71863 3.72127 3.72552 3.74287 3.74387 3.74943 3.75224 3.76212 3.77988 3.78135
+ 3.71863 3.72127 3.72552 3.74287 3.74387 3.74943 3.75224 3.76212 3.77988 3.78134
  3.78276 3.78723 3.79704 3.80427 3.81000 3.81546 3.81678 3.82719 3.82811 3.84721
  3.85269 3.85604 3.87499 3.87580 3.88444 3.88541 3.89322 3.89803 3.90066 3.90561
  3.90636 3.90941 3.91349 3.91700 3.91822 3.91925 3.92818 3.93777 3.94047 3.94372
@@ -5011,7 +5150,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  0.93583 0.94516 0.94856 0.95550 0.96105 0.96337 0.96854 0.97339 0.97683 0.98302
  0.99762 1.00251 1.00252 1.00513 1.01104 1.01289 1.01536 1.01930 1.02669 1.03656
  1.03830 1.04373 1.04676 1.05329 1.05958 1.06554 1.06597 1.07141 1.08127 1.08632
- 1.08710 1.09300 1.10379 1.10532 1.10942 1.11681 1.12794 1.13150 1.13447 1.13722
+ 1.08709 1.09300 1.10379 1.10532 1.10942 1.11681 1.12794 1.13150 1.13447 1.13722
  1.13761 1.14083 1.15094 1.16488 1.16574 1.16749 1.17197 1.17556 1.17933 1.18587
  1.19144 1.20266 1.20300 1.20921 1.20993 1.21642 1.22388 1.22842 1.22953 1.23247
  1.24308 1.24710 1.25679 1.25800 1.26024 1.26277 1.26778 1.27032 1.27884 1.28978
@@ -5031,9 +5170,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.12688 2.13845 2.14768 2.14863 2.15371 2.15560 2.18667 2.20109 2.20434 2.21044
  2.22064 2.23505 2.23957 2.24521 2.25387 2.27433 2.28027 2.29192 2.30522 2.31300
  2.32442 2.33058 2.33295 2.34147 2.34879 2.36328 2.36720 2.38774 2.38785 2.39243
- 2.40922 2.41185 2.41548 2.43644 2.43716 2.44513 2.45490 2.45744 2.46802 2.48336
+ 2.40922 2.41185 2.41547 2.43644 2.43716 2.44513 2.45490 2.45744 2.46802 2.48336
  2.48360 2.49131 2.49403 2.50227 2.51318 2.52570 2.53043 2.53050 2.53424 2.54541
- 2.54838 2.54939 2.55561 2.55837 2.56281 2.57324 2.57728 2.59043 2.60684 2.62334
+ 2.54838 2.54939 2.55561 2.55837 2.56281 2.57324 2.57727 2.59043 2.60684 2.62334
  2.62722 2.63166 2.64287 2.64647 2.65991 2.66974 2.68118 2.68968 2.69014 2.69423
  2.70381 2.70649 2.72189 2.72287 2.72884 2.73014 2.73483 2.74272 2.74912 2.75506
  2.75693 2.76150 2.76657 2.77448 2.77617 2.77909 2.79645 2.80272 2.81204 2.81386
@@ -5043,7 +5182,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.94872 2.95720 2.95945 2.96262 2.96945 2.97177 2.97319 2.98582 2.98696 2.98943
  2.99258 2.99327 3.00052 3.00452 3.00809 3.01871 3.02008 3.02178 3.02909 3.04096
  3.04403 3.04831 3.05172 3.05326 3.06842 3.07796 3.08246 3.08800 3.09045 3.09443
- 3.09695 3.10582 3.10804 3.11200 3.12223 3.12823 3.13222 3.13428 3.14665 3.14890
+ 3.09695 3.10582 3.10804 3.11200 3.12222 3.12823 3.13222 3.13428 3.14665 3.14890
  3.16185 3.16514 3.16631 3.17608 3.17609 3.17915 3.18136 3.18729 3.19086 3.19252
  3.19462 3.19616 3.20038 3.20276 3.20558 3.20700 3.21179 3.21763 3.22765 3.22796
  3.23246 3.23624 3.24092 3.24202 3.24331 3.24396 3.25320 3.25387 3.25711 3.25802
@@ -5061,7 +5200,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.84692 3.85902 3.87015 3.87917 3.89417 3.89546 3.89918 3.90445 3.90640 3.90872
  3.91093 3.91322 3.91654 3.91797 3.91993 3.92352 3.93138 3.93311 3.93687 3.93906
  3.94022 3.94054 3.95021 3.95236 3.95458 3.96087 3.96975 3.97210 3.97261 3.97480
- 3.98539 3.98873 3.99098 3.99567 3.99823 4.00801 4.00812 4.01504 4.02353 4.02361
+ 3.98539 3.98873 3.99098 3.99567 3.99823 4.00800 4.00812 4.01504 4.02353 4.02361
  4.03038 4.03101 4.03360 4.04604 4.04869 4.05373 4.05521 4.06359 4.07051 4.07520
  4.07697 4.08202 4.08697 4.09512 4.09793 4.10312 4.10531 4.11326 4.11918 4.13331
  4.13349 4.15257 4.16566 4.16958 4.17074 4.17633 4.17929 4.19347 4.19621 4.19771
@@ -5087,7 +5226,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.76013 5.77903 5.85210 5.85870 5.85903 5.87193 5.88504 5.88842 5.88852 5.90380
  5.98613 5.99562 5.99772 6.01218 6.10407 6.10834 6.11954 6.14136 6.14976 6.15666
  6.16358 6.16600 6.18769 6.21926 6.22273 6.24045 6.26812 6.27360 6.27379 6.27897
- 6.30313 6.30540 6.31679 6.32450 6.70745 6.71681 6.72677 6.73412 7.03280 7.03473
+ 6.30313 6.30540 6.31678 6.32450 6.70745 6.71681 6.72677 6.73412 7.03280 7.03473
  7.03622 7.03741 10.14468 10.24697 10.59556 10.88638 12.85822 12.95679 12.95980 13.03050
  13.10813 13.11438 13.21874 13.27949 13.53450 13.57001 13.61170 13.64606 13.84571 13.88814
  13.93758 14.05149 16.16860 16.17543 16.19262 16.27532
@@ -5148,7 +5287,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.85452 2.85903 2.86016 2.86498 2.86658 2.87695 2.88143 2.88832 2.89119 2.89596
  2.89871 2.90743 2.91227 2.91392 2.91533 2.91919 2.92538 2.92879 2.93624 2.93923
  2.93974 2.94595 2.94872 2.95165 2.95352 2.96389 2.96572 2.96774 2.97103 2.98177
- 2.98731 2.99617 2.99924 3.00527 3.00614 3.01006 3.01253 3.01774 3.03085 3.04303
+ 2.98731 2.99617 2.99924 3.00527 3.00614 3.01006 3.01253 3.01774 3.03084 3.04303
  3.04365 3.04653 3.05657 3.07085 3.07167 3.07855 3.08575 3.08803 3.09109 3.09417
  3.09643 3.10282 3.10754 3.11139 3.11408 3.11772 3.13238 3.13656 3.13867 3.14470
  3.14674 3.16215 3.16611 3.17327 3.17412 3.17487 3.18180 3.18501 3.19436 3.19464
@@ -5180,7 +5319,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.47529 4.47728 4.47953 4.48172 4.48662 4.49172 4.49849 4.50854 4.50989 4.51039
  4.51142 4.51685 4.52145 4.53093 4.53534 4.54470 4.54838 4.54908 4.55604 4.55614
  4.56397 4.56419 4.58110 4.58776 4.59141 4.59544 4.62034 4.62379 4.62398 4.62771
- 4.63819 4.64141 4.65376 4.66004 4.66053 4.66392 4.66826 4.68005 4.68206 4.68397
+ 4.63819 4.64141 4.65376 4.66003 4.66053 4.66392 4.66826 4.68005 4.68206 4.68397
  4.72648 4.73082 4.73748 4.74229 4.76723 4.77322 4.77656 4.79440 4.79938 4.80346
  4.82183 4.83582 4.84668 4.84897 4.84931 4.85762 4.86170 4.86182 4.86900 4.87407
  4.89673 4.89898 4.90100 4.90642 4.90991 4.91558 4.92230 4.92380 4.92895 4.92981
@@ -5192,16 +5331,16 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.38296 5.40164 5.40375 5.40552 5.44083 5.44521 5.44806 5.47473 5.47805 5.48297
  5.58342 5.58618 5.59270 5.59336 5.63209 5.65284 5.67578 5.68477 5.70088 5.73844
  5.76766 5.81676 5.83324 5.86071 5.86527 5.87577 5.88214 5.88588 5.88933 5.89056
- 5.98322 6.00544 6.01516 6.01633 6.08782 6.11202 6.11777 6.12899 6.14753 6.15556
+ 5.98322 6.00544 6.01516 6.01633 6.08782 6.11202 6.11777 6.12898 6.14753 6.15556
  6.17479 6.17762 6.18268 6.20618 6.21996 6.25671 6.26913 6.27077 6.27507 6.28001
  6.29671 6.30229 6.33398 6.33539 6.69432 6.70869 6.72119 6.73359 7.02891 7.03275
  7.03331 7.03572 9.78060 9.81411 10.93874 11.32322 12.85655 12.96272 12.97275 12.97759
  13.05857 13.07214 13.20041 13.26298 13.59127 13.60512 13.61609 13.61754 13.68606 13.81722
- 13.96911 14.04827 16.09795 16.12580 16.15505 16.32310
+ 13.96911 14.04826 16.09795 16.12580 16.15505 16.32310
  == 13-th k-point (0.00000,0.00000,0.00000) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68202 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68061
- -9.68061 -9.68061 -9.68061 -9.68060 -0.57655 -0.57296 -0.57051 -0.57006 -0.47595 -0.47055
+ -9.68061 -9.68061 -9.68061 -9.68060 -0.57656 -0.57296 -0.57051 -0.57007 -0.47595 -0.47055
  -0.47010 -0.46821 -0.46791 -0.46678 -0.46594 -0.46509 -0.34048 -0.34025 -0.33689 -0.33502
  -0.33469 -0.33377 -0.33352 -0.32691 -0.27775 -0.26269 -0.26244 -0.25261 -0.21126 -0.20420
  -0.19783 -0.19488 -0.19329 -0.19315 -0.19067 -0.19049 -0.17862 -0.17797 -0.17594 -0.16264
@@ -5263,7 +5402,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.23454 3.23507 3.23790 3.23855 3.24027 3.24296 3.24329 3.24595 3.24933 3.25742
  3.25768 3.25768 3.26229 3.26422 3.28038 3.28643 3.28965 3.29083 3.29261 3.29316
  3.29357 3.29611 3.29650 3.30578 3.30649 3.30990 3.31410 3.32209 3.32472 3.32999
- 3.33227 3.33272 3.33414 3.34677 3.35691 3.37069 3.37838 3.38125 3.38461 3.39907
+ 3.33227 3.33272 3.33414 3.34677 3.35691 3.37068 3.37838 3.38125 3.38461 3.39907
  3.40568 3.40667 3.40857 3.40938 3.41074 3.41754 3.43230 3.44674 3.44746 3.44761
  3.46717 3.47149 3.47200 3.47782 3.48308 3.48446 3.48762 3.49400 3.49567 3.49684
  3.50149 3.50341 3.52418 3.52888 3.53133 3.53427 3.53934 3.54770 3.54803 3.55331
@@ -5362,7 +5501,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.85452 2.85903 2.86016 2.86498 2.86658 2.87695 2.88143 2.88832 2.89119 2.89596
  2.89871 2.90743 2.91227 2.91392 2.91533 2.91919 2.92538 2.92879 2.93624 2.93923
  2.93974 2.94595 2.94872 2.95165 2.95352 2.96389 2.96572 2.96774 2.97103 2.98177
- 2.98731 2.99617 2.99924 3.00527 3.00614 3.01006 3.01253 3.01774 3.03085 3.04303
+ 2.98731 2.99617 2.99924 3.00527 3.00614 3.01006 3.01253 3.01774 3.03084 3.04303
  3.04365 3.04653 3.05657 3.07085 3.07167 3.07855 3.08575 3.08803 3.09109 3.09417
  3.09643 3.10282 3.10754 3.11139 3.11408 3.11772 3.13238 3.13656 3.13867 3.14470
  3.14674 3.16215 3.16611 3.17327 3.17412 3.17487 3.18180 3.18501 3.19436 3.19464
@@ -5394,7 +5533,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.47529 4.47728 4.47953 4.48172 4.48662 4.49172 4.49849 4.50854 4.50989 4.51039
  4.51142 4.51685 4.52145 4.53093 4.53534 4.54470 4.54838 4.54908 4.55604 4.55614
  4.56397 4.56419 4.58110 4.58776 4.59141 4.59544 4.62034 4.62379 4.62398 4.62771
- 4.63819 4.64141 4.65376 4.66004 4.66053 4.66392 4.66826 4.68005 4.68206 4.68397
+ 4.63819 4.64141 4.65376 4.66003 4.66053 4.66392 4.66826 4.68005 4.68206 4.68397
  4.72648 4.73082 4.73748 4.74229 4.76723 4.77322 4.77656 4.79440 4.79938 4.80346
  4.82183 4.83582 4.84668 4.84897 4.84931 4.85762 4.86170 4.86182 4.86900 4.87407
  4.89673 4.89898 4.90100 4.90642 4.90991 4.91558 4.92230 4.92380 4.92895 4.92981
@@ -5406,12 +5545,12 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.38296 5.40164 5.40375 5.40552 5.44083 5.44521 5.44806 5.47473 5.47805 5.48297
  5.58342 5.58618 5.59270 5.59336 5.63209 5.65284 5.67578 5.68477 5.70088 5.73844
  5.76766 5.81676 5.83324 5.86071 5.86527 5.87577 5.88214 5.88588 5.88933 5.89056
- 5.98322 6.00544 6.01516 6.01633 6.08782 6.11202 6.11777 6.12899 6.14753 6.15556
+ 5.98322 6.00544 6.01516 6.01633 6.08782 6.11202 6.11777 6.12898 6.14753 6.15556
  6.17479 6.17762 6.18268 6.20618 6.21996 6.25671 6.26913 6.27077 6.27507 6.28001
  6.29671 6.30229 6.33398 6.33539 6.69432 6.70869 6.72119 6.73359 7.02891 7.03275
  7.03331 7.03572 9.78060 9.81411 10.93874 11.32322 12.85655 12.96272 12.97275 12.97759
  13.05857 13.07214 13.20041 13.26298 13.59127 13.60512 13.61609 13.61754 13.68606 13.81722
- 13.96911 14.04827 16.09795 16.12580 16.15505 16.32310
+ 13.96911 14.04826 16.09795 16.12580 16.15505 16.32310
  == 15-th k-point (0.00000,0.14997,-0.11765) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
@@ -5439,7 +5578,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  0.93583 0.94516 0.94856 0.95550 0.96105 0.96337 0.96854 0.97339 0.97683 0.98302
  0.99762 1.00251 1.00252 1.00513 1.01104 1.01289 1.01536 1.01930 1.02669 1.03656
  1.03830 1.04373 1.04676 1.05329 1.05958 1.06554 1.06597 1.07141 1.08127 1.08632
- 1.08710 1.09300 1.10379 1.10532 1.10942 1.11681 1.12794 1.13150 1.13447 1.13722
+ 1.08709 1.09300 1.10379 1.10532 1.10942 1.11681 1.12794 1.13150 1.13447 1.13722
  1.13761 1.14083 1.15094 1.16488 1.16574 1.16749 1.17197 1.17556 1.17933 1.18587
  1.19144 1.20266 1.20300 1.20921 1.20993 1.21642 1.22388 1.22842 1.22953 1.23247
  1.24308 1.24710 1.25679 1.25800 1.26024 1.26277 1.26778 1.27032 1.27884 1.28978
@@ -5459,9 +5598,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.12688 2.13845 2.14768 2.14863 2.15371 2.15560 2.18667 2.20109 2.20434 2.21044
  2.22064 2.23505 2.23957 2.24521 2.25387 2.27433 2.28027 2.29192 2.30522 2.31300
  2.32442 2.33058 2.33295 2.34147 2.34879 2.36328 2.36720 2.38774 2.38785 2.39243
- 2.40922 2.41185 2.41548 2.43644 2.43716 2.44513 2.45490 2.45744 2.46802 2.48336
+ 2.40922 2.41185 2.41547 2.43644 2.43716 2.44513 2.45490 2.45744 2.46802 2.48336
  2.48360 2.49131 2.49403 2.50227 2.51318 2.52570 2.53043 2.53050 2.53424 2.54541
- 2.54838 2.54939 2.55561 2.55837 2.56281 2.57324 2.57728 2.59043 2.60684 2.62334
+ 2.54838 2.54939 2.55561 2.55837 2.56281 2.57324 2.57727 2.59043 2.60684 2.62334
  2.62722 2.63166 2.64287 2.64647 2.65991 2.66974 2.68118 2.68968 2.69014 2.69423
  2.70381 2.70649 2.72189 2.72287 2.72884 2.73014 2.73483 2.74272 2.74912 2.75506
  2.75693 2.76150 2.76657 2.77448 2.77617 2.77909 2.79645 2.80272 2.81204 2.81386
@@ -5471,7 +5610,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.94872 2.95720 2.95945 2.96262 2.96945 2.97177 2.97319 2.98582 2.98696 2.98943
  2.99258 2.99327 3.00052 3.00452 3.00809 3.01871 3.02008 3.02178 3.02909 3.04096
  3.04403 3.04831 3.05172 3.05326 3.06842 3.07796 3.08246 3.08800 3.09045 3.09443
- 3.09695 3.10582 3.10804 3.11200 3.12223 3.12823 3.13222 3.13428 3.14665 3.14890
+ 3.09695 3.10582 3.10804 3.11200 3.12222 3.12823 3.13222 3.13428 3.14665 3.14890
  3.16185 3.16514 3.16631 3.17608 3.17609 3.17915 3.18136 3.18729 3.19086 3.19252
  3.19462 3.19616 3.20038 3.20276 3.20558 3.20700 3.21179 3.21763 3.22765 3.22796
  3.23246 3.23624 3.24092 3.24202 3.24331 3.24396 3.25320 3.25387 3.25711 3.25802
@@ -5489,7 +5628,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.84692 3.85902 3.87015 3.87917 3.89417 3.89546 3.89918 3.90445 3.90640 3.90872
  3.91093 3.91322 3.91654 3.91797 3.91993 3.92352 3.93138 3.93311 3.93687 3.93906
  3.94022 3.94054 3.95021 3.95236 3.95458 3.96087 3.96975 3.97210 3.97261 3.97480
- 3.98539 3.98873 3.99098 3.99567 3.99823 4.00801 4.00812 4.01504 4.02353 4.02361
+ 3.98539 3.98873 3.99098 3.99567 3.99823 4.00800 4.00812 4.01504 4.02353 4.02361
  4.03038 4.03101 4.03360 4.04604 4.04869 4.05373 4.05521 4.06359 4.07051 4.07520
  4.07697 4.08202 4.08697 4.09512 4.09793 4.10312 4.10531 4.11326 4.11918 4.13331
  4.13349 4.15257 4.16566 4.16958 4.17074 4.17633 4.17929 4.19347 4.19621 4.19771
@@ -5515,13 +5654,13 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.76013 5.77903 5.85210 5.85870 5.85903 5.87193 5.88504 5.88842 5.88852 5.90380
  5.98613 5.99562 5.99772 6.01218 6.10407 6.10834 6.11954 6.14136 6.14976 6.15666
  6.16358 6.16600 6.18769 6.21926 6.22273 6.24045 6.26812 6.27360 6.27379 6.27897
- 6.30313 6.30540 6.31679 6.32450 6.70745 6.71681 6.72677 6.73412 7.03280 7.03473
+ 6.30313 6.30540 6.31678 6.32450 6.70745 6.71681 6.72677 6.73412 7.03280 7.03473
  7.03622 7.03741 10.14468 10.24697 10.59556 10.88638 12.85822 12.95679 12.95980 13.03050
  13.10813 13.11438 13.21874 13.27949 13.53450 13.57001 13.61170 13.64606 13.84571 13.88814
  13.93758 14.05149 16.16860 16.17543 16.19262 16.27532
  == 16-th k-point (0.00000,0.14997,0.00000) occupation: 84==
  -9.68238 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
- -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68061
+ -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
  -9.68061 -9.68061 -9.68061 -9.68060 -0.57511 -0.57224 -0.57210 -0.57080 -0.47412 -0.47042
  -0.46953 -0.46891 -0.46849 -0.46693 -0.46654 -0.46561 -0.33864 -0.33715 -0.33666 -0.33568
  -0.33523 -0.33428 -0.33405 -0.33013 -0.27542 -0.26815 -0.26023 -0.25538 -0.20924 -0.20568
@@ -5572,8 +5711,8 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.62427 2.63229 2.64264 2.64576 2.65461 2.65844 2.66852 2.67338 2.68604 2.69032
  2.69062 2.70721 2.71149 2.71567 2.72977 2.73080 2.75096 2.75557 2.75807 2.75930
  2.76786 2.76989 2.77731 2.77974 2.78059 2.78324 2.79477 2.79767 2.79885 2.80950
- 2.81384 2.82331 2.82475 2.82528 2.83023 2.83507 2.84384 2.84450 2.84664 2.85012
- 2.85384 2.86233 2.86495 2.86865 2.88330 2.88536 2.88976 2.89093 2.90147 2.90872
+ 2.81384 2.82331 2.82475 2.82528 2.83023 2.83507 2.84383 2.84450 2.84664 2.85012
+ 2.85384 2.86233 2.86495 2.86864 2.88330 2.88536 2.88976 2.89093 2.90147 2.90872
  2.90970 2.91001 2.92106 2.92128 2.92641 2.93458 2.93735 2.93803 2.95058 2.95183
  2.95279 2.95684 2.96088 2.96420 2.96863 2.97103 2.97237 2.97883 2.98656 2.99354
  2.99442 2.99863 3.00155 3.00739 3.00832 3.01491 3.01696 3.01725 3.02818 3.02915
@@ -5591,7 +5730,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.55930 3.56528 3.56636 3.57130 3.57651 3.59233 3.59253 3.59453 3.59473 3.59623
  3.60860 3.60990 3.61066 3.61743 3.62558 3.63089 3.63533 3.63673 3.64450 3.65565
  3.66441 3.67091 3.67515 3.68273 3.68509 3.69201 3.69242 3.70150 3.70907 3.71749
- 3.71863 3.72127 3.72552 3.74287 3.74387 3.74943 3.75224 3.76212 3.77988 3.78135
+ 3.71863 3.72127 3.72552 3.74287 3.74387 3.74943 3.75224 3.76212 3.77988 3.78134
  3.78276 3.78723 3.79704 3.80427 3.81000 3.81546 3.81678 3.82719 3.82811 3.84721
  3.85269 3.85604 3.87499 3.87580 3.88444 3.88541 3.89322 3.89803 3.90066 3.90561
  3.90636 3.90941 3.91349 3.91700 3.91822 3.91925 3.92818 3.93777 3.94047 3.94372
@@ -5692,7 +5831,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.25990 3.26143 3.26406 3.26857 3.27569 3.27785 3.28109 3.28862 3.28892 3.29305
  3.29631 3.29772 3.29883 3.30092 3.30963 3.31291 3.31827 3.32050 3.32709 3.33273
  3.33512 3.33998 3.34346 3.35094 3.35659 3.36838 3.36905 3.37506 3.37532 3.38562
- 3.38990 3.39957 3.40167 3.40193 3.41401 3.42565 3.42963 3.43803 3.44978 3.45136
+ 3.38990 3.39957 3.40167 3.40193 3.41401 3.42565 3.42963 3.43803 3.44978 3.45135
  3.45807 3.46251 3.46456 3.46644 3.46901 3.47622 3.48739 3.49080 3.50082 3.50529
  3.51095 3.52320 3.52706 3.52730 3.53957 3.54282 3.54741 3.54930 3.55139 3.55638
  3.55720 3.56110 3.57502 3.58105 3.58147 3.58956 3.59146 3.59384 3.59763 3.60493
@@ -5728,10 +5867,10 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.58574 5.58891 5.59096 5.59615 5.65831 5.67003 5.68405 5.69674 5.70994 5.75017
  5.76013 5.77903 5.85210 5.85870 5.85903 5.87193 5.88504 5.88842 5.88852 5.90380
  5.98613 5.99562 5.99772 6.01218 6.10407 6.10834 6.11954 6.14136 6.14976 6.15666
- 6.16359 6.16600 6.18769 6.21926 6.22273 6.24045 6.26812 6.27360 6.27379 6.27897
+ 6.16358 6.16600 6.18769 6.21926 6.22273 6.24045 6.26812 6.27360 6.27379 6.27897
  6.30313 6.30540 6.31678 6.32450 6.70745 6.71681 6.72677 6.73412 7.03280 7.03473
  7.03622 7.03741 10.14468 10.24697 10.59556 10.88638 12.85822 12.95679 12.95980 13.03050
- 13.10814 13.11438 13.21874 13.27949 13.53450 13.57001 13.61170 13.64606 13.84571 13.88814
+ 13.10813 13.11438 13.21874 13.27949 13.53450 13.57001 13.61170 13.64606 13.84570 13.88814
  13.93758 14.05149 16.16860 16.17543 16.19262 16.27532
  == 18-th k-point (0.16275,-0.14997,-0.11765) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
@@ -5741,7 +5880,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.33324 -0.33265 -0.33236 -0.33119 -0.26838 -0.26394 -0.26373 -0.26129 -0.20399 -0.20227
  -0.20060 -0.19907 -0.19182 -0.19136 -0.19119 -0.19098 -0.17591 -0.17543 -0.17463 -0.17110
  -0.16060 -0.15951 -0.15765 -0.15634 -0.12776 -0.12514 -0.12145 -0.12002 -0.09747 -0.09645
- -0.09554 -0.09470 -0.08801 -0.08615 -0.08519 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
+ -0.09554 -0.09470 -0.08801 -0.08615 -0.08520 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
  -0.02455 -0.02262 -0.02057 -0.01987 0.15225 0.15266 0.15505 0.15609 0.16801 0.16949
  0.17207 0.17338 0.22775 0.24444 0.24991 0.25067 0.26087 0.26622 0.26995 0.27795
  0.29278 0.29479 0.30091 0.30218 0.30467 0.31164 0.32115 0.32393 0.32753 0.33367
@@ -5800,7 +5939,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.29254 3.29477 3.30191 3.30683 3.31034 3.31635 3.32328 3.33286 3.33760 3.34004
  3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38643 3.39279 3.39705
  3.40205 3.40530 3.41039 3.41718 3.41959 3.42738 3.43341 3.43660 3.43824 3.44202
- 3.45375 3.45673 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
+ 3.45375 3.45672 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
  3.50096 3.50721 3.51506 3.51944 3.52030 3.53310 3.53628 3.54161 3.54580 3.55220
  3.55743 3.55961 3.56368 3.57080 3.57351 3.57791 3.58873 3.59339 3.59821 3.60306
  3.61194 3.61460 3.62165 3.62481 3.63045 3.63767 3.64085 3.65636 3.65897 3.66131
@@ -5813,7 +5952,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.99092 3.99591 4.00052 4.00385 4.01041 4.01484 4.01862 4.02463 4.02809 4.03824
  4.04157 4.04225 4.05224 4.05482 4.05815 4.05994 4.06238 4.07243 4.07497 4.08038
  4.08407 4.08798 4.09032 4.09811 4.10858 4.11315 4.11719 4.12552 4.12950 4.13103
- 4.14370 4.14527 4.17025 4.17474 4.17745 4.18128 4.18600 4.19584 4.19935 4.20391
+ 4.14370 4.14527 4.17025 4.17474 4.17745 4.18128 4.18600 4.19584 4.19934 4.20391
  4.20788 4.21610 4.22423 4.23262 4.23379 4.24081 4.24314 4.25127 4.25835 4.26679
  4.27474 4.28424 4.28740 4.29624 4.29797 4.30399 4.30756 4.31032 4.31842 4.32706
  4.32867 4.33446 4.33830 4.34775 4.34994 4.35403 4.36785 4.37112 4.37796 4.37957
@@ -5849,7 +5988,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.19789 -0.19676 -0.19239 -0.19177 -0.19108 -0.19072 -0.17272 -0.17222 -0.17150 -0.16685
  -0.16588 -0.16331 -0.16278 -0.15836 -0.12862 -0.12500 -0.12268 -0.11986 -0.09600 -0.09568
  -0.09375 -0.09224 -0.09127 -0.08735 -0.08490 -0.08407 -0.03022 -0.02771 -0.02769 -0.02659
- -0.02506 -0.02197 -0.02127 -0.02087 0.15455 0.15503 0.15750 0.15970 0.16543 0.16669
+ -0.02506 -0.02197 -0.02127 -0.02087 0.15455 0.15503 0.15750 0.15970 0.16542 0.16669
  0.16831 0.17153 0.22017 0.24466 0.24662 0.24897 0.26798 0.26899 0.27629 0.28585
  0.29277 0.29283 0.29529 0.29671 0.30288 0.30757 0.31593 0.31870 0.34375 0.34627
  0.35167 0.35246 0.36644 0.36904 0.37154 0.37575 0.37817 0.38424 0.39342 0.39365
@@ -5893,7 +6032,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.62259 2.62499 2.63391 2.63964 2.65512 2.66015 2.67198 2.68764 2.70000 2.70268
  2.70800 2.71382 2.72888 2.73164 2.73988 2.74727 2.75322 2.75376 2.75782 2.76545
  2.76855 2.77591 2.78763 2.79151 2.79327 2.80138 2.80264 2.80440 2.81209 2.81516
- 2.82048 2.82200 2.82239 2.82519 2.83712 2.85073 2.85566 2.85649 2.85796 2.86514
+ 2.82048 2.82200 2.82239 2.82519 2.83712 2.85072 2.85566 2.85649 2.85796 2.86514
  2.86659 2.87081 2.87390 2.87710 2.88117 2.89118 2.89164 2.89615 2.89970 2.89996
  2.90798 2.91118 2.91313 2.91714 2.92483 2.93050 2.93423 2.94433 2.94779 2.95278
  2.95532 2.95713 2.95875 2.96843 2.97250 2.97271 2.98068 2.98166 2.98175 2.99501
@@ -6057,7 +6196,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  == 21-th k-point (0.16275,0.00000,-0.11765) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
- -9.68061 -9.68061 -9.68061 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
+ -9.68061 -9.68061 -9.68060 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
  -0.46959 -0.46954 -0.46785 -0.46777 -0.46647 -0.46637 -0.34003 -0.33870 -0.33749 -0.33622
  -0.33435 -0.33286 -0.33240 -0.33004 -0.27096 -0.26595 -0.26207 -0.26097 -0.20411 -0.20087
  -0.20019 -0.19753 -0.19193 -0.19163 -0.19131 -0.19072 -0.17257 -0.17201 -0.17122 -0.17047
@@ -6106,7 +6245,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.54955 2.55431 2.55838 2.56072 2.56996 2.58107 2.58284 2.58687 2.60315 2.61347
  2.62366 2.62682 2.65132 2.66501 2.66644 2.67454 2.67706 2.68984 2.70591 2.70707
  2.71475 2.71539 2.72336 2.73273 2.73782 2.74990 2.75599 2.75702 2.75999 2.76425
- 2.76819 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
+ 2.76818 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
  2.81902 2.82307 2.82500 2.82736 2.83006 2.83633 2.84236 2.84642 2.84805 2.85108
  2.85953 2.86164 2.86522 2.87206 2.87552 2.88272 2.88680 2.89754 2.89957 2.90542
  2.90609 2.91110 2.91675 2.92016 2.92512 2.92780 2.93368 2.93439 2.94071 2.95181
@@ -6116,7 +6255,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.09090 3.09847 3.10147 3.10964 3.11862 3.12767 3.13153 3.13164 3.13640 3.14143
  3.14844 3.15297 3.16031 3.16371 3.16521 3.16573 3.18025 3.18320 3.18859 3.18961
  3.19605 3.19748 3.20015 3.20675 3.21178 3.21338 3.21944 3.22634 3.22711 3.22835
- 3.23061 3.23456 3.23787 3.24465 3.24506 3.24675 3.25123 3.25571 3.25839 3.26020
+ 3.23061 3.23455 3.23787 3.24465 3.24506 3.24675 3.25123 3.25571 3.25839 3.26020
  3.26200 3.26488 3.26734 3.26740 3.27427 3.27682 3.27914 3.28397 3.28702 3.29102
  3.29521 3.30253 3.30261 3.31066 3.31607 3.31870 3.32031 3.32649 3.33392 3.34204
  3.34429 3.34664 3.35245 3.36552 3.36623 3.37167 3.37601 3.38089 3.38564 3.38863
@@ -6125,9 +6264,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.50123 3.50667 3.50789 3.51510 3.53036 3.53877 3.53982 3.54744 3.55142 3.55353
  3.55574 3.55937 3.56839 3.57061 3.58791 3.59031 3.59203 3.59663 3.59871 3.60798
  3.60805 3.61707 3.62148 3.62588 3.63197 3.63751 3.64256 3.64431 3.64684 3.65141
- 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70384 3.71309
+ 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70383 3.71309
  3.71457 3.71710 3.71744 3.73200 3.73328 3.75921 3.76419 3.76649 3.78201 3.78522
- 3.78859 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
+ 3.78858 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
  3.86723 3.86758 3.87737 3.88445 3.89176 3.89410 3.89463 3.89463 3.90031 3.90343
  3.90708 3.91220 3.91266 3.92093 3.92236 3.92839 3.93099 3.93486 3.93674 3.94232
  3.94446 3.94851 3.94861 3.95322 3.96522 3.96893 3.97342 3.97716 3.98639 3.98642
@@ -6192,7 +6331,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.13341 1.15001 1.15168 1.15597 1.16517 1.16803 1.18199 1.18618 1.18645 1.18732
  1.20339 1.20904 1.21127 1.21723 1.21761 1.22438 1.22494 1.22672 1.22788 1.23578
  1.24119 1.24765 1.24838 1.25473 1.26211 1.26622 1.26682 1.27241 1.28160 1.28170
- 1.28631 1.29476 1.29612 1.31009 1.31134 1.31459 1.31694 1.32132 1.33491 1.33851
+ 1.28631 1.29476 1.29611 1.31009 1.31134 1.31459 1.31694 1.32132 1.33491 1.33851
  1.34761 1.34804 1.36685 1.36723 1.36833 1.37314 1.38767 1.39001 1.39639 1.39718
  1.40796 1.42072 1.42077 1.42936 1.43044 1.43251 1.43435 1.44783 1.45558 1.45670
  1.45804 1.46021 1.47445 1.49115 1.49378 1.49844 1.50190 1.50561 1.50758 1.50857
@@ -6248,7 +6387,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.38263 4.38416 4.38577 4.40089 4.40529 4.40713 4.41719 4.42247 4.42380 4.42811
  4.42862 4.43377 4.43975 4.44125 4.44378 4.44559 4.45539 4.46204 4.46921 4.46928
  4.47695 4.47966 4.48204 4.48351 4.48723 4.49046 4.49197 4.49384 4.50121 4.50340
- 4.50346 4.51172 4.51537 4.51874 4.53409 4.54312 4.54550 4.55191 4.56221 4.56388
+ 4.50346 4.51171 4.51537 4.51874 4.53409 4.54312 4.54549 4.55191 4.56221 4.56388
  4.56863 4.58261 4.58758 4.58967 4.59228 4.59639 4.62047 4.62361 4.63031 4.63450
  4.63622 4.63800 4.64099 4.65991 4.66092 4.66619 4.66876 4.67765 4.68224 4.70246
  4.70781 4.71506 4.72028 4.72909 4.74218 4.75424 4.75587 4.80719 4.81153 4.81229
@@ -6259,19 +6398,19 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.11130 5.11154 5.11222 5.14177 5.16627 5.16735 5.17026 5.17083 5.17664 5.17698
  5.17887 5.17945 5.18587 5.20153 5.20350 5.20699 5.21595 5.22839 5.25329 5.25888
  5.28712 5.30604 5.30875 5.31384 5.31763 5.32505 5.32761 5.32919 5.36427 5.37019
- 5.39273 5.39357 5.41940 5.42945 5.43296 5.43995 5.44128 5.45594 5.47709 5.48411
+ 5.39273 5.39357 5.41940 5.42945 5.43295 5.43995 5.44128 5.45594 5.47709 5.48411
  5.58038 5.58059 5.59705 5.59978 5.66241 5.66638 5.67099 5.71348 5.71706 5.75223
  5.75741 5.75985 5.83042 5.84101 5.86678 5.86771 5.87359 5.88467 5.88628 5.90126
  5.99757 6.01041 6.01061 6.02184 6.13060 6.13382 6.13563 6.13976 6.16442 6.16959
  6.17312 6.17385 6.19662 6.20554 6.22397 6.25553 6.27303 6.27318 6.28108 6.28714
- 6.29469 6.30522 6.31033 6.31312 6.72281 6.72924 6.73387 6.73938 7.03318 7.03435
+ 6.29469 6.30522 6.31033 6.31312 6.72281 6.72924 6.73387 6.73938 7.03318 7.03434
  7.03955 7.04037 10.20622 10.26880 10.65509 10.84884 12.88101 12.90707 12.90844 13.02775
- 13.07421 13.08932 13.11105 13.11612 13.53362 13.58660 13.60218 13.60283 13.71232 13.89928
+ 13.07421 13.08932 13.11105 13.11612 13.53362 13.58660 13.60218 13.60283 13.71231 13.89928
  13.93284 14.13293 16.09256 16.12278 16.13366 16.21473
  == 23-th k-point (0.16275,0.00000,0.11765) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
- -9.68061 -9.68061 -9.68060 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
+ -9.68061 -9.68061 -9.68061 -9.68060 -0.57434 -0.57302 -0.57158 -0.57127 -0.47250 -0.47072
  -0.46959 -0.46954 -0.46785 -0.46777 -0.46647 -0.46637 -0.34003 -0.33870 -0.33749 -0.33622
  -0.33435 -0.33286 -0.33240 -0.33004 -0.27096 -0.26595 -0.26207 -0.26097 -0.20411 -0.20087
  -0.20019 -0.19753 -0.19193 -0.19163 -0.19131 -0.19072 -0.17257 -0.17201 -0.17122 -0.17047
@@ -6282,7 +6421,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  0.28518 0.29040 0.29070 0.29492 0.30297 0.30905 0.32327 0.32484 0.33171 0.34473
  0.34534 0.34904 0.35774 0.36136 0.36339 0.37439 0.37672 0.38190 0.39145 0.39360
  0.39813 0.39948 0.41056 0.41624 0.41923 0.42678 0.42903 0.43669 0.43813 0.44922
- 0.45340 0.45574 0.46187 0.46609 0.46847 0.47553 0.47957 0.48148 0.48848 0.49574
+ 0.45340 0.45574 0.46187 0.46608 0.46847 0.47553 0.47957 0.48148 0.48848 0.49574
  0.50221 0.50798 0.52074 0.52384 0.52394 0.52872 0.54445 0.54928 0.55244 0.55670
  0.56920 0.57010 0.57463 0.58036 0.58393 0.58958 0.60214 0.60674 0.60931 0.61346
  0.61925 0.62202 0.62762 0.62855 0.63752 0.64502 0.64977 0.65075 0.65175 0.65469
@@ -6320,14 +6459,14 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.54955 2.55431 2.55838 2.56072 2.56996 2.58107 2.58284 2.58687 2.60315 2.61347
  2.62366 2.62682 2.65132 2.66501 2.66644 2.67454 2.67706 2.68984 2.70591 2.70707
  2.71475 2.71539 2.72336 2.73273 2.73782 2.74990 2.75599 2.75702 2.75999 2.76425
- 2.76819 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
+ 2.76818 2.77960 2.78375 2.78606 2.79161 2.79581 2.79972 2.80194 2.80609 2.80870
  2.81902 2.82307 2.82500 2.82736 2.83006 2.83633 2.84236 2.84642 2.84805 2.85108
  2.85953 2.86164 2.86522 2.87206 2.87552 2.88272 2.88680 2.89754 2.89957 2.90542
  2.90609 2.91110 2.91675 2.92016 2.92512 2.92780 2.93368 2.93439 2.94071 2.95181
  2.95379 2.95931 2.96457 2.96727 2.97050 2.97399 2.97568 2.97689 2.98044 2.98976
  2.99724 2.99797 3.00078 3.00431 3.01548 3.01837 3.01845 3.02213 3.02892 3.04021
  3.05005 3.05102 3.05671 3.05888 3.06388 3.06681 3.07753 3.07999 3.08209 3.08551
- 3.09090 3.09847 3.10147 3.10964 3.11862 3.12767 3.13153 3.13164 3.13640 3.14143
+ 3.09090 3.09847 3.10147 3.10963 3.11862 3.12767 3.13153 3.13164 3.13640 3.14143
  3.14844 3.15297 3.16031 3.16371 3.16521 3.16573 3.18025 3.18320 3.18859 3.18961
  3.19605 3.19748 3.20015 3.20675 3.21178 3.21338 3.21944 3.22634 3.22711 3.22835
  3.23061 3.23455 3.23787 3.24465 3.24506 3.24675 3.25123 3.25571 3.25839 3.26020
@@ -6339,9 +6478,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.50123 3.50667 3.50789 3.51510 3.53036 3.53877 3.53982 3.54744 3.55142 3.55353
  3.55574 3.55937 3.56839 3.57061 3.58791 3.59031 3.59203 3.59663 3.59871 3.60798
  3.60805 3.61707 3.62148 3.62588 3.63197 3.63751 3.64256 3.64431 3.64684 3.65141
- 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70384 3.71309
+ 3.66142 3.66472 3.67129 3.67338 3.68371 3.68915 3.69043 3.69707 3.70383 3.71309
  3.71457 3.71710 3.71744 3.73200 3.73328 3.75921 3.76419 3.76649 3.78201 3.78522
- 3.78859 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
+ 3.78858 3.79234 3.79806 3.80340 3.81265 3.82041 3.82325 3.83204 3.85440 3.85674
  3.86723 3.86758 3.87737 3.88445 3.89176 3.89410 3.89463 3.89463 3.90031 3.90343
  3.90708 3.91220 3.91266 3.92093 3.92236 3.92839 3.93099 3.93486 3.93674 3.94232
  3.94446 3.94851 3.94861 3.95322 3.96522 3.96893 3.97342 3.97716 3.98639 3.98642
@@ -6353,7 +6492,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.27498 4.28083 4.29271 4.29298 4.29535 4.30662 4.31635 4.31955 4.32099 4.32725
  4.33511 4.34305 4.34541 4.35407 4.35529 4.35610 4.37104 4.37144 4.37313 4.37475
  4.38467 4.39837 4.40249 4.41195 4.41207 4.41337 4.42194 4.42611 4.42723 4.43046
- 4.43127 4.43318 4.43993 4.44231 4.44722 4.44883 4.45107 4.45453 4.45520 4.46441
+ 4.43127 4.43318 4.43993 4.44231 4.44722 4.44883 4.45107 4.45452 4.45520 4.46441
  4.46683 4.46897 4.46976 4.48033 4.48202 4.48265 4.49369 4.49711 4.50084 4.50227
  4.50281 4.51210 4.51239 4.52217 4.52912 4.53379 4.53692 4.54565 4.54768 4.55195
  4.56721 4.56859 4.57742 4.58794 4.59053 4.60602 4.61674 4.62031 4.62050 4.62653
@@ -6382,7 +6521,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.47085 -0.47057 -0.46721 -0.46672 -0.46621 -0.46585 -0.33918 -0.33857 -0.33798 -0.33720
  -0.33324 -0.33265 -0.33236 -0.33119 -0.26838 -0.26394 -0.26373 -0.26129 -0.20399 -0.20227
  -0.20060 -0.19907 -0.19182 -0.19136 -0.19119 -0.19098 -0.17591 -0.17543 -0.17463 -0.17110
- -0.16059 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
+ -0.16060 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
  -0.09553 -0.09469 -0.08801 -0.08615 -0.08520 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
  -0.02455 -0.02262 -0.02057 -0.01987 0.15225 0.15266 0.15505 0.15609 0.16801 0.16949
  0.17207 0.17338 0.22775 0.24444 0.24991 0.25067 0.26087 0.26622 0.26995 0.27795
@@ -6413,9 +6552,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.51143 1.51711 1.52334 1.52695 1.52829 1.53652 1.53819 1.54311 1.55398 1.55758
  1.56058 1.56296 1.56576 1.56982 1.57410 1.57874 1.58320 1.58959 1.59083 1.59358
  1.60305 1.60534 1.60805 1.61859 1.62322 1.62846 1.63617 1.64001 1.64881 1.65267
- 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68255 1.68887 1.69196 1.70109
+ 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68254 1.68887 1.69196 1.70109
  1.70850 1.71360 1.72211 1.72990 1.73220 1.73741 1.74564 1.75157 1.76641 1.77180
- 1.77723 1.78279 1.78650 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
+ 1.77723 1.78279 1.78649 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
  1.85895 1.86344 1.87088 1.87332 1.88371 1.90398 1.90822 1.92123 1.92794 1.93385
  1.94009 1.94394 1.95203 1.96028 1.97566 1.98229 1.99212 1.99291 2.00799 2.01974
  2.03101 2.03331 2.03391 2.04360 2.05250 2.06712 2.07990 2.08896 2.09505 2.10450
@@ -6440,7 +6579,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.22798 3.23135 3.23456 3.23689 3.23795 3.24590 3.24981 3.25133 3.25320 3.25373
  3.26143 3.26249 3.26764 3.27126 3.27524 3.27901 3.28033 3.28358 3.28652 3.29001
  3.29254 3.29477 3.30191 3.30683 3.31034 3.31635 3.32328 3.33286 3.33760 3.34004
- 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38644 3.39280 3.39705
+ 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38644 3.39279 3.39705
  3.40205 3.40530 3.41039 3.41718 3.41959 3.42738 3.43341 3.43660 3.43824 3.44202
  3.45375 3.45672 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
  3.50096 3.50721 3.51506 3.51944 3.52030 3.53310 3.53628 3.54161 3.54580 3.55220
@@ -6479,13 +6618,13 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.98992 5.99785 6.00356 6.00886 6.12044 6.12206 6.13611 6.14271 6.15720 6.16772
  6.17622 6.17874 6.18703 6.19695 6.20566 6.21767 6.28035 6.28367 6.28575 6.28803
  6.30328 6.30520 6.31093 6.31449 6.71250 6.71519 6.71997 6.72559 7.03324 7.03408
- 7.03486 7.03769 10.34881 10.42103 10.70444 10.88079 12.84407 12.91421 12.97380 13.04639
- 13.05737 13.09958 13.19049 13.20427 13.55268 13.56929 13.61146 13.62218 13.84311 13.86561
+ 7.03486 7.03768 10.34881 10.42103 10.70444 10.88079 12.84407 12.91421 12.97380 13.04639
+ 13.05737 13.09958 13.19049 13.20427 13.55268 13.56930 13.61146 13.62218 13.84311 13.86561
  13.90736 13.99299 16.11863 16.14501 16.15426 16.18870
  == 25-th k-point (0.16275,0.14997,0.00000) occupation: 84==
  -9.68237 -9.68237 -9.68237 -9.68237 -9.68235 -9.68235 -9.68234 -9.68234 -9.68201 -9.68201
  -9.68201 -9.68201 -9.68194 -9.68194 -9.68193 -9.68193 -9.68062 -9.68062 -9.68062 -9.68062
- -9.68061 -9.68061 -9.68061 -9.68060 -0.57403 -0.57216 -0.57209 -0.57187 -0.47269 -0.47020
+ -9.68061 -9.68061 -9.68061 -9.68060 -0.57403 -0.57216 -0.57209 -0.57187 -0.47269 -0.47021
  -0.46987 -0.46926 -0.46872 -0.46739 -0.46687 -0.46620 -0.33850 -0.33767 -0.33602 -0.33514
  -0.33498 -0.33394 -0.33385 -0.33149 -0.27207 -0.26452 -0.26448 -0.25806 -0.20514 -0.20315
  -0.19789 -0.19676 -0.19240 -0.19177 -0.19108 -0.19072 -0.17272 -0.17222 -0.17150 -0.16685
@@ -6537,7 +6676,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.76855 2.77591 2.78763 2.79151 2.79327 2.80138 2.80264 2.80440 2.81209 2.81516
  2.82049 2.82200 2.82239 2.82519 2.83712 2.85072 2.85566 2.85649 2.85796 2.86514
  2.86659 2.87081 2.87390 2.87710 2.88117 2.89118 2.89164 2.89615 2.89970 2.89996
- 2.90798 2.91118 2.91313 2.91714 2.92483 2.93050 2.93423 2.94433 2.94779 2.95278
+ 2.90798 2.91118 2.91313 2.91714 2.92483 2.93050 2.93422 2.94433 2.94779 2.95278
  2.95532 2.95713 2.95875 2.96843 2.97250 2.97271 2.98068 2.98166 2.98175 2.99501
  2.99928 3.00430 3.00636 3.01085 3.01499 3.01790 3.02242 3.02676 3.03075 3.03093
  3.03720 3.03859 3.04626 3.05050 3.05577 3.05872 3.06457 3.07263 3.07455 3.09106
@@ -6572,7 +6711,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  4.51801 4.52224 4.52810 4.52829 4.53417 4.53751 4.53940 4.54794 4.55317 4.56147
  4.56409 4.56998 4.57775 4.58591 4.59462 4.60678 4.60926 4.61500 4.63174 4.63933
  4.64803 4.65273 4.65654 4.65784 4.66333 4.66690 4.67471 4.67803 4.67986 4.69185
- 4.69774 4.71528 4.73176 4.73851 4.75061 4.77539 4.78103 4.79832 4.81928 4.82217
+ 4.69774 4.71528 4.73176 4.73851 4.75061 4.77539 4.78102 4.79832 4.81928 4.82217
  4.83035 4.83061 4.83963 4.84372 4.85258 4.85292 4.85694 4.85949 4.88465 4.89420
  4.89488 4.89667 4.89762 4.90434 4.90971 4.91450 4.91563 4.91781 4.92048 4.92432
  4.94081 4.94266 4.94441 4.94958 4.95912 4.96819 4.97436 4.97721 4.97971 5.00929
@@ -6596,7 +6735,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  -0.47085 -0.47057 -0.46721 -0.46672 -0.46621 -0.46585 -0.33918 -0.33857 -0.33798 -0.33720
  -0.33324 -0.33265 -0.33236 -0.33119 -0.26838 -0.26394 -0.26373 -0.26129 -0.20399 -0.20227
  -0.20060 -0.19907 -0.19182 -0.19136 -0.19119 -0.19098 -0.17591 -0.17543 -0.17463 -0.17110
- -0.16059 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
+ -0.16060 -0.15951 -0.15765 -0.15634 -0.12776 -0.12515 -0.12144 -0.12002 -0.09747 -0.09645
  -0.09553 -0.09469 -0.08801 -0.08615 -0.08520 -0.08423 -0.03056 -0.02942 -0.02779 -0.02664
  -0.02455 -0.02262 -0.02057 -0.01987 0.15225 0.15266 0.15505 0.15609 0.16801 0.16949
  0.17207 0.17338 0.22775 0.24444 0.24991 0.25067 0.26087 0.26622 0.26995 0.27795
@@ -6627,9 +6766,9 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  1.51143 1.51711 1.52334 1.52695 1.52829 1.53652 1.53819 1.54311 1.55398 1.55758
  1.56058 1.56296 1.56576 1.56982 1.57410 1.57874 1.58320 1.58959 1.59083 1.59358
  1.60305 1.60534 1.60805 1.61859 1.62322 1.62846 1.63617 1.64001 1.64881 1.65267
- 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68255 1.68887 1.69196 1.70109
+ 1.65504 1.65792 1.66451 1.66801 1.67405 1.67719 1.68254 1.68887 1.69196 1.70109
  1.70850 1.71360 1.72211 1.72990 1.73220 1.73741 1.74564 1.75157 1.76641 1.77180
- 1.77723 1.78279 1.78650 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
+ 1.77723 1.78279 1.78649 1.79018 1.80475 1.81140 1.81584 1.81802 1.82734 1.83652
  1.85895 1.86344 1.87088 1.87332 1.88371 1.90398 1.90822 1.92123 1.92794 1.93385
  1.94009 1.94394 1.95203 1.96028 1.97566 1.98229 1.99212 1.99291 2.00799 2.01974
  2.03101 2.03331 2.03391 2.04360 2.05250 2.06712 2.07990 2.08896 2.09505 2.10450
@@ -6637,7 +6776,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  2.21962 2.22970 2.23490 2.24696 2.25211 2.25919 2.28715 2.29580 2.30596 2.31633
  2.31924 2.32362 2.32973 2.35186 2.35428 2.35820 2.36705 2.37704 2.39039 2.39735
  2.40430 2.40959 2.41588 2.42526 2.44408 2.45423 2.45694 2.46276 2.47390 2.48318
- 2.48804 2.48949 2.50510 2.50573 2.51023 2.52228 2.52350 2.52752 2.53268 2.53758
+ 2.48804 2.48949 2.50510 2.50573 2.51023 2.52228 2.52349 2.52752 2.53268 2.53758
  2.54354 2.55328 2.56775 2.56941 2.57574 2.58345 2.58661 2.59409 2.61543 2.61917
  2.62583 2.63691 2.64410 2.64998 2.65452 2.67073 2.67688 2.68815 2.69094 2.69802
  2.70589 2.71103 2.71879 2.73031 2.74061 2.74839 2.75280 2.75589 2.76726 2.76909
@@ -6654,7 +6793,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  3.22798 3.23135 3.23456 3.23689 3.23795 3.24590 3.24981 3.25133 3.25320 3.25373
  3.26143 3.26249 3.26764 3.27126 3.27524 3.27901 3.28033 3.28358 3.28652 3.29001
  3.29254 3.29477 3.30191 3.30683 3.31034 3.31635 3.32328 3.33286 3.33760 3.34004
- 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38644 3.39279 3.39705
+ 3.34237 3.35329 3.35617 3.35999 3.36284 3.37408 3.38037 3.38643 3.39279 3.39705
  3.40205 3.40530 3.41039 3.41718 3.41959 3.42738 3.43341 3.43660 3.43824 3.44202
  3.45375 3.45672 3.45958 3.46510 3.46801 3.47066 3.47539 3.48377 3.49224 3.49781
  3.50096 3.50721 3.51506 3.51944 3.52030 3.53310 3.53628 3.54161 3.54580 3.55220
@@ -6690,7 +6829,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  5.38640 5.40256 5.41733 5.42397 5.42951 5.43649 5.44571 5.46174 5.46382 5.47433
  5.58441 5.58755 5.59108 5.59315 5.68685 5.69116 5.69368 5.70077 5.73874 5.75578
  5.75866 5.77457 5.84773 5.85572 5.86246 5.86896 5.88665 5.88734 5.89135 5.89824
- 5.98992 5.99785 6.00356 6.00887 6.12044 6.12206 6.13611 6.14271 6.15720 6.16772
+ 5.98992 5.99785 6.00356 6.00886 6.12044 6.12206 6.13611 6.14271 6.15720 6.16772
  6.17622 6.17874 6.18703 6.19695 6.20566 6.21767 6.28035 6.28367 6.28575 6.28803
  6.30328 6.30520 6.31093 6.31449 6.71250 6.71519 6.71997 6.72559 7.03324 7.03408
  7.03486 7.03768 10.34881 10.42103 10.70444 10.88079 12.84407 12.91421 12.97380 13.04639
@@ -6699,7 +6838,7 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
  ---------------------------------------------------------------------------
  VBM is at 13-th k-point with -0.35129 eV
  CBM is at 13-th k-point with 4.12640 eV
- Band gap is 4.47770 eV
+ Band gap is 4.47769 eV
 
 
            Ground-State Mulliken Net Atomic Charges
@@ -6707,61 +6846,61 @@ There are 42 Q batches for computing 2e3c SR integrals with latsum
       Atom                 Charge (a.u.)          Spin (a.u.)
    --------------------------------------------------------
       1  C              (-0.197817,-0.000000)    (0.000000,0.000000)
-      2  C               (-0.197821,0.000000)    (0.000000,0.000000)
-      3  C               (-0.197813,0.000000)    (0.000000,0.000000)
-      4  C              (-0.197813,-0.000000)    (0.000000,0.000000)
-      5  C               (-0.197813,0.000000)    (0.000000,0.000000)
-      6  C              (-0.197811,-0.000000)    (0.000000,0.000000)
-      7  C              (-0.197814,-0.000000)    (0.000000,0.000000)
-      8  C               (-0.197819,0.000000)    (0.000000,0.000000)
-      9  C               (-0.040432,0.000000)    (0.000000,0.000000)
-     10  C              (-0.040449,-0.000000)    (0.000000,0.000000)
-     11  C              (-0.040441,-0.000000)    (0.000000,0.000000)
-     12  C               (-0.040439,0.000000)    (0.000000,0.000000)
-     13  C              (-0.040441,-0.000000)    (0.000000,0.000000)
-     14  C               (-0.040440,0.000000)    (0.000000,0.000000)
-     15  C               (-0.040434,0.000000)    (0.000000,0.000000)
-     16  C              (-0.040449,-0.000000)    (0.000000,0.000000)
-     17  C               (-0.126280,0.000000)    (0.000000,0.000000)
-     18  C              (-0.126273,-0.000000)    (0.000000,0.000000)
-     19  C              (-0.126276,-0.000000)    (0.000000,0.000000)
-     20  C               (-0.126273,0.000000)    (0.000000,0.000000)
-     21  C              (-0.126278,-0.000000)    (0.000000,0.000000)
-     22  C               (-0.126276,0.000000)    (0.000000,0.000000)
-     23  C               (-0.126282,0.000000)    (0.000000,0.000000)
-     24  C              (-0.126274,-0.000000)    (0.000000,0.000000)
-     25  H               (0.134562,-0.000000)    (0.000000,0.000000)
-     26  H                (0.134564,0.000000)    (0.000000,0.000000)
+      2  C              (-0.197823,-0.000000)    (0.000000,0.000000)
+      3  C              (-0.197812,-0.000000)    (0.000000,0.000000)
+      4  C               (-0.197812,0.000000)    (0.000000,0.000000)
+      5  C              (-0.197812,-0.000000)    (0.000000,0.000000)
+      6  C              (-0.197810,-0.000000)    (0.000000,0.000000)
+      7  C              (-0.197815,-0.000000)    (0.000000,0.000000)
+      8  C              (-0.197819,-0.000000)    (0.000000,0.000000)
+      9  C               (-0.040431,0.000000)    (0.000000,0.000000)
+     10  C               (-0.040452,0.000000)    (0.000000,0.000000)
+     11  C               (-0.040442,0.000000)    (0.000000,0.000000)
+     12  C               (-0.040438,0.000000)    (0.000000,0.000000)
+     13  C              (-0.040444,-0.000000)    (0.000000,0.000000)
+     14  C              (-0.040438,-0.000000)    (0.000000,0.000000)
+     15  C               (-0.040435,0.000000)    (0.000000,0.000000)
+     16  C              (-0.040451,-0.000000)    (0.000000,0.000000)
+     17  C               (-0.126279,0.000000)    (0.000000,0.000000)
+     18  C              (-0.126272,-0.000000)    (0.000000,0.000000)
+     19  C               (-0.126275,0.000000)    (0.000000,0.000000)
+     20  C              (-0.126274,-0.000000)    (0.000000,0.000000)
+     21  C              (-0.126280,-0.000000)    (0.000000,0.000000)
+     22  C              (-0.126277,-0.000000)    (0.000000,0.000000)
+     23  C              (-0.126283,-0.000000)    (0.000000,0.000000)
+     24  C               (-0.126274,0.000000)    (0.000000,0.000000)
+     25  H                (0.134563,0.000000)    (0.000000,0.000000)
+     26  H                (0.134565,0.000000)    (0.000000,0.000000)
      27  H               (0.134563,-0.000000)    (0.000000,0.000000)
      28  H               (0.134562,-0.000000)    (0.000000,0.000000)
-     29  H               (0.134562,-0.000000)    (0.000000,0.000000)
-     30  H                (0.134563,0.000000)    (0.000000,0.000000)
+     29  H               (0.134563,-0.000000)    (0.000000,0.000000)
+     30  H               (0.134563,-0.000000)    (0.000000,0.000000)
      31  H               (0.134563,-0.000000)    (0.000000,0.000000)
-     32  H                (0.134564,0.000000)    (0.000000,0.000000)
+     32  H               (0.134564,-0.000000)    (0.000000,0.000000)
      33  H                (0.107246,0.000000)    (0.000000,0.000000)
-     34  H               (0.107251,-0.000000)    (0.000000,0.000000)
-     35  H               (0.107247,-0.000000)    (0.000000,0.000000)
+     34  H                (0.107252,0.000000)    (0.000000,0.000000)
+     35  H                (0.107247,0.000000)    (0.000000,0.000000)
      36  H                (0.107249,0.000000)    (0.000000,0.000000)
-     37  H                (0.107247,0.000000)    (0.000000,0.000000)
-     38  H               (0.107249,-0.000000)    (0.000000,0.000000)
-     39  H                (0.107246,0.000000)    (0.000000,0.000000)
-     40  H               (0.107251,-0.000000)    (0.000000,0.000000)
-     41  H                (0.122722,0.000000)    (0.000000,0.000000)
+     37  H                (0.107248,0.000000)    (0.000000,0.000000)
+     38  H                (0.107249,0.000000)    (0.000000,0.000000)
+     39  H               (0.107246,-0.000000)    (0.000000,0.000000)
+     40  H                (0.107252,0.000000)    (0.000000,0.000000)
+     41  H               (0.122722,-0.000000)    (0.000000,0.000000)
      42  H               (0.122721,-0.000000)    (0.000000,0.000000)
-     43  H               (0.122721,-0.000000)    (0.000000,0.000000)
-     44  H                (0.122720,0.000000)    (0.000000,0.000000)
-     45  H               (0.122721,-0.000000)    (0.000000,0.000000)
-     46  H                (0.122721,0.000000)    (0.000000,0.000000)
+     43  H                (0.122721,0.000000)    (0.000000,0.000000)
+     44  H               (0.122721,-0.000000)    (0.000000,0.000000)
+     45  H               (0.122722,-0.000000)    (0.000000,0.000000)
+     46  H                (0.122722,0.000000)    (0.000000,0.000000)
      47  H                (0.122722,0.000000)    (0.000000,0.000000)
-     48  H               (0.122720,-0.000000)    (0.000000,0.000000)
+     48  H               (0.122721,-0.000000)    (0.000000,0.000000)
    --------------------------------------------------------
   Sum of atomic charges =     (-0.000000,-0.000000)
   Sum of spin   charges =       (0.000000,0.000000)
 
 
 
- Total job time:  3841.73 s.
- Wed Jul  9 20:22:45 2025
+ Total job time:  4522.62 s.
+ Wed Sep 17 11:03:59 2025
 
 
         *************************************************************
